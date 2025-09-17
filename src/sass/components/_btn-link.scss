@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.btn-link {
+  color: var(--white);
+  font-size: rem(14);
+  font-weight: 700;
+  background-color: var(--main-color);
+  min-width: rem(200);
+  text-align: center;
+  padding-block: rem(14) rem(13);
+  position: relative;
+  border: 1px solid var(--main-color);
+  transition: background-color var(--duration-base) ease, color var(--duration-base) ease;
+  @include mq('md') {
+  font-size: rem(16);
+  padding-block: rem(12);
+  }
+  @media (any-hover: hover) {
+  &:hover {
+    background-color: var(--white);
+    color: var(--main-color);
+  }
+
+  &:hover::after {
+    background: url('../images/common/btn-arrow-red.webp') no-repeat center center / contain;
+    right: rem(-27);
+  }
+  }
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+ top: 43%;
+ translate: 0 -50%;
+ background: url('../images/common/btn-arrow.webp') no-repeat center center / contain;
+ width: rem(40);
+ height: rem(8);
+ right: rem(-22);
+ transition: background var(--duration-base) ease, right var(--duration-base) ease;
+}

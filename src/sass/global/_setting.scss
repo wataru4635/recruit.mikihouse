@@ -1,0 +1,99 @@
+@use "sass:math";
+
+// インナー幅設定
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1100px;
+// ※キュンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 30px;
+$padding-sp: 20px;
+
+////////////////////
+// フォント設定
+////////////////////
+
+:root {
+  --font-family-base: "Zen Old Mincho", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-family-second: "Inter", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  --font-family-third: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  --font-family-fourth: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+// ※検証ツールでしっかり反映されているか確認する
+
+
+// フォントウェイト
+:root {
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+}
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+:root {
+  --black: #000;
+  --white: #fff;
+  --text-color: #626262;
+  --text-gray: #ACACAC;
+  --main-color: #E60012;
+  --main-color2: #C4A552;
+  --bg-color: #F9F6EE;
+}
+
+////////////////////
+// z-index
+///////////////////
+
+:root {
+  --z-index-header: 100;
+  --z-index-to-top: 200;
+  --z-index-drawer: 1000;
+  --z-index-hamburger: 1000;
+  --z-index-modal: 10000;
+}
+
+////////////////////
+// アニメーション設定
+///////////////////
+
+:root {
+  --duration-short: 0.2s;
+  --duration-base: 0.3s;
+  --duration-long: 0.6s;
+  --duration-fv: 0.7s;
+
+  --ease-smooth-bounce: cubic-bezier(.48, .07, .33, .79);
+}
+
+////////////////////
+// レスポンシブ
+///////////////////
+:root {
+  --cq-ref-mobile: 375;
+  --cq-ref: 1440;
+  /* スマホ〜中型（320px〜375px） */
+  --fluid-basis-mobile: (100vw - 320px) / (375 - 320);
+
+  /* 中型〜大型（768px〜1440px） */
+  --fluid-basis: (100vw - 768px) / (1440 - 768);
+
+  /* 大型ディスプレイ（1440px〜1800px） */
+  --fluid-basis-2: (100vw - 1440px) / (1800 - 1440);
+}
+
+
+////////////////////
+// bodyの指定
+////////////////////
+
+body {
+  color: var(--text-color);
+  font-family: var(--font-family-base);
+}

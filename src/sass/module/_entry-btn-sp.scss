@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.entry-btn-sp {
+  margin-top: calc(93 * 100 / var(--cq-ref-mobile) * 1cqw);
+@include mq('md') {
+display: none;
+}
+}
+
+.entry-btn-sp__inner {
+  padding-inline: rem(33) rem(30);
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.entry-btn-sp__link {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+background-color: var(--main-color);
+border-radius: 10px;
+box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.20);
+gap: rem(1);
+padding-block: rem(10);
+}
+
+.entry-btn-sp__label {
+  color: var(--white);
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: rem(11);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.entry-btn-sp__label-ls {
+  letter-spacing: calc(0.99px / 11px * 1em);
+}
+
+
+.entry-btn-sp__text {
+  color: var(--white);
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: rem(28);
+  font-style: italic;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  letter-spacing: calc(3.92px / 28px * 1em);
+  text-transform: uppercase;
+}
+

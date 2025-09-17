@@ -1,0 +1,231 @@
+@use "global" as *;
+
+.top-person {
+margin-top: rem(100);
+@media (max-width: 767px) {
+overflow-x: clip;
+}
+@include mq('md') {
+margin-top: rem(150);
+padding-top: rem(95);
+position: relative;
+container-type: inline-size;
+}
+}
+
+.top-person__inner {
+
+}
+
+.inner {
+
+}
+
+.top-person__text-wrap {
+@include mq('md') {
+max-width: rem(490);
+}
+}
+
+.section-header.top-person__header {
+@media (max-width: 767px) {
+gap: rem(17);
+}
+}
+
+.top-person__lead {
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 2.07143;
+  margin-top: rem(20);
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: 2.5;
+    margin-top: rem(30);
+  }
+}
+
+.top-person__btn {
+margin-top: rem(20);
+@include mq('md') {
+margin-top: rem(30);
+}
+}
+
+.btn-link {
+
+}
+
+.top-person__list {
+margin-top: rem(50);
+@media (max-width: 767px) {
+display: flex;
+overflow-x: auto;
+margin-right: calc(50% - 50vw);
+gap: rem(10);
+transform: translateX(20px);
+opacity: 0;
+transition: transform 1s var(--ease-smooth-bounce), opacity 1s var(--ease-smooth-bounce);
+}
+@include mq('md') {
+margin-top: rem(180);
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: rem(15);
+}
+}
+
+@media (max-width: 767px) {
+  .top-person__list.is-active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.is-active .top-person__item {
+  @include mq('md') {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.top-person__item {
+  transition: transform 1s var(--ease-smooth-bounce), opacity 1s var(--ease-smooth-bounce);
+  @include mq('md') {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+@media (max-width: 767px) {
+min-width: rem(280);
+}
+}
+
+.top-person__item--01 {
+@include mq('md') {
+  transition-delay: .2s;
+}
+}
+
+.top-person__item--02 {
+@include mq('md') {
+  margin-top: rem(-242);
+  transition-delay: .1s;
+}
+}
+
+.top-person__item--03 {
+@include mq('md') {
+  margin-top: rem(-483);
+}
+}
+
+.top-person__link {
+display: block;
+position: relative;
+@media (any-hover: hover) {
+  &:hover .top-person__info {
+    background-color: #ffffffd0;
+  }
+  &:hover .top-person__name {
+    color: var(--main-color);
+  }
+  &:hover .top-person__position {
+    color: var(--main-color);
+  }
+  &:hover {
+    .top-person__info-inner::after {
+      background: url('../images/common/btn-arrow-red.webp') no-repeat center center / contain;
+      right: rem(-55);
+    }
+  }
+  &:hover .top-person__img {
+    transform: scale(1.05);
+  }
+}
+}
+
+.top-person__img-wrap {
+overflow: hidden;
+border-radius: 30px;
+@include mq('md') {
+  border-radius: 50px;
+}
+}
+
+.top-person__img {
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 280 / 400;
+  border-radius: 30px;
+  transition: transform var(--duration-base) ease;
+  @include mq('md') {
+    aspect-ratio: 357 / 500;
+    border-radius: 50px;
+  }
+}
+
+
+.top-person__info {
+position: absolute;
+bottom: 0;
+left: 0;
+background-color: var(--main-color);
+padding-inline: rem(15);
+padding-block: rem(8);
+border: 1px solid var(--main-color);
+transition: background-color var(--duration-base) ease;
+min-width: rem(220);
+border-radius: 0 12.56px 0 0;
+@include mq('md') {
+  min-width: rem(300);
+  padding-inline: rem(30);
+  padding-block: rem(11) rem(3);
+  border-radius: 0 20px 0 0;
+}
+}
+
+.top-person__info-inner {
+position: relative;
+}
+
+.top-person__info-inner::after {
+  content: "";
+  position: absolute;
+ top: 50%;
+ translate: 0 -50%;
+ background: url('../images/common/btn-arrow.webp') no-repeat center center / contain;
+ width: rem(25);
+ height: rem(8);
+ right: rem(-29);
+ transition: background var(--duration-base) ease, right var(--duration-base) ease;
+ @include mq('md') {
+  right: rem(-50);
+  width: rem(40);
+ }
+}
+
+.top-person__name {
+  color: var(--white);
+  font-size: rem(18);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.22222;
+  transition: color var(--duration-base) ease;
+  @include mq('md') {
+    font-size: rem(24);
+  }
+}
+
+.top-person__position {
+  color: var(--white);
+  font-size: rem(10);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  transition: color var(--duration-base) ease;
+  margin-top: rem(4);
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: 1.5;
+    margin-top: rem(3);
+  }
+}
+

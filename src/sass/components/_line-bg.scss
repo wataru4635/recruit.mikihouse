@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.line-bg {
+  position: absolute;
+  width: 100cqw;
+  height: auto;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  @media (max-width: 767px) {
+  display: none;
+  }
+  }
+
+  .line-bg__img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  }
+
+  .line-bg--01 {
+    top: 19%;
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path 2.5s cubic-bezier(0.45, 0.00, 0.55, 1.00);
+  }
+
+  .line-bg--01.is-active {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .line-bg--02 {
+    top: -6.8%;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 2.5s cubic-bezier(0.45, 0.00, 0.55, 1.00);
+  }
+
+  .line-bg--02.is-active {
+    clip-path: inset(0 0 0 0);
+  }
+
+  .line-bg--03 {
+    top: 90%;
+    clip-path: inset(0 0 0 100%);
+    transition: clip-path 2.5s cubic-bezier(0.45, 0.00, 0.55, 1.00);
+  }
+
+  .line-bg--03.is-active {
+    clip-path: inset(0 0 0 0);
+  }
