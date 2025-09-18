@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 });
   
+
 /* ===============================================
 # アニメーション
 // =============================================== */
@@ -55,16 +56,48 @@ function observeElements(selector, activeClass = "is-active", options = {}, keep
   elements.forEach((element) => observer.observe(element));
 }
 
-observeElements(".js-fade-in", "is-active", { rootMargin: "0px 0px -20% 0px" });
-observeElements(".js-clip-img", "is-active", { rootMargin: "0px 0px -30% 0px" });
-observeElements(".js-scaleImg", "is-active", { rootMargin: "0px 0px -10% 0px" });
-observeElements(".js-text-animate", "is-active", { rootMargin: "0px 0px -30% 0px" });
-observeElements(".js-top-person-list", "is-active", { rootMargin: "0px 0px -10% 0px" });
-observeElements(".js-clip-item", "is-active", { rootMargin: "0px 0px -20% 0px" });
-observeElements(".js-line-bg01", "is-active", { rootMargin: "0px 0px -30% 0px" }, true);
-observeElements(".js-line-bg02", "is-active", { rootMargin: "0px 0px -40% 0px" }, true);
-observeElements(".js-line-bg03", "is-active", { rootMargin: "0px 0px -40% 0px" }, true);
+// rootMargin をスマホ／PCで切り替える関数
+function getRootMargin(pcMargin, spMargin) {
+  return window.matchMedia("(min-width: 768px)").matches ? pcMargin : spMargin;
+}
 
+// 各要素に適用
+observeElements(".js-fade-in", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px") 
+});
+
+observeElements(".js-clip-img", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -15% 0px") 
+});
+
+observeElements(".js-scaleImg", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -5% 0px") 
+});
+
+observeElements(".js-text-animate", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -15% 0px") 
+});
+
+observeElements(".js-top-person-list", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -5% 0px") 
+});
+
+observeElements(".js-clip-item", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px") 
+});
+
+// keepActive = true の場合
+observeElements(".js-line-bg01", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -20% 0px") 
+}, true);
+
+observeElements(".js-line-bg02", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -40% 0px", "0px 0px -25% 0px") 
+}, true);
+
+observeElements(".js-line-bg03", "is-active", { 
+  rootMargin: getRootMargin("0px 0px -40% 0px", "0px 0px -25% 0px") 
+}, true);
 
 
   // =======================
@@ -86,4 +119,3 @@ observeElements(".js-line-bg03", "is-active", { rootMargin: "0px 0px -40% 0px" }
     });
   }
   wrapTextInSpans(".js-text-split");
-  

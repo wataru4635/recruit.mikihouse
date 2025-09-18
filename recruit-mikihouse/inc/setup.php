@@ -32,19 +32,6 @@ function enqueue_custom_scripts() {
         return file_exists($file_path) ? filemtime($file_path) : wp_get_theme()->get('Version');
     };
 
-    // トップページ専用JS・CSS
-    if (is_front_page()) {
-        // トップページ専用JS
-        $script = '/js/top.js';
-        wp_enqueue_script(
-            'top-script',
-            "{$asset_uri}{$script}",
-            [],
-            $get_ver("{$theme_path}/assets{$script}"),
-            true
-        );
-    }
-
     // CSS（共通）- 最後に読み込む
     $style_file = '/css/style.css';
     wp_enqueue_style(

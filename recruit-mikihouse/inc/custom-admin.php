@@ -58,4 +58,41 @@ function disable_classic_editor_for_news() {
 }
 add_action('admin_head', 'disable_classic_editor_for_news');
 
+// ==========================================================================
+// デフォルトの投稿を非表示化
+// ==========================================================================
+function remove_default_post_type() {
+	remove_menu_page('edit.php'); // 投稿メニューを非表示
+}
+add_action('admin_menu', 'remove_default_post_type');
+
+// 管理バーからも投稿を非表示
+function remove_default_post_type_from_admin_bar() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_node('new-post');
+}
+add_action('admin_bar_menu', 'remove_default_post_type_from_admin_bar', 999);
+
+// ==========================================================================
+// 固定ページ（edit.php?post_type=page）をメディア（upload.php）の上に移動
+// ==========================================================================
+
+add_filter('custom_menu_order', '__return_true'); // カスタム順序を有効化
+add_filter('menu_order', function ($menu_order) {
+    $move   = 'edit.php?post_type=page'; // 固定ページ
+    $before = 'upload.php';              // メディア
+
+    $from = array_search($move, $menu_order, true);
+    $to   = array_search($before, $menu_order, true);
+
+    if ($from === false || $to === false) return $menu_order;
+
+    // いったん取り除いて…
+    array_splice($menu_order, $from, 1);
+    // “メディア” の直前に挿入（= 上に表示）
+    $to = array_search($before, $menu_order, true);
+    array_splice($menu_order, $to, 0, $move);
+
+    return $menu_order;
+}, 999); // ほかのプラグインより後に実行
 

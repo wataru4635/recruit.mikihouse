@@ -54,9 +54,10 @@ $padding-sp: 20px;
 :root {
   --z-index-header: 100;
   --z-index-to-top: 200;
-  --z-index-drawer: 1000;
   --z-index-hamburger: 1000;
+  --z-index-float-entry: 1000;
   --z-index-modal: 10000;
+  --z-index-drawer: 10000;
 }
 
 ////////////////////

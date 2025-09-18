@@ -13,7 +13,7 @@
   }
 
   & .section-header__title-ja {
-   text-indent: 0;
+    text-indent: 0;
   }
 }
 
@@ -52,11 +52,17 @@
   font-weight: var(--font-weight-bold);
   line-height: 1.45455;
   text-indent: -0.3em;
+
   @include mq('md') {
     font-size: rem(32);
     line-height: 1;
   }
+
   @media (min-width: 1440px) {
     font-size: clamp(32px, calc(32px + 2 * var(--fluid-basis-2)), 34px);
   }
+}
+
+:root:not(:lang(ja)) .section-header__title-ja {
+  text-indent: 0;
 }

@@ -25,6 +25,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root:not(:lang(ja)) body {
+  overflow-wrap: break-word;
+  hyphens: auto;
+  word-break: normal;
+  line-break: auto;
+}
+
 /* デフォルトの余白とパディングを削除 */
 ul,
 ol,

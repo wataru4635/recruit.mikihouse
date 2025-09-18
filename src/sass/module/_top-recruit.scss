@@ -28,17 +28,12 @@ position: relative;
 &:hover {
   .top-recruit__text::after {
     right: rem(-45);
-    background: url('../images/common/btn-arrow-white.webp') no-repeat center center / contain;
   }
 }
 
 &:hover .top-recruit__img {
   transform: scale(1.05);
   filter: brightness(1.1);
-}
-
-&:hover .top-recruit__img-wrap::after {
-  opacity: 0.7;
 }
 
 }

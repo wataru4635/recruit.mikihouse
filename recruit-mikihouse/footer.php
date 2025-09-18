@@ -1,11 +1,21 @@
-<footer class="footer">
-  <div class="footer__entry">
-    <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="footer__entry-link" target="_blank" rel="noopener noreferrer">
-      <span class="footer__entry-label">今すぐ! エントリー</span>
-      <span class="footer__entry-main">ENTRY</span>
-      <span class="footer__entry-logo"><span class="footer__entry-logo-img"></span><span class="footer__entry-logo-text">新卒採用2027</span></span>
+<div class="float-entry-btn-sp">
+    <div class="float-entry-btn-sp__inner">
+      <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="float-entry-btn-sp__link" target="_blank" rel="noopener noreferrer">
+        <span class="float-entry-btn-sp__label"><span class="float-entry-btn-sp__label-ls">今</span>すぐ! エントリー</span>
+        <span class="float-entry-btn-sp__text">entry</span>
+      </a>
+    </div>
+  </div>
+
+<div class="float-entry">
+    <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="float-entry__link" target="_blank" rel="noopener noreferrer">
+      <span class="float-entry__label">今すぐ! エントリー</span>
+      <span class="float-entry__main">ENTRY</span>
+      <span class="float-entry__logo"><span class="float-entry__logo-img"></span><span class="float-entry__logo-text">新卒採用2027</span></span>
     </a>
   </div>
+
+<footer class="footer">
 
   <div class="footer__info-wrap">
     <div class="footer__info">

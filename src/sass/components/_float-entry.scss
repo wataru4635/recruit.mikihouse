@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.float-entry {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-index-float-entry);
+  @media (max-width: 767px) {
+  display: none;
+  }
+  }
+  
+  .float-entry__link {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color);
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: rem(272);
+  padding-block: rem(10) rem(4);
+  border-radius: 0 20px 0 0;
+  position: relative;
+  border: 2px solid var(--main-color);
+  transition: background-color var(--duration-base) ease;
+  @media (any-hover: hover) {
+  &:hover {
+    background-color: var(--white);
+  }
+  &:hover .float-entry__label {
+    color: var(--main-color);
+  }
+  &:hover .float-entry__main {
+    color: var(--main-color);
+  }
+  &:hover .float-entry__logo-text {
+    color: var(--main-color);
+  }
+  &:hover::after {
+    border-top: 2px solid var(--main-color);
+    border-right: 2px solid var(--main-color);
+  }
+  &:hover .float-entry__logo-img {
+    background-color: var(--main-color);
+  }
+  }
+  }
+  
+  .float-entry__link::after {
+    content: '';
+    position: absolute;
+   translate: 0 -50%;
+   border-top: 2px solid #fff;
+   border-right: 2px solid #fff;
+   transform: translateY(-50%) rotate(45deg);
+   transition: border-top var(--duration-base) ease, border-right var(--duration-base) ease;
+    right: rem(20);
+    top: 60%;
+    translate: 0 -50%;
+    width: rem(13);
+    height: rem(13);
+  }
+  
+  .float-entry__label {
+    color: var(--white);
+    font-family: var(--font-family-second);
+    font-size: rem(12.538);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    letter-spacing: calc(1.128 / 12.538 * 1em);
+    transition: color var(--duration-base) ease;
+  }
+  
+  .float-entry__main {
+    color: var(--white);
+    font-family: var(--font-family-second);
+    font-size: rem(34.08);
+    font-style: italic;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: calc(4.771 / 34.08 * 1em);
+    transition: color var(--duration-base) ease;
+  }
+  
+  .float-entry__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(5);
+  }
+  
+  .float-entry__logo-img {
+    display: inline-block;
+    width: rem(85.82);
+    height: rem(15  );
+    background-color: var(--white); /* 背景色（マスク内で表示される色） */
+    -webkit-mask-image: url('../images/common/logo-white.svg'); /* マスクとして使用するSVG */
+    mask-image: url('../images/common/logo-white.svg'); /* フォールバックで他のブラウザ向け */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    transition: background-color var(--duration-base) ease;
+  }
+  
+  .float-entry__logo-text {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--font-family-second);
+    font-size: rem(11);
+    font-weight: var(--font-weight-bold);
+    transform: translateY(rem(2));
+    transition: color var(--duration-base) ease;
+    letter-spacing: 0.05em;
+  }

@@ -1,7 +1,7 @@
 @use "global"as *;
 
 .top-news {
-  margin-top: rem(55);
+  margin-top: rem(110);
   container-type: inline-size;
 
   @include mq('md') {

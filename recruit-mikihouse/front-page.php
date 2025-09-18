@@ -8,25 +8,34 @@
 
   <section class="fv">
     <div class="fv__inner">
-      <div class="fv__img-wrap">
-        <picture>
+      <div class="fv__video-wrap">
+        <!-- <picture>
           <source srcset="<?php echo IMAGEPATH; ?>/top/fv-sp.webp" media="(max-width: 767px)" type="image/webp"
             width="375" height="520">
           <img class="fv__img" src="<?php echo IMAGEPATH; ?>/top/fv.webp" alt="二人の男性が店内で会話している様子" width="1211"
             height="690" loading="eager">
-        </picture>
+        </picture> -->
+        <video src="<?php echo VIDEOPATH; ?>/fv.mp4" class="fv__video" autoplay muted loop playsinline></video>
       </div>
       <div class="fv__space"></div>
       <div class="fv__content">
         <div class="fv__vision-label">our&nbsp;vision</div>
         <span class="fv__vision-dot"></span>
-        <h2 class="fv__title" aria-label="日本発のラグジュアリーブランドで、世界の子どもを笑顔にする挑戦。">
+        <h2 class="fv__title fv__title--jp" lang="ja" aria-label="日本発のラグジュアリーブランドで、世界の子どもを笑顔にする挑戦。">
           <span class="fv__text-line fv__text-line-01" aria-hidden="true">日本発の<span
               class="fv__text-line-ls01">ラグジュアリーブラ</span><span class="fv__text-line-ls02">ン</span>ドで､</span>
           <span class="fv__text-line fv__text-line-02" aria-hidden="true">世界の<span
               class="fv__text-line-ls03">子</span><span class="fv__text-line-ls04">ど</span><span
               class="fv__text-line-ls05">も</span>を<span class="fv__text-line-ls06">笑</span>顔<span
               class="fv__text-line-ls07">に</span>する<span class="fv__text-line-ls08">挑</span>戦｡</span>
+        </h2>
+        <h2 class="fv__title fv__title--other">
+          日本発のラグジュアリーブランドで、<br>
+          世界の子どもを笑顔にする挑戦。
+        </h2>
+        <h2 class="fv__title fv__title--other fv__title--other-en" lang="en">
+          <span class="hl-line">A luxury brand from Japan takes on</span><br>
+          <span class="hl-line">the challenge of bringing smiles to the</span><br class="u-mobile"> <span class="hl-line">faces of children around the world.</span>
         </h2>
       </div>
       <div class="scroll-down">
@@ -38,15 +47,6 @@
       </div>
     </div>
   </section>
-
-  <div class="entry-btn-sp">
-    <div class="entry-btn-sp__inner">
-      <a href="#" class="entry-btn-sp__link">
-        <span class="entry-btn-sp__label"><span class="entry-btn-sp__label-ls">今</span>すぐ! エントリー</span>
-        <span class="entry-btn-sp__text">entry</span>
-      </a>
-    </div>
-  </div>
 
   <?php
 // 外部リンク判定（同一ドメイン=内部扱い）
@@ -128,7 +128,8 @@ $news_q = new WP_Query([
           </div>
           <p class="top-message__lead js-text-animate">一着の服がつなぐ、<br>世界の親子に受け継がれる笑顔</p>
           <p class="top-message__text">ミキハウスの一着には、上質なものづくりへの思いと、<br
-              class="u-desktop">子どもと家族の笑顔を広げる願いが宿っています。<br>ここであなたが挑むのは、ただの“アパレルの仕事”ではありません。<br>日本発のラグジュアリーブランドとして、子どもの最初の一歩を支え、<br class="u-desktop">家族の物語を彩り、世界へ笑顔を広げる――<br>そんな社会的インパクトを、若手のうちから自らの手で生み出すキャリアです。
+              class="u-desktop">子どもと家族の笑顔を広げる願いが宿っています。<br>ここであなたが挑むのは、ただの“アパレルの仕事”ではありません。<br>日本発のラグジュアリーブランドとして、子どもの最初の一歩を支え、<br
+              class="u-desktop">家族の物語を彩り、世界へ笑顔を広げる――<br>そんな社会的インパクトを、若手のうちから自らの手で生み出すキャリアです。
           </p>
         </div>
         <div class="top-message__img-wrap js-scaleImg">
@@ -169,7 +170,8 @@ $news_q = new WP_Query([
         <li class="top-about__item top-about__item--right">
           <div class="top-about__img-wrap js-scaleImg">
             <picture>
-              <source srcset="<?php echo IMAGEPATH; ?>/top/about-img02-sp.webp" media="(max-width: 767px)" type="image/webp" width="335" height="328">
+              <source srcset="<?php echo IMAGEPATH; ?>/top/about-img02-sp.webp" media="(max-width: 767px)"
+                type="image/webp" width="335" height="328">
               <img src="<?php echo IMAGEPATH; ?>/top/about-img02.webp" alt="女性社員が子供と接客している様子" class="top-about__img"
                 width="510" height="500" loading="lazy">
             </picture>
@@ -325,7 +327,8 @@ $news_q = new WP_Query([
     <div class="recruit-links__inner inner">
       <ul class="recruit-links__list">
         <li class="recruit-links__item">
-          <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="recruit-links__btn recruit-links__btn--01" target="_blank" rel="noopener noreferrer">
+          <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027"
+            class="recruit-links__btn recruit-links__btn--01" target="_blank" rel="noopener noreferrer">
             <span class="recruit-links__text">
               <span class="recruit-links__category">新卒採用</span>
               <span class="recruit-links__title">マイページ</span>
@@ -334,7 +337,8 @@ $news_q = new WP_Query([
         </li>
 
         <li class="recruit-links__item">
-          <a href="https://recruit.mikihouse.co.jp/digitalbook/jp/?pNo=1" class="recruit-links__btn recruit-links__btn--02" target="_blank" rel="noopener noreferrer">
+          <a href="https://recruit.mikihouse.co.jp/digitalbook/jp/?pNo=1"
+            class="recruit-links__btn recruit-links__btn--02" target="_blank" rel="noopener noreferrer">
             <span class="recruit-links__text">
               <span class="recruit-links__category">デジタル版</span>
               <span class="recruit-links__title">採用パンフレット</span>
@@ -343,7 +347,8 @@ $news_q = new WP_Query([
         </li>
 
         <li class="recruit-links__item">
-          <a href="https://www.instagram.com/mikihouse_recruit/?hl=ja" class="recruit-links__btn recruit-links__btn--03" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/mikihouse_recruit/?hl=ja" class="recruit-links__btn recruit-links__btn--03"
+            target="_blank" rel="noopener noreferrer">
             <span class="recruit-links__text">
               <span class="recruit-links__category">新卒採用</span>
               <span class="recruit-links__title">インスタグラム</span>
