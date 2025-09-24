@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.sub-breadcrumbs {
+ padding-block: rem(10);
+ border-bottom: 1px solid var(--line-color);
+}
+
+.sub-breadcrumbs__inner.inner {
+  padding-inline: 10px;
+  @include mq('md') {
+  max-width: 1120px;
+  }
+}

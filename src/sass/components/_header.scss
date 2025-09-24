@@ -1,5 +1,12 @@
 @use "global"as *;
 
+html {
+  scroll-padding-top: rem(53);
+  @include mq('md') {
+    scroll-padding-top: rem(95);
+  }
+}
+
 .header {
   position: fixed;
   inset: 0 0 auto 0;

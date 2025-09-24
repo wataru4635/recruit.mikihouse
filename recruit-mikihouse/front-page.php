@@ -9,12 +9,6 @@
   <section class="fv">
     <div class="fv__inner">
       <div class="fv__video-wrap">
-        <!-- <picture>
-          <source srcset="<?php echo IMAGEPATH; ?>/top/fv-sp.webp" media="(max-width: 767px)" type="image/webp"
-            width="375" height="520">
-          <img class="fv__img" src="<?php echo IMAGEPATH; ?>/top/fv.webp" alt="二人の男性が店内で会話している様子" width="1211"
-            height="690" loading="eager">
-        </picture> -->
         <video src="<?php echo VIDEOPATH; ?>/fv.mp4" class="fv__video" autoplay muted loop playsinline></video>
       </div>
       <div class="fv__space"></div>

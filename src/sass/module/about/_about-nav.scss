@@ -1,0 +1,145 @@
+@use "global"as *;
+
+.about-nav {
+  padding-bottom: rem(50);
+
+  @include mq('md') {
+    padding-block: rem(50);
+  }
+}
+
+.about-nav__inner {
+  margin-inline: auto;
+  max-width: 450px;
+
+  @include mq("md") {
+    padding-inline: 30px;
+    max-width: 1160px;
+  }
+}
+
+.about-nav__list {
+  background: var(--white);
+  box-shadow: 0 1px 6px 0 #D3D3D3;
+  padding: rem(30) rem(20);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 767px) {
+    gap: rem(13) rem(20);
+  }
+
+  @include mq('md') {
+    padding: rem(40) rem(90) rem(40) rem(138);
+    border-radius: 28px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: rem(15);
+  }
+
+}
+
+.about-nav__item {
+  display: block;
+}
+
+.about-nav__link {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: rem(5);
+
+  @include mq('md') {
+    gap: rem(11);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .about-nav__link-text {
+        color: var(--main-color);
+      }
+    }
+  }
+}
+
+.about-nav__link-arrow {
+  aspect-ratio: 1/1;
+  width: rem(15.6);
+  border-radius: calc(infinity * 1px);
+  background-color: var(--main-color);
+  position: relative;
+  overflow: hidden;
+
+  @include mq('md') {
+    width: rem(25);
+  }
+}
+
+.about-nav__link-arrow::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-top: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  width: rem(4);
+  height: rem(4);
+  transform: rotate(135deg);
+  transform-origin: center;
+
+  @include mq('md') {
+    width: rem(5);
+    height: rem(5);
+  }
+}
+
+.about-nav__link-text {
+  font-size: rem(12);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.03774;
+  transition: color var(--duration-base) ease;
+
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: 1.25;
+  }
+}
+
+@media (hover: hover) {
+  .about-nav__link:hover .about-nav__link-arrow::before {
+    transform: scale(1.1);
+  }
+
+  .about-nav__link:hover .about-nav__link-arrow::before {
+    animation: arrow 0.3s ease forwards;
+  }
+}
+
+
+@keyframes arrow {
+  0% {
+    translate: -50% -50%;
+    transform: rotate(135deg);
+  }
+
+  49% {
+    translate: -50% calc(-50% + 200%);
+    transform: rotate(135deg);
+    visibility: hidden;
+  }
+
+  50% {
+    translate: -50% calc(-50% - 200%);
+    transform: rotate(135deg);
+    visibility: hidden;
+  }
+
+  52% {
+    visibility: visible;
+  }
+
+  100% {
+    translate: -50% -50%;
+    transform: rotate(135deg);
+  }
+}

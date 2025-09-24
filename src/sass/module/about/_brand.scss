@@ -1,0 +1,147 @@
+@use "global"as *;
+
+.brand {
+  padding-block: rem(80);
+
+  @include mq('md') {
+    padding-block: rem(150);
+  }
+}
+
+
+.brand__lead {
+  font-size: rem(16);
+  font-weight: var(--font-weight-bold);
+  line-height: 2;
+  margin-top: rem(50);
+
+  @include mq('md') {
+    margin-top: rem(30);
+    max-width: 700px;
+    margin-inline: auto;
+  }
+}
+
+.brand__main {
+  margin-top: rem(50);
+}
+
+.brand__link {
+  display: block;
+  transition: opacity var(--duration-long) ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+
+      .brand__main-img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .brand__img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.brand__main-img-wrap {
+  overflow: hidden;
+}
+
+.brand__main-img {
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 319 / 180;
+  transition: transform var(--duration-long) ease;
+
+  @include mq('md') {
+    aspect-ratio: 1088 / 614.62;
+  }
+}
+
+.brand__image--main {}
+
+.brand__logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: rem(30);
+  gap: rem(20);
+}
+
+.brand__logo {
+  height: auto;
+  object-fit: contain;
+}
+
+.brand__logo--main {
+  width: rem(171.64);
+}
+
+.brand__tag {
+  font-size: rem(12);
+  font-family: var(--font-family-fourth);
+  font-weight: var(--font-weight-regular);
+  line-height: 1;
+  letter-spacing: calc(1.2 / 12 * 1em);
+}
+
+.brand__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+  margin-top: rem(40);
+
+  @include mq('md') {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40) rem(50);
+  }
+}
+
+.brand__item--01,
+.brand__item--02,
+.brand__item--03 {
+  & .brand__logo {
+    width: rem(171.64);
+  }
+}
+
+.brand__item--04 {
+  & .brand__logo {
+    width: rem(180);
+  }
+}
+
+
+.brand__item--05 {
+  & .brand__logo {
+    width: rem(170);
+  }
+}
+
+.brand__item--06 {
+  & .brand__logo {
+    width: rem(179);
+  }
+}
+
+
+.brand__img-wrap {
+  overflow: hidden;
+}
+
+.brand__img {
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 319 / 180;
+  transition: transform var(--duration-long) ease;
+
+  @include mq('md') {
+    aspect-ratio: 329.33 / 270;
+  }
+}

@@ -7,7 +7,7 @@
     </div>
   </div>
 
-<div class="float-entry">
+<div class="float-entry js-float-entry">
     <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="float-entry__link" target="_blank" rel="noopener noreferrer">
       <span class="float-entry__label">今すぐ! エントリー</span>
       <span class="float-entry__main">ENTRY</span>

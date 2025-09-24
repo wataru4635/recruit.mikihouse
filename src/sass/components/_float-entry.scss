@@ -5,10 +5,18 @@
   bottom: 0;
   left: 0;
   z-index: var(--z-index-float-entry);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .7s ease-in-out, visibility .7s ease-in-out;
   @media (max-width: 767px) {
   display: none;
   }
+  &.is-scroll {
+    opacity: 1;
+    visibility: visible;
   }
+  }
+
   
   .float-entry__link {
   display: flex;

@@ -31,6 +31,18 @@ function enqueue_custom_scripts() {
     $get_ver = function($file_path) {
         return file_exists($file_path) ? filemtime($file_path) : wp_get_theme()->get('Version');
     };
+    
+    if (is_page('about')) {
+        // aboutページ専用JS
+        $about_file = '/js/about.js';
+        wp_enqueue_script(
+            'about-script',
+            "{$asset_uri}{$about_file}",
+            [],
+            $get_ver("{$theme_path}/assets{$about_file}"),
+            true
+        );
+    }
 
     // CSS（共通）- 最後に読み込む
     $style_file = '/css/style.css';
@@ -62,10 +74,12 @@ function enqueue_preload_headers() {
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@500;600&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="preload"
-    as="style" fetchpriority="high">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@500;600&family=Zen+Old+Mincho:wght@700;900&display=swap" rel="stylesheet"
-    media="print" onload="this.media='all'">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@500;600&family=Zen+Old+Mincho:wght@700;900&display=swap"
+    rel="preload" as="style" fetchpriority="high">
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@500;600&family=Zen+Old+Mincho:wght@700;900&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
 <?php
 }
 add_action('wp_head', 'enqueue_preload_headers');

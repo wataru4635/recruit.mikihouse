@@ -9,6 +9,10 @@ $inner: 1100px;
 $padding-pc: 30px;
 $padding-sp: 20px;
 
+$padding-sub-pc: 30px;
+$padding-sub-sp: 30px;
+
+
 ////////////////////
 // フォント設定
 ////////////////////
@@ -45,6 +49,8 @@ $padding-sp: 20px;
   --main-color: #E60012;
   --main-color2: #C4A552;
   --bg-color: #F9F6EE;
+  --line-color: #DDD;
+  --linear-gradient: linear-gradient(270deg, rgba(249, 246, 238, 0.00) 3.37%, var(--bg01, #F9F6EE) 29.53%);
 }
 
 ////////////////////
@@ -56,8 +62,8 @@ $padding-sp: 20px;
   --z-index-to-top: 200;
   --z-index-hamburger: 1000;
   --z-index-float-entry: 1000;
-  --z-index-modal: 10000;
   --z-index-drawer: 10000;
+  --z-index-modal: 100000;
 }
 
 ////////////////////
@@ -97,4 +103,12 @@ $padding-sp: 20px;
 body {
   color: var(--text-color);
   font-family: var(--font-family-base);
+}
+
+////////////////////  
+// 翻訳関連の設定
+////////////////////  
+
+:root:not(:lang(ja)) .translate-none {
+  display: none;
 }

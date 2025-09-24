@@ -28,3 +28,33 @@
     }
   }
 }
+
+
+@if $startFrom == sp {
+  .sub-inner {
+    width: 100%;
+    padding-right: $padding-sub-sp;
+    padding-left: $padding-sub-sp;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+    @include mq("md") {
+      max-width: $inner + strip-unit($padding-sub-pc) * 2;
+      padding-right: $padding-sub-pc;
+      padding-left: $padding-sub-pc;
+    }
+  }
+} @else {
+  .sub-inner {
+    max-width: $inner + strip-unit($padding-sub-pc) * 2;
+    padding-right: $padding-sub-pc;
+    padding-left: $padding-sub-pc;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq("md") {
+      padding-right: $padding-sub-sp;
+      padding-left: $padding-sub-sp;
+    }
+  }
+}

@@ -6,7 +6,7 @@
 /* フェード */
 .js-fade-in {
   opacity: 0;
-  transition: opacity var(--duration-long) ease;
+  transition: opacity 1.2s ease-in-out;
   
   &.is-active {
     opacity: 1;
@@ -17,7 +17,7 @@
 .js-fade-up {
   opacity: 0;
   translate: 0 20px;
-  transition: opacity var(--duration-long) ease, translate var(--duration-long) ease;
+  transition: opacity 1.2s ease-in-out, translate 1.2s ease-in-out;
   
   &.is-active {
     opacity: 1;
@@ -75,6 +75,12 @@
   &.is-active img {
     scale: 1;
     opacity: 1;
+  }
+}
+
+.global-expansion__img-wrap.js-scaleImg {
+  img {
+    transition: scale 1.4s var(--ease-smooth-bounce), opacity 1.4s var(--ease-smooth-bounce);
   }
 }
 
