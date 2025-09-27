@@ -9,9 +9,9 @@ define('VIDEOPATH',            get_template_directory_uri() . '/assets/video');
 /* ---------- 各ページのリンク ---------- */
 define('HOME_URL',             esc_url(home_url('/')));                          // トップページ
 define('ABOUT_URL',            esc_url(home_url('/about/')));                    // ミキハウスを知る
-define('JOB_URL',              esc_url(home_url('/job/')));                      // ミキハウスの仕事
-define('RECRUIT_URL',          esc_url(home_url('/recruit/')));                  // 採用情報
-define('INTERNSHIP_URL',       esc_url(home_url('/internship/')));                // インターンシップ
+define('JOB_URL',             esc_url(home_url('/job/')));                      // ミキハウスの仕事
+define('RECRUITMENT_URL',          esc_url(home_url('/recruitment/')));                  // 採用情報
+define('INTERNSHIP_URL',       esc_url(home_url('/internship/')));               // インターンシップ
 define('NEWS_URL',             esc_url(home_url('/news/')));                     // お知らせ
 
 // Personページ

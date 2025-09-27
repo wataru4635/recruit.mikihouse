@@ -37,6 +37,7 @@ gap: clamp(20px, calc(20px + 10 * var(--fluid-basis-2)), 30px);
   font-size: rem(20);
   font-weight: var(--font-weight-bold);
   line-height: 1.55;
+  text-indent: -0.5em;
   @include mq('md') {
     font-size: rem(35);
 line-height: 1.8;

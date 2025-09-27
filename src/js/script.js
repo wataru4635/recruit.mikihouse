@@ -1,4 +1,70 @@
 /* ===============================================
+# ヘッダー、ハンバーガーメニュー処理全体
+=============================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  // 定数：クラス名
+  const BODY_CLASS = "body-hidden";
+  const OPEN_CLASS = "is-open";
+
+  // 要素取得
+  const hamburger = document.querySelector(".js-hamburger");
+  const drawer = document.querySelector(".js-drawer");
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+  // ドロワーメニューを開く
+  function openDrawer() {
+    document.body.classList.add(BODY_CLASS);
+    drawer.classList.add(OPEN_CLASS);
+    hamburger.classList.add(OPEN_CLASS);
+  }
+
+  // ドロワーメニューを閉じる
+  function closeDrawer() {
+    if (!document.body.classList.contains(BODY_CLASS)) return;
+    document.body.classList.remove(BODY_CLASS);
+    drawer.classList.remove(OPEN_CLASS);
+    hamburger.classList.remove(OPEN_CLASS);
+  }
+
+  // ハンバーガークリックでメニューをトグル
+  function toggleDrawer(event) {
+    event.preventDefault();
+    const isOpen = drawer.classList.contains(OPEN_CLASS);
+
+    if (isOpen) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }
+
+  // ハンバーガーメニュークリックイベント登録
+  hamburger.addEventListener("click", toggleDrawer);
+
+  // メニュー内リンククリックでメニューを閉じる
+  drawer.addEventListener("click", (event) => {
+    if (event.target.matches("a[href]")) {
+      closeDrawer();
+    }
+  });
+
+  // リサイズ時：メニュー閉じる処理
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (mediaQuery.matches) closeDrawer();
+    }, 150);
+  });
+
+  // ブレークポイント変更時にメニュー閉じる
+  mediaQuery.addEventListener("change", () => {
+    if (mediaQuery.matches) closeDrawer();
+  });
+});
+
+
+/* ===============================================
 # ヘッダー；スクロールでクラスを追加
 # + PCのみ：.js-float-entry は「スクロール中のみ is-scroll」
 =============================================== */

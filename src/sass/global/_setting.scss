@@ -60,9 +60,9 @@ $padding-sub-sp: 30px;
 :root {
   --z-index-header: 100;
   --z-index-to-top: 200;
-  --z-index-hamburger: 1000;
   --z-index-float-entry: 1000;
-  --z-index-drawer: 10000;
+  --z-index-drawer: 2000;
+  --z-index-hamburger: 10000;
   --z-index-modal: 100000;
 }
 
@@ -85,13 +85,8 @@ $padding-sub-sp: 30px;
 :root {
   --cq-ref-mobile: 375;
   --cq-ref: 1440;
-  /* スマホ〜中型（320px〜375px） */
   --fluid-basis-mobile: (100vw - 320px) / (375 - 320);
-
-  /* 中型〜大型（768px〜1440px） */
   --fluid-basis: (100vw - 768px) / (1440 - 768);
-
-  /* 大型ディスプレイ（1440px〜1800px） */
   --fluid-basis-2: (100vw - 1440px) / (1800 - 1440);
 }
 

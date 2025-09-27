@@ -16,7 +16,7 @@ Template Name: ミキハウスを知る
       <picture>
         <source srcset="<?php echo IMAGEPATH; ?>/about/about-fv-sp.webp" media="(max-width: 767px)" type="image/webp"
           width="375" height="180">
-        <img src="<?php echo IMAGEPATH; ?>/about/about-fv.webp" alt="ミキハウスを知る" class="sub-fv__img" width="1440"
+        <img src="<?php echo IMAGEPATH; ?>/about/about-fv.webp" alt="社員同士が笑顔で交流する様子" class="sub-fv__img" width="1440"
           height="390">
       </picture>
     </div>
@@ -235,7 +235,7 @@ Template Name: ミキハウスを知る
   <section class="global-expansion" id="global-expansion">
     <div class="global-expansion__inner sub-inner">
       <div class="global-expansion__header sub-section-header">
-        <h2 class="sub-section-header__title js-text-animate sub-section-header__title js-text-animate--indent-none">
+        <h2 class="sub-section-header__title js-text-animate sub-section-header__title--transform-none">
           世界16ヵ国108店舗へ</h2>
       </div>
       <time class="global-expansion__date" datetime="2025-03-14">2025年3月14日現在</time>
@@ -306,7 +306,7 @@ Template Name: ミキハウスを知る
     <div class="data-view__inner sub-inner">
 
       <div class="data-view__header sub-section-header">
-        <h2 class="sub-section-header__title sub-section-header__title js-text-animate--indent-small js-text-animate">
+        <h2 class="sub-section-header__title sub-section-header__title--transform-small js-text-animate">
           データで見るミキハウス</h2>
       </div>
 

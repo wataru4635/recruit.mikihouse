@@ -1,30 +1,88 @@
 "use strict";
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+/* ===============================================
+# ヘッダー、ハンバーガーメニュー処理全体
+=============================================== */
+document.addEventListener("DOMContentLoaded", () => {
+  // 定数：クラス名
+  const BODY_CLASS = "body-hidden";
+  const OPEN_CLASS = "is-open";
+
+  // 要素取得
+  const hamburger = document.querySelector(".js-hamburger");
+  const drawer = document.querySelector(".js-drawer");
+  const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+  // ドロワーメニューを開く
+  function openDrawer() {
+    document.body.classList.add(BODY_CLASS);
+    drawer.classList.add(OPEN_CLASS);
+    hamburger.classList.add(OPEN_CLASS);
+  }
+
+  // ドロワーメニューを閉じる
+  function closeDrawer() {
+    if (!document.body.classList.contains(BODY_CLASS)) return;
+    document.body.classList.remove(BODY_CLASS);
+    drawer.classList.remove(OPEN_CLASS);
+    hamburger.classList.remove(OPEN_CLASS);
+  }
+
+  // ハンバーガークリックでメニューをトグル
+  function toggleDrawer(event) {
+    event.preventDefault();
+    const isOpen = drawer.classList.contains(OPEN_CLASS);
+    if (isOpen) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  }
+
+  // ハンバーガーメニュークリックイベント登録
+  hamburger.addEventListener("click", toggleDrawer);
+
+  // メニュー内リンククリックでメニューを閉じる
+  drawer.addEventListener("click", event => {
+    if (event.target.matches("a[href]")) {
+      closeDrawer();
+    }
+  });
+
+  // リサイズ時：メニュー閉じる処理
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      if (mediaQuery.matches) closeDrawer();
+    }, 150);
+  });
+
+  // ブレークポイント変更時にメニュー閉じる
+  mediaQuery.addEventListener("change", () => {
+    if (mediaQuery.matches) closeDrawer();
+  });
+});
+
 /* ===============================================
 # ヘッダー；スクロールでクラスを追加
 # + PCのみ：.js-float-entry は「スクロール中のみ is-scroll」
 =============================================== */
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   var _PC_MEDIA$addEventLis;
-  var header = document.querySelector('.header');
-  var floatEntries = document.querySelectorAll('.js-float-entry');
-  var THRESHOLD = 50; // ヘッダーの発火位置(px)
-  var SCROLL_STOP_DELAY = 500; // スクロール停止判定(ms)
-  var PC_MEDIA = window.matchMedia('(min-width: 768px)');
+  const header = document.querySelector('.header');
+  const floatEntries = document.querySelectorAll('.js-float-entry');
+  const THRESHOLD = 50; // ヘッダーの発火位置(px)
+  const SCROLL_STOP_DELAY = 500; // スクロール停止判定(ms)
+  const PC_MEDIA = window.matchMedia('(min-width: 768px)');
 
   /* -------------------------------
   # ヘッダーの is-scroll 制御（既存仕様）
   ------------------------------- */
-  var ticking = false;
-  var applyHeader = function applyHeader() {
+  let ticking = false;
+  const applyHeader = () => {
     if (!header) return;
-    var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+    const y = window.pageYOffset || document.documentElement.scrollTop || 0;
     header.classList.toggle('is-scroll', y > THRESHOLD);
     ticking = false;
   };
@@ -33,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
   applyHeader();
 
   // rAF でスクロールイベント間引き
-  window.addEventListener('scroll', function () {
+  window.addEventListener('scroll', () => {
     if (!ticking) {
       ticking = true;
       requestAnimationFrame(applyHeader);
@@ -45,20 +103,16 @@ document.addEventListener('DOMContentLoaded', function () {
   /* -------------------------------
   # PC限定：.js-float-entry は「スクロール中のみ is-scroll」
   ------------------------------- */
-  var stopTimer = null;
-  var addFloatScrollClass = function addFloatScrollClass() {
+  let stopTimer = null;
+  const addFloatScrollClass = () => {
     // PCのみ有効
     if (!PC_MEDIA.matches) return;
-    floatEntries.forEach(function (el) {
-      return el.classList.add('is-scroll');
-    });
+    floatEntries.forEach(el => el.classList.add('is-scroll'));
   };
-  var removeFloatScrollClass = function removeFloatScrollClass() {
-    floatEntries.forEach(function (el) {
-      return el.classList.remove('is-scroll');
-    });
+  const removeFloatScrollClass = () => {
+    floatEntries.forEach(el => el.classList.remove('is-scroll'));
   };
-  var onScrollForFloat = function onScrollForFloat() {
+  const onScrollForFloat = () => {
     // PC以外は何もしない（万一付いていたら外す）
     if (!PC_MEDIA.matches) {
       removeFloatScrollClass();
@@ -70,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 停止判定のデバウンス
     if (stopTimer) clearTimeout(stopTimer);
-    stopTimer = setTimeout(function () {
+    stopTimer = setTimeout(() => {
       // スクロールが止まったら外す
       removeFloatScrollClass();
     }, SCROLL_STOP_DELAY);
@@ -82,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // 画面幅が切り替わった時の後始末（SP→PC/PC→SP）
-  var handleMediaChange = function handleMediaChange() {
+  const handleMediaChange = () => {
     if (!PC_MEDIA.matches) {
       // SPでは常に外しておく
       removeFloatScrollClass();
@@ -101,12 +155,12 @@ document.addEventListener('DOMContentLoaded', function () {
 # アニメーション
 // =============================================== */
 function observeElements(selector) {
-  var activeClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "is-active";
-  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  var keepActive = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
-  var elements = document.querySelectorAll(selector);
+  let activeClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "is-active";
+  let options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  let keepActive = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+  const elements = document.querySelectorAll(selector);
   function handleIntersect(entries, observer) {
-    entries.forEach(function (entry) {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add(activeClass);
 
@@ -122,10 +176,8 @@ function observeElements(selector) {
       }
     });
   }
-  var observer = new IntersectionObserver(handleIntersect, options);
-  elements.forEach(function (element) {
-    return observer.observe(element);
-  });
+  const observer = new IntersectionObserver(handleIntersect, options);
+  elements.forEach(element => observer.observe(element));
 }
 
 // rootMargin をスマホ／PCで切り替える関数
@@ -177,14 +229,14 @@ observeElements(".js-gallery-img", "is-active", {
 // 文字を1文字ずつ <span> に分割
 // =======================
 function wrapTextInSpans(selector) {
-  document.querySelectorAll(selector).forEach(function (element) {
-    var text = element.textContent;
+  document.querySelectorAll(selector).forEach(element => {
+    const text = element.textContent;
     element.setAttribute('aria-label', text);
     element.setAttribute('role', 'text');
     element.textContent = '';
-    _toConsumableArray(text).forEach(function (_char, index) {
-      var span = document.createElement('span');
-      span.textContent = _char;
+    [...text].forEach((char, index) => {
+      const span = document.createElement('span');
+      span.textContent = char;
       span.style.setProperty('--index', index);
       span.setAttribute('aria-hidden', 'true');
       element.appendChild(span);
@@ -200,17 +252,13 @@ wrapTextInSpans(".js-text-split");
 function getTextForTranslate(el) {
   if (!el) return "";
   if (el.classList.contains("translate-clean")) {
-    var clone = el.cloneNode(true);
-    clone.querySelectorAll("br").forEach(function (br) {
-      return br.remove();
-    });
+    const clone = el.cloneNode(true);
+    clone.querySelectorAll("br").forEach(br => br.remove());
     return clone.innerText.trim();
   }
   return el.innerText.trim();
 }
 
 // 複数の .translate-clean をまとめて処理
-var targets = document.querySelectorAll(".translate-clean");
-var textsForTranslate = Array.from(targets).map(function (el) {
-  return getTextForTranslate(el);
-});
+const targets = document.querySelectorAll(".translate-clean");
+const textsForTranslate = Array.from(targets).map(el => getTextForTranslate(el));

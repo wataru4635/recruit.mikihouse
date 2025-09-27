@@ -1,18 +1,15 @@
-/* グローバルリセット */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* テキストサイズの調整をリセット */
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
 
-/* ボディの基本設定 */
 body {
   margin: 0;
   overflow-wrap: anywhere;
@@ -32,7 +29,6 @@ body {
   line-break: auto;
 }
 
-/* デフォルトの余白とパディングを削除 */
 ul,
 ol,
 button,
@@ -52,25 +48,21 @@ small {
   padding: 0;
 }
 
-/* リストスタイルのリセット */
 ul,
 ol {
   list-style: none;
 }
 
-/* クラスなしのaタグにデフォルトのスタイルを適用 */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* インラインブロック要素 */
 a,
 span,
 button {
   display: inline-block;
 }
 
-/* フォントとマージンのリセット */
 small,
 time,
 figure {
@@ -84,19 +76,16 @@ address {
   font-style: normal;
 }
 
-/* 画像の調整 */
 img {
   max-width: 100%;
   display: block;
   width: 100%;
 }
 
-/* 記事内の自然な余白を設定 */
 article>*+* {
   margin-top: 1em;
 }
 
-/* フォーム要素のフォント継承 */
 input,
 button,
 textarea,
@@ -104,7 +93,6 @@ select {
   font: inherit;
 }
 
-/* フォームのリセット */
 input,
 button,
 select,
@@ -122,7 +110,6 @@ textarea {
   resize: vertical;
 }
 
-/* チェックボックスとラジオボタンを非表示 */
 input[type="checkbox"],
 input[type="radio"] {
   position: absolute;
@@ -134,7 +121,6 @@ input[type="radio"] {
   border: 0;
 }
 
-/* ボタンやラベルにカーソルを設定 */
 input[type="submit"],
 input[type="button"],
 label,
@@ -143,12 +129,6 @@ select {
   cursor: pointer;
 }
 
-/* IE用の選択ボックスアイコンを非表示 */
-select::-ms-expand {
-  display: none;
-}
-
-/* aタグのスタイルとトランジション */
 a {
   text-decoration: none;
   color: inherit;
@@ -159,14 +139,12 @@ button {
   color: inherit;
 }
 
-/* ホバー時のカーソル設定 */
 @media (any-hover: hover) {
   a:hover {
     cursor: pointer;
   }
 }
 
-/* PCでtelリンクを無効化 */
 @media (min-width: 768px) {
   a[href*="tel:"] {
     pointer-events: none;
@@ -175,13 +153,10 @@ button {
   }
 }
 
-/* タップ時のハイライトを透明に設定 */
 a {
   -webkit-tap-highlight-color: transparent;
-  /* リンクのハイライトを透明に */
 }
 
 button {
   -webkit-tap-highlight-color: transparent;
-  /* ボタンのハイライトも透明に */
 }

@@ -50,7 +50,7 @@ position: relative;
   text-align: center;
   font-family: var(--font-family-second);
   font-size: rem(11);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   line-height: 1;
 }
 
@@ -65,7 +65,7 @@ position: relative;
   font-family: var(--font-family-second);
   font-size: rem(28);
   font-style: italic;
-  font-weight: var(--font-weight-semibold);
+  font-weight: (--font-weight-semibold);
   line-height: 1;
   letter-spacing: calc(3.92px / 28px * 1em);
   text-transform: uppercase;

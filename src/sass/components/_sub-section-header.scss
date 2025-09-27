@@ -32,7 +32,7 @@ font-size: rem(22);
 font-style: normal;
 font-weight: var(--font-weight-bold);
 line-height: 1.40909;
-text-indent: -0.3em;
+transform: translateX(-0.3em);
 @include mq('md') {
   font-size: rem(32);
   line-height: 1;
@@ -43,12 +43,12 @@ text-indent: -0.3em;
   text-indent: 0;
 }
 
-.sub-section-header__title.sub-section-header__title--indent-none {
-  text-indent: 0;
+.sub-section-header__title.sub-section-header__title--transform-none {
+  transform: translateX(0);
 }
 
-.sub-section-header__title.sub-section-header__title--indent-small {
-  text-indent: -0.15em;
+.sub-section-header__title.sub-section-header__title--transform-small {
+  transform: translateX(-0.15em);
 }
 
 /* sub-section-header02 */

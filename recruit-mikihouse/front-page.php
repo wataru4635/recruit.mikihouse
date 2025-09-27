@@ -157,7 +157,7 @@ $news_q = new WP_Query([
               50年以上、子どもと家族の笑顔を創り続ける日本発のラグジュアリーブランド──ミキハウス。最高級品質のものづくりとおもてなしは、すでに世界150超の国へ広がっています。
             </p>
             <div class="top-about__btn">
-              <a href="#" class="btn-link">詳しくはこちら</a>
+              <a href="<?php echo ABOUT_URL; ?>" class="btn-link">詳しくはこちら</a>
             </div>
           </div>
         </li>

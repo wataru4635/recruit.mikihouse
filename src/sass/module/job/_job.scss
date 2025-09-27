@@ -1,0 +1,147 @@
+@use "global"as *;
+
+.job {
+  margin-top: rem(66);
+  container-type: inline-size;
+
+  @include mq('md') {
+    margin-top: rem(100);
+  }
+}
+
+.job__lead {
+  font-size: rem(14);
+  font-weight: var(--font-weight-medium);
+  line-height: 2.07143;
+  margin-top: rem(50);
+
+  @include mq('md') {
+    font-size: clamp(10px, calc(16 * 100 / var(--cq-ref) * 1cqw), 17px);
+    line-height: 2;
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+.job__list {
+  background-color: var(--bg-color);
+  margin-inline: calc(50% - 50cqi);
+  padding-inline: calc(50cqi - 50%);
+  padding-block: rem(50);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(10);
+  margin-top: rem(50);
+
+  @include mq('md') {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: rem(100);
+  }
+}
+
+.job__item {
+  height: 100%;
+  background-color: var(--white);
+  border: 1px solid var(--main-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.job__item-header {
+  background-color: var(--main-color);
+  padding-block: rem(12.75) rem(13.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(3);
+
+  @include mq('md') {
+    padding-block: rem(15.75) rem(16.25);
+  }
+}
+
+.job__category {
+  color: var(--white);
+  text-align: center;
+  font-family: var(--font-family-second);
+  font-size: rem(12);
+  font-weight: var(--font-weight-light);
+  line-height: 1;
+  letter-spacing: calc(1.2 / 12 * 1em);
+}
+
+.job__subtitle {
+  color: var(--white);
+  text-align: center;
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+
+  @include mq('md') {
+    line-height: 1.71429;
+  }
+}
+
+.job__role-list {
+  height: 100%;
+  padding-inline: rem(20);
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: rem(10);
+  }
+
+  @include mq('md') {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.job__role {
+  color: var(--main-color);
+  font-size: rem(13);
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.53846;
+  padding-block: rem(10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 767px) {
+    width: calc(50% - rem(10));
+  }
+
+  @include mq('md') {
+    font-size: rem(14);
+    line-height: 1.1;
+    padding-block: rem(15);
+    padding-inline: clamp(5px, calc(5px + 20 * var(--fluid-basis)), 25px);
+  }
+}
+
+.job__role:not(:last-child) {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.job__role-list .job__role:nth-child(odd):last-child {
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.job__role--sub {
+  padding-block: rem(7);
+}
+
+.job__role-sub {
+  color: var(--main-color);
+  text-align: center;
+  font-size: rem(10);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+
+  @include mq('md') {
+    margin-top: rem(5);
+  }
+}

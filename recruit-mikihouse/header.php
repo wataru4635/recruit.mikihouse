@@ -5,7 +5,8 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-  <link type="image/x-icon" rel="shortcut icon" href="https://www.mikihouse.co.jp/cdn/shop/t/29/assets/_src.44976065.favicon.ico?v=69320511775598620361689246606">
+  <link type="image/x-icon" rel="shortcut icon"
+    href="https://www.mikihouse.co.jp/cdn/shop/t/29/assets/_src.44976065.favicon.ico?v=69320511775598620361689246606">
   <?php wp_head(); ?>
 </head>
 
@@ -15,17 +16,18 @@
 
   <header class="header">
     <div class="header__inner">
-    <a href="<?php echo HOME_URL; ?>" class="header__logo-link">
+      <a href="<?php echo HOME_URL; ?>" class="header__logo-link">
         <?php
           $logo_tag = (is_front_page() || is_home()) ? 'h1' : 'div';
         ?>
         <<?php echo $logo_tag; ?> class="header__logo">
-          <img src="<?php echo IMAGEPATH; ?>/common/logo.svg" alt="ミキハウスのロゴ" class="header__logo-img" width="171.64" height="30">
-            <p class="header__logo-text">新卒採用2027</p>
+          <img src="<?php echo IMAGEPATH; ?>/common/logo.svg" alt="ミキハウスのロゴ" class="header__logo-img" width="171.64"
+            height="30">
+          <p class="header__logo-text">新卒採用2027</p>
         </<?php echo $logo_tag; ?>>
       </a>
       <div class="header__menu">
-      <nav class="header__nav">
+        <nav class="header__nav">
           <?php
             // 現在のページID
             $current_id = get_queried_object_id();
@@ -51,46 +53,50 @@
             <li class="header__nav-item">
               <a href="<?php echo ABOUT_URL; ?>" class="header__nav-link<?php echo $is_about ? ' is-current' : ''; ?>">
                 <span class="header__nav-label">ミキハウスを知る</span>
-                <span class="header__nav-sub">ABOUT</span>
+                <span class="header__nav-sub">about</span>
               </a>
             </li>
 
             <li class="header__nav-item">
               <a href="<?php echo JOB_URL; ?>" class="header__nav-link<?php echo $is_job ? ' is-current' : ''; ?>">
                 <span class="header__nav-label">ミキハウスの仕事</span>
-                <span class="header__nav-sub">WORK</span>
+                <span class="header__nav-sub">job</span>
               </a>
             </li>
 
             <li class="header__nav-item">
-              <a href="<?php echo PERSON_URL; ?>" class="header__nav-link<?php echo $is_person ? ' is-current' : ''; ?>">
+              <a href="<?php echo PERSON_URL; ?>"
+                class="header__nav-link<?php echo $is_person ? ' is-current' : ''; ?>">
                 <span class="header__nav-label">ミキハウスの人</span>
-                <span class="header__nav-sub">PERSON</span>
+                <span class="header__nav-sub">person</span>
               </a>
             </li>
 
             <li class="header__nav-item">
-              <a href="<?php echo RECRUIT_URL; ?>" class="header__nav-link<?php echo $is_recruit ? ' is-current' : ''; ?>">
+              <a href="<?php echo RECRUITMENT_URL; ?>"
+                class="header__nav-link<?php echo $is_recruit ? ' is-current' : ''; ?>">
                 <span class="header__nav-label">採用情報</span>
-                <span class="header__nav-sub">RECRUITMENT</span>
+                <span class="header__nav-sub">recruitment</span>
               </a>
             </li>
 
             <li class="header__nav-item">
-              <a href="<?php echo INTERNSHIP_URL; ?>" class="header__nav-link<?php echo $is_internship ? ' is-current' : ''; ?>">
+              <a href="<?php echo INTERNSHIP_URL; ?>"
+                class="header__nav-link<?php echo $is_internship ? ' is-current' : ''; ?>">
                 <span class="header__nav-label">インターンシップ</span>
-                <span class="header__nav-sub">INTERNSHIP</span>
+                <span class="header__nav-sub">internship</span>
               </a>
             </li>
           </ul>
         </nav>
-      <div class="header__entry">
-        <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="header__entry-link" target="_blank" rel="noopener noreferrer">
-          <span class="header__entry-label">今すぐ！エントリー</span>
-          <span class="header__entry-text">entry</span>
-        </a>
+        <div class="header__entry">
+          <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027"
+            class="header__entry-link" target="_blank" rel="noopener noreferrer">
+            <span class="header__entry-label">今すぐ！エントリー</span>
+            <span class="header__entry-text">entry</span>
+          </a>
+        </div>
       </div>
-    </div>
     </div>
   </header>
 
@@ -100,4 +106,46 @@
       <span></span>
       <span></span>
     </button>
+  </div>
+
+  <!---------  drawer  --------->
+  <div class="header__drawer js-drawer">
+    <div class="header__drawer-header">
+      <img src="<?php echo IMAGEPATH; ?>/common/logo-white.svg" alt="ミキハウスのロゴ" class="header__drawer-header-img"
+      width="171.64" height="30">
+      <p class="header__drawer-header-text">新卒採用2027</p>
+    </div>
+    <div class="header__drawer-body">
+      <nav class="header__drawer-nav">
+        <ul class="header__drawer-items">
+          <li class="header__drawer-item">
+            <a href="#about" class="header__drawer-item-link"><span
+                class="header__drawer-item-label">ミキハウスを知る</span><span class="header__drawer-item-sub">about</span></a>
+          </li>
+          <li class="header__drawer-item">
+            <a href="#feature" class="header__drawer-item-link"><span
+                class="header__drawer-item-label">ミキハウスの仕事</span><span class="header__drawer-item-sub">job</span></a>
+          </li>
+          <li class="header__drawer-item">
+            <a href="#scene" class="header__drawer-item-link"><span
+                class="header__drawer-item-label">ミキハウスの人</span><span class="header__drawer-item-sub">person</span></a>
+          </li>
+          <li class="header__drawer-item">
+            <a href="#faq" class="header__drawer-item-link"><span class="header__drawer-item-label">採用情報</span><span
+                class="header__drawer-item-sub">recruitment</span></a>
+          </li>
+          <li class="header__drawer-item">
+            <a href="#faq" class="header__drawer-item-link"><span class="header__drawer-item-label">インターンシップ</span><span
+                class="header__drawer-item-sub">internship</span></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__drawer-entry-btn">
+        <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027"
+          class="header__drawer-entry-btn-link" target="_blank" rel="noopener noreferrer">
+          <span class="header__drawer-entry-btn-label"><span class="header__drawer-entry-btn-label-ls">今</span>すぐ! エントリー</span>
+          <span class="header__drawer-entry-btn-text">entry</span>
+        </a>
+      </div>
+    </div>
   </div>
