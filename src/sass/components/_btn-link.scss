@@ -11,9 +11,11 @@
   position: relative;
   border: 1px solid var(--main-color);
   transition: background-color var(--duration-base) ease, color var(--duration-base) ease;
+  padding-inline: rem(30);
   @include mq('md') {
   font-size: rem(16);
   padding-block: rem(12);
+  
   }
   @media (any-hover: hover) {
   &:hover {
@@ -26,6 +28,10 @@
     right: rem(-27);
   }
   }
+}
+
+.btn-link.btn-link--long {
+    min-width: rem(240);
 }
 
 .btn-link::after {

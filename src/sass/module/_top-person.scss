@@ -184,6 +184,7 @@ padding-block: rem(8);
 border: 1px solid var(--main-color);
 transition: background-color var(--duration-base) ease;
 min-width: rem(220);
+max-width: 90%;
 border-radius: 0 12.56px 0 0;
 @include mq('md') {
   min-width: rem(300);

@@ -31,7 +31,35 @@ function enqueue_custom_scripts() {
     $get_ver = function($file_path) {
         return file_exists($file_path) ? filemtime($file_path) : wp_get_theme()->get('Version');
     };
-    
+        // トップページ専用JS・CSS
+    if (is_front_page()) {
+        // Swiper JS
+        wp_enqueue_script(
+            'swiper-js',
+            'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',
+            [],
+            '8.0.0',
+            true
+        );
+        
+        // Swiper CSS
+        wp_enqueue_style(
+            'swiper-css',
+            'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
+            [],
+            '8.0.0'
+        );
+
+        // topページ専用JS
+        $top_file = '/js/top.js';
+        wp_enqueue_script(
+            'top-script',
+            "{$asset_uri}{$top_file}",
+            ['swiper-js'],
+            $get_ver("{$theme_path}/assets{$top_file}"),
+            true
+        );
+    }
     if (is_page('about')) {
         // aboutページ専用JS
         $about_file = '/js/about.js';
@@ -40,6 +68,39 @@ function enqueue_custom_scripts() {
             "{$asset_uri}{$about_file}",
             [],
             $get_ver("{$theme_path}/assets{$about_file}"),
+            true
+        );
+    }
+
+    if (is_page('recruitment')) {
+        // recruitmentページ専用JS
+        $recruitment_file = '/js/recruitment.js';
+        wp_enqueue_script(
+            'recruitment-script',
+            "{$asset_uri}{$recruitment_file}",
+            [],
+            $get_ver("{$theme_path}/assets{$recruitment_file}"),
+            true
+        );
+    }
+
+    if (is_page('person')) {
+        // MixItUp ライブラリを追加
+        wp_enqueue_script(
+            'mixitup',
+            'https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js',
+            [],
+            '3.0.0',
+            true
+        );
+        
+        // personページ専用JS
+        $employees_file = '/js/employees.js';
+        wp_enqueue_script(
+            'employees-script',
+            "{$asset_uri}{$employees_file}",
+            ['mixitup'],
+            $get_ver("{$theme_path}/assets{$employees_file}"),
             true
         );
     }

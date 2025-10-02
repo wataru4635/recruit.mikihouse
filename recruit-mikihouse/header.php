@@ -29,20 +29,16 @@
       <div class="header__menu">
         <nav class="header__nav">
           <?php
-            // 現在のページID
             $current_id = get_queried_object_id();
 
-            // personページの固定ページID取得（存在しない場合はnull）
             $person_page = get_page_by_path('person');
             $person_id = $person_page ? $person_page->ID : null;
 
-            // 各ページ判定
             $is_about      = is_page('about');
             $is_job        = is_page('job');
-            $is_recruit    = is_page('recruit');
+            $is_recruit    = is_page('recruitment');
             $is_internship = is_page('internship');
 
-            // personページまたはその子ページの場合にtrue
             $is_person = false;
             if ($person_id) {
               $is_person = is_page($person_id) || in_array($person_id, get_post_ancestors($current_id));
@@ -119,23 +115,23 @@
       <nav class="header__drawer-nav">
         <ul class="header__drawer-items">
           <li class="header__drawer-item">
-            <a href="#about" class="header__drawer-item-link"><span
+            <a href="<?php echo ABOUT_URL; ?>" class="header__drawer-item-link"><span
                 class="header__drawer-item-label">ミキハウスを知る</span><span class="header__drawer-item-sub">about</span></a>
           </li>
           <li class="header__drawer-item">
-            <a href="#feature" class="header__drawer-item-link"><span
+            <a href="<?php echo JOB_URL; ?>" class="header__drawer-item-link"><span
                 class="header__drawer-item-label">ミキハウスの仕事</span><span class="header__drawer-item-sub">job</span></a>
           </li>
           <li class="header__drawer-item">
-            <a href="#scene" class="header__drawer-item-link"><span
+            <a href="<?php echo PERSON_URL; ?>" class="header__drawer-item-link"><span
                 class="header__drawer-item-label">ミキハウスの人</span><span class="header__drawer-item-sub">person</span></a>
           </li>
           <li class="header__drawer-item">
-            <a href="#faq" class="header__drawer-item-link"><span class="header__drawer-item-label">採用情報</span><span
+            <a href="<?php echo RECRUITMENT_URL; ?>" class="header__drawer-item-link"><span class="header__drawer-item-label">採用情報</span><span
                 class="header__drawer-item-sub">recruitment</span></a>
           </li>
           <li class="header__drawer-item">
-            <a href="#faq" class="header__drawer-item-link"><span class="header__drawer-item-label">インターンシップ</span><span
+            <a href="<?php echo INTERNSHIP_URL; ?>" class="header__drawer-item-link"><span class="header__drawer-item-label">インターンシップ</span><span
                 class="header__drawer-item-sub">internship</span></a>
           </li>
         </ul>

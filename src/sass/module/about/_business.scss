@@ -33,6 +33,16 @@ gap: rem(50) rem(30);
 }
 }
 
+.business__item--01 {
+@include mq('md') {
+  grid-column: 1 / span 2;
+
+  & .business__img {
+    aspect-ratio: 1088 / 220;
+  }
+}
+}
+
 .business__link {
 display: block;
 position: relative;

@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.talk {
+margin-block: rem(80);
+padding-block: rem(80);
+background-color: var(--bg-color);
+@include mq('md') {
+  margin-block: rem(150) rem(180);
+  padding-block: rem(120);
+}
+}
+
+.talk__inner {
+
+}
+
+.sub-inner {
+
+}
+
+.talk__header.sub-section-header02__title {
+  @media (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      left: 50%;
+      translate: -50% 0;
+    }
+  }
+}
+
+.talk__lead {
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 2.07143;
+  margin-top: rem(30);
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: 2;
+  }
+}
+
+.talk__frame {
+  margin-top: rem(50);
+  border: 8px solid var(--line-color);
+  padding: rem(30);
+  aspect-ratio: 215 / 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mq('md') {
+    margin-top: rem(30);
+    padding: rem(50);
+    aspect-ratio: 1000 / 1076;
+  }
+}
+
+.talk__frame-text {
+  color: #FFF;
+font-family: YuGothic;
+font-size: rem(9);
+font-weight: 700;
+background: #A9A9A9;
+padding: 3px 10px;
+min-width: 120px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+@include mq('md') {
+  font-size: rem(12);
+}
+}
+

@@ -70,6 +70,9 @@ align-items: center;
 .header__logo-img {
 height: auto;
 object-fit: contain;
+@media (min-width: 768px) and (max-width: 1329px) {
+width: rem(171.64);
+}
 }
 
 :root:not(:lang(ja)) .header__logo-img {
@@ -124,7 +127,7 @@ object-fit: contain;
 height: 100%;
 display: flex;
 align-items: center;
-gap: myClamp(20, 41, 768, 1440);
+gap: clamp(15px, calc(15px + 26 * var(--fluid-basis)), 41px);
 }
 
 .header__nav-item {

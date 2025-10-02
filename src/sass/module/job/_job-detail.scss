@@ -1,28 +1,22 @@
-@use "global" as *;
+@use "global"as *;
 
 .job-detail {
-margin-top: rem(80);
-container-type: inline-size;
-@include mq('md') {
-margin-top: rem(150);
-}
+  margin-top: rem(80);
+  container-type: inline-size;
+
+  @include mq('md') {
+    margin-top: rem(150);
+  }
 }
 
 .job-detail__inner {
-display: flex;
-flex-direction: column;
-gap: rem(80);
-@include mq('md') {
-gap: rem(150);
-}
-}
+  display: flex;
+  flex-direction: column;
+  gap: rem(80);
 
-.sub-inner {
-
-}
-
-.job-detail__block {
-
+  @include mq('md') {
+    gap: rem(150);
+  }
 }
 
 .job-detail__header {
@@ -32,6 +26,7 @@ gap: rem(150);
   display: flex;
   align-items: flex-end;
   gap: rem(20);
+
   @include mq('md') {
     padding-top: rem(50);
     gap: rem(30);
@@ -46,13 +41,11 @@ gap: rem(150);
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(
-    to right,
-    var(--main-color) 0px,
-    var(--main-color) 100px,
-    var(--line-color) 100px,
-    var(--line-color) 100%
-  );
+  background: linear-gradient(to right,
+      var(--main-color) 0px,
+      var(--main-color) 100px,
+      var(--line-color) 100px,
+      var(--line-color) 100%);
 }
 
 .job-detail__category {
@@ -60,9 +53,12 @@ gap: rem(150);
   font-style: normal;
   font-weight: var(--font-weight-bold);
   line-height: 1.40909;
+
   @include mq('md') {
     font-size: rem(32);
     line-height: 1;
+    padding-bottom: rem(5);
+    transform: translateY(rem(5));
   }
 }
 
@@ -73,6 +69,7 @@ gap: rem(150);
   display: flex;
   align-items: center;
   gap: rem(4);
+
   @include mq('md') {
     font-size: rem(24);
     line-height: 1;
@@ -84,11 +81,12 @@ gap: rem(150);
   content: "";
   display: inline-block;
   width: 10px;
-height: 1px;
-background-color: var(--main-color);
-@include mq('md') {
-  width: 15px;
-}
+  height: 1px;
+  background-color: var(--main-color);
+
+  @include mq('md') {
+    width: 15px;
+  }
 }
 
 .job-detail__lead {
@@ -97,6 +95,7 @@ background-color: var(--main-color);
   font-weight: var(--font-weight-medium);
   line-height: 2.07143;
   margin-top: rem(40);
+
   @include mq('md') {
     font-size: rem(16);
     line-height: 2;
@@ -108,57 +107,106 @@ background-color: var(--main-color);
   background: var(--bg-color);
   padding: rem(50) rem(30);
   display: grid;
+  margin-top: rem(40);
+
   @media (max-width: 767px) {
     margin-inline: calc(50% - 50cqi);
-  padding-inline: calc(50cqi - 50%);
-  grid-template-areas: "name" "info" "img" "text" "btn";
+    padding-inline: calc(50cqi - 50%);
+    grid-template-areas: "name""info""img""text""btn";
   }
+
   @include mq('md') {
     padding: rem(50) rem(70);
+    grid-template-columns: 708fr 208fr;
+    gap: rem(44);
+    margin-top: rem(60);
   }
 }
 
 .job-detail__profile {
-@media (max-width: 767px) {
-display: contents;
-}
+  @media (max-width: 767px) {
+    display: contents;
+  }
 }
 
 .job-detail__name {
-@media (max-width: 767px) {
-grid-area: name;
-}
+  font-size: rem(20);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.55;
+
+  @media (max-width: 767px) {
+    grid-area: name;
+  }
+
+  @include mq('md') {
+    font-size: rem(24);
+    line-height: 1.8;
+  }
 }
 
 .job-detail__info {
-@media (max-width: 767px) {
-grid-area: info;
-}
+  font-size: rem(14);
+  font-weight: var(--font-weight-medium);
+  line-height: 2.07143;
+
+  @media (max-width: 767px) {
+    grid-area: info;
+  }
+
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: 1.8;
+  }
 }
 
 .job-detail__text {
-@media (max-width: 767px) {
-grid-area: text;
-}
+  font-size: rem(14);
+  font-weight: var(--font-weight-medium);
+  line-height: 2.07143;
+  margin-top: rem(20);
+
+  @media (max-width: 767px) {
+    grid-area: text;
+  }
+
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: 2;
+    margin-top: rem(25);
+  }
 }
 
 .job-detail__btn {
-@media (max-width: 767px) {
-grid-area: btn;
-}
-}
+  margin-top: rem(25);
 
-.btn-link {
-
+  @media (max-width: 767px) {
+    grid-area: btn;
+    margin-inline: auto;
+  }
 }
 
 .job-detail__img-wrap {
-@media (max-width: 767px) {
-grid-area: img;
-}
+  border-radius: 15px;
+
+  @media (max-width: 767px) {
+    grid-area: img;
+    width: 66.034%;
+    margin-inline: auto;
+    margin-top: rem(20);
+  }
+
+  @include mq('md') {
+    border-radius: 25px;
+  }
 }
 
-.job-detail__image {
+.job-detail__img {
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 208 / 314;
+  border-radius: 15px;
 
+  @include mq('md') {
+    border-radius: 25px;
+  }
 }
-

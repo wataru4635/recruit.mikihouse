@@ -8,9 +8,53 @@
 
   <section class="fv">
     <div class="fv__inner">
-      <div class="fv__video-wrap">
-        <video src="<?php echo VIDEOPATH; ?>/fv.mp4" class="fv__video" autoplay muted loop playsinline></video>
+      <div class="fv__swiper swiper js-fv-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <picture>
+                <source srcset="<?php echo IMAGEPATH; ?>/top/fv01-sp.webp" media="(max-width: 767px)"
+                  type="image/webp" width="375" height="440">
+                <img src="<?php echo IMAGEPATH; ?>/top/fv01.webp" alt="" width="1211" height="690" loading="eager"
+                  decoding="async" class="fv__slide-img">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <picture>
+                <source srcset="<?php echo IMAGEPATH; ?>/top/fv02-sp.webp" media="(max-width: 767px)"
+                  type="image/webp" width="375" height="440">
+                <img src="<?php echo IMAGEPATH; ?>/top/fv02.webp" alt="" width="1211" height="690" loading="lazy"
+                  decoding="async" class="fv__slide-img">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img">
+                <picture>
+                <source srcset="<?php echo IMAGEPATH; ?>/top/fv03-sp.webp" media="(max-width: 767px)"
+                  type="image/webp" width="375" height="440">
+                <img src="<?php echo IMAGEPATH; ?>/top/fv03.webp" alt="" width="1211" height="690" loading="lazy"
+                  decoding="async" class="fv__slide-img">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <picture>
+                <source srcset="<?php echo IMAGEPATH; ?>/top/fv04-sp.webp" media="(max-width: 767px)"
+                  type="image/webp" width="375" height="440">
+                <img src="<?php echo IMAGEPATH; ?>/top/fv04.webp" alt="" width="1211" height="690" loading="lazy"
+                  decoding="async" class="fv__slide-img">
+              </picture>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- <div class="fv__video-wrap">
+        <video src="<?php echo VIDEOPATH; ?>/fv.mp4" class="fv__video" autoplay muted loop playsinline></video>
+      </div> -->
       <div class="fv__space"></div>
       <div class="fv__content">
         <div class="fv__vision-label">our&nbsp;vision</div>
@@ -29,7 +73,8 @@
         </h2>
         <h2 class="fv__title fv__title--other fv__title--other-en" lang="en">
           <span class="hl-line">A luxury brand from Japan takes on</span><br>
-          <span class="hl-line">the challenge of bringing smiles to the</span><br class="u-mobile"> <span class="hl-line">faces of children around the world.</span>
+          <span class="hl-line">the challenge of bringing smiles to the</span><br class="u-mobile"> <span
+            class="hl-line">faces of children around the world.</span>
         </h2>
       </div>
       <div class="scroll-down">
@@ -176,7 +221,7 @@ $news_q = new WP_Query([
               ものづくり、営業・マーケティング、人事・管理から店舗運営、マーケティング、海外事業、DX推進まで──一着の誕生から世界へ届く瞬間までを担う多彩なフィールドで、あなたのキャリアアップを実現できます。
             </p>
             <div class="top-about__btn">
-              <a href="#" class="btn-link">詳しくはこちら</a>
+              <a href="<?php echo JOB_URL; ?>" class="btn-link">詳しくはこちら</a>
             </div>
           </div>
         </li>
@@ -202,17 +247,17 @@ $news_q = new WP_Query([
         </div>
         <p class="top-person__lead">国籍や年齢や入社年次に関係なく、お互いの意見を尊重し合い、子どもの笑顔を広げるために一緒に成長していく。そんな想いを共有できるのがミキハウスの仲間です。</p>
         <div class="top-person__btn">
-          <a href="#" class="btn-link">詳しくはこちら</a>
+          <a href="<?php echo PERSON_URL; ?>" class="btn-link">詳しくはこちら</a>
         </div>
       </div>
       <ul class="top-person__list js-top-person-list">
         <li class="top-person__item top-person__item--01">
-          <a href="#" class="top-person__link">
+          <a href="<?php echo PERSON_SN_2009_SALES02; ?> " class="top-person__link">
             <div class="top-person__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/person/person_sn-2009a-sp.webp" media="(max-width: 767px)"
                   type="image/webp" width="280" height="400">
-                <img src="<?php echo IMAGEPATH; ?>/person/person_sn-2009a.webp" class="top-person__img"
+                <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales02-1.webp" class="top-person__img"
                   alt="スーツ姿の男性社員のポートレート" width="357" height="500" loading="lazy">
               </picture>
             </div>
@@ -226,12 +271,12 @@ $news_q = new WP_Query([
         </li>
 
         <li class="top-person__item top-person__item--02">
-          <a href="#" class="top-person__link">
+          <a href="<?php echo PERSON_SN_2009_SALES04; ?> " class="top-person__link">
             <div class="top-person__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/person/person_sn-2009b-sp.webp" media="(max-width: 767px)"
                   type="image/webp" width="280" height="400">
-                <img src="<?php echo IMAGEPATH; ?>/person/person_sn-2009b.webp" class="top-person__img"
+                <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales04.webp" class="top-person__img"
                   alt="黄色と水色のシャツを着た女性社員のポートレート" width="357" height="500" loading="lazy">
               </picture>
             </div>
@@ -245,12 +290,12 @@ $news_q = new WP_Query([
         </li>
 
         <li class="top-person__item top-person__item--03">
-          <a href="#" class="top-person__link">
+          <a href="<?php echo PERSON_SN_2009_SALES05; ?> " class="top-person__link">
             <div class="top-person__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/person/person_sn-2009c-sp.webp" media="(max-width: 767px)"
                   type="image/webp" width="280" height="400">
-                <img src="<?php echo IMAGEPATH; ?>/person/person_sn-2009c.webp" class="top-person__img"
+                <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales05.webp" class="top-person__img"
                   alt="ネイビーのジャケットを着た男性社員のポートレート" width="357" height="500" loading="lazy">
               </picture>
             </div>
@@ -275,7 +320,7 @@ $news_q = new WP_Query([
       </div>
       <ul class="top-recruit__list">
         <li class="top-recruit__item js-clip-item">
-          <a href="#" class="top-recruit__link">
+          <a href="<?php echo RECRUITMENT_URL; ?>#recruit-info" class="top-recruit__link">
             <div class="top-recruit__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/top/top-recruit-img01-sp.webp" media="(max-width: 767px)"
@@ -288,7 +333,7 @@ $news_q = new WP_Query([
           </a>
         </li>
         <li class="top-recruit__item js-clip-item --delay-1">
-          <a href="#" class="top-recruit__link">
+          <a href="<?php echo RECRUITMENT_URL; ?>#faq" class="top-recruit__link">
             <div class="top-recruit__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/top/top-recruit-img02-sp.webp" media="(max-width: 767px)"
@@ -301,7 +346,7 @@ $news_q = new WP_Query([
           </a>
         </li>
         <li class="top-recruit__item js-clip-item --delay-2">
-          <a href="#" class="top-recruit__link">
+          <a href="<?php echo RECRUITMENT_URL; ?>#process" class="top-recruit__link">
             <div class="top-recruit__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/top/top-recruit-img03-sp.webp" media="(max-width: 767px)"

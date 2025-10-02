@@ -3,6 +3,10 @@
 .sub-breadcrumbs {
  padding-block: rem(10);
  border-bottom: 1px solid var(--line-color);
+ @media (max-width: 767px) {
+  overflow-x: auto;
+  margin-right: calc(50% - 50vw);
+ }
 }
 
 .sub-breadcrumbs__inner.inner {

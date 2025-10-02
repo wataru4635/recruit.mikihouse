@@ -20,22 +20,22 @@
   }
 }
 
-.fv__video-wrap {
-  height: auto;
-}
+// .fv__video-wrap {
+//   height: auto;
+// }
 
-.fv__video {
-  height: auto;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0 0 0 20px;
-  aspect-ratio: 375 / 520;
+// .fv__video {
+//   height: auto;
+//   width: 100%;
+//   object-fit: cover;
+//   border-radius: 0 0 0 20px;
+//   aspect-ratio: 375 / 520;
 
-  @include mq('md') {
-    border-radius: 0 0 50px 0;
-    aspect-ratio: 1211 / 690;
-  }
-}
+//   @include mq('md') {
+//     border-radius: 0 0 50px 0;
+//     aspect-ratio: 1211 / 690;
+//   }
+// }
 
 .fv__content {
   position: absolute;
@@ -45,6 +45,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  z-index: 1;
 
   @include mq('md') {
     top: 69.5%;
@@ -126,10 +127,12 @@
     padding-inline: 10px;
   }
 }
+
 /* デフォルトは全部非表示 */
 .fv__title {
   display: none;
 }
+
 /* 日本語のとき */
 :root:lang(ja) .fv__title.fv__title--jp {
   display: flex;
@@ -138,6 +141,7 @@
 /* 英語のとき */
 :root:lang(en) .fv__title.fv__title--other[lang="en"] {
   display: inline;
+
   @media (max-width: 767px) {
     font-size: calc(18 * 100 / var(--cq-ref-mobile) * 1cqw);
   }
@@ -275,4 +279,46 @@
 .scroll-down__icon-img {
   height: auto;
   object-fit: contain;
+}
+
+.fv__swiper {
+  z-index: 0;
+}
+
+.fv__swiper,
+.fv__swiper .swiper-img,
+.fv__swiper .swiper-img img {
+  height: auto;
+  width: 100%;
+  border-radius: 0 0 0 20px;
+  @include mq('md') {
+    border-radius: 0 0 50px 0;
+  }
+}
+
+.fv__swiper .swiper-img img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 375 / 440;
+  @include mq('md') {
+    aspect-ratio: 1211 / 690;
+  }
+  
+}
+
+.fv__swiper .swiper-slide.swiper-slide-active .swiper-img,
+.fv__swiper .swiper-slide.swiper-slide-duplicate-active .swiper-img,
+.fv__swiper .swiper-slide.swiper-slide-prev .swiper-img {
+  animation: scale 8s linear 0s normal both;
+  transform-origin: left bottom;
+}
+
+@keyframes scale {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.05);
+  }
 }

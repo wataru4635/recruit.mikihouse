@@ -4,31 +4,22 @@
 # ヘッダー、ハンバーガーメニュー処理全体
 =============================================== */
 document.addEventListener("DOMContentLoaded", () => {
-  // 定数：クラス名
   const BODY_CLASS = "body-hidden";
   const OPEN_CLASS = "is-open";
-
-  // 要素取得
   const hamburger = document.querySelector(".js-hamburger");
   const drawer = document.querySelector(".js-drawer");
   const mediaQuery = window.matchMedia("(min-width: 768px)");
-
-  // ドロワーメニューを開く
   function openDrawer() {
     document.body.classList.add(BODY_CLASS);
     drawer.classList.add(OPEN_CLASS);
     hamburger.classList.add(OPEN_CLASS);
   }
-
-  // ドロワーメニューを閉じる
   function closeDrawer() {
     if (!document.body.classList.contains(BODY_CLASS)) return;
     document.body.classList.remove(BODY_CLASS);
     drawer.classList.remove(OPEN_CLASS);
     hamburger.classList.remove(OPEN_CLASS);
   }
-
-  // ハンバーガークリックでメニューをトグル
   function toggleDrawer(event) {
     event.preventDefault();
     const isOpen = drawer.classList.contains(OPEN_CLASS);
@@ -38,18 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
       openDrawer();
     }
   }
-
-  // ハンバーガーメニュークリックイベント登録
   hamburger.addEventListener("click", toggleDrawer);
-
-  // メニュー内リンククリックでメニューを閉じる
   drawer.addEventListener("click", event => {
     if (event.target.matches("a[href]")) {
       closeDrawer();
     }
   });
-
-  // リサイズ時：メニュー閉じる処理
   let resizeTimeout;
   window.addEventListener("resize", () => {
     clearTimeout(resizeTimeout);
@@ -57,8 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mediaQuery.matches) closeDrawer();
     }, 150);
   });
-
-  // ブレークポイント変更時にメニュー閉じる
   mediaQuery.addEventListener("change", () => {
     if (mediaQuery.matches) closeDrawer();
   });
@@ -72,8 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   var _PC_MEDIA$addEventLis;
   const header = document.querySelector('.header');
   const floatEntries = document.querySelectorAll('.js-float-entry');
-  const THRESHOLD = 50; // ヘッダーの発火位置(px)
-  const SCROLL_STOP_DELAY = 500; // スクロール停止判定(ms)
+  const THRESHOLD = 50;
+  const SCROLL_STOP_DELAY = 500;
   const PC_MEDIA = window.matchMedia('(min-width: 768px)');
 
   /* -------------------------------
@@ -86,11 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     header.classList.toggle('is-scroll', y > THRESHOLD);
     ticking = false;
   };
-
-  // 初期状態反映（中間位置スタートも想定）
   applyHeader();
-
-  // rAF でスクロールイベント間引き
   window.addEventListener('scroll', () => {
     if (!ticking) {
       ticking = true;
@@ -105,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
   ------------------------------- */
   let stopTimer = null;
   const addFloatScrollClass = () => {
-    // PCのみ有効
     if (!PC_MEDIA.matches) return;
     floatEntries.forEach(el => el.classList.add('is-scroll'));
   };
@@ -113,39 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
     floatEntries.forEach(el => el.classList.remove('is-scroll'));
   };
   const onScrollForFloat = () => {
-    // PC以外は何もしない（万一付いていたら外す）
     if (!PC_MEDIA.matches) {
       removeFloatScrollClass();
       return;
     }
-
-    // スクロール発生 → 付与
     addFloatScrollClass();
-
-    // 停止判定のデバウンス
     if (stopTimer) clearTimeout(stopTimer);
     stopTimer = setTimeout(() => {
-      // スクロールが止まったら外す
       removeFloatScrollClass();
     }, SCROLL_STOP_DELAY);
   };
-
-  // スクロール時のハンドラ（ヘッダーと共存）
   window.addEventListener('scroll', onScrollForFloat, {
     passive: true
   });
-
-  // 画面幅が切り替わった時の後始末（SP→PC/PC→SP）
   const handleMediaChange = () => {
     if (!PC_MEDIA.matches) {
-      // SPでは常に外しておく
       removeFloatScrollClass();
     }
-    // PCに切り替わった直後は何もしない（スクロール開始で付与）
   };
-
   (_PC_MEDIA$addEventLis = PC_MEDIA.addEventListener) === null || _PC_MEDIA$addEventLis === void 0 ? void 0 : _PC_MEDIA$addEventLis.call(PC_MEDIA, 'change', handleMediaChange);
-  // Safari等の古い実装向けフォールバック
   if (!PC_MEDIA.addEventListener) {
     PC_MEDIA.addListener(handleMediaChange);
   }
@@ -154,111 +118,89 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ===============================================
 # アニメーション
 // =============================================== */
-function observeElements(selector) {
-  let activeClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "is-active";
-  let options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  let keepActive = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
-  const elements = document.querySelectorAll(selector);
-  function handleIntersect(entries, observer) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(activeClass);
-
-        // keepActive が false の場合は一度だけ発火
-        if (!keepActive) {
-          observer.unobserve(entry.target);
+document.addEventListener('DOMContentLoaded', () => {
+  function observeElements(selector) {
+    let activeClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "is-active";
+    let options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    let keepActive = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+    const elements = document.querySelectorAll(selector);
+    function handleIntersect(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(activeClass);
+          if (!keepActive) {
+            observer.unobserve(entry.target);
+          }
+        } else {
+          if (!keepActive) {
+            entry.target.classList.remove(activeClass);
+          }
         }
-      } else {
-        // keepActive が true の場合は外さない
-        if (!keepActive) {
-          entry.target.classList.remove(activeClass);
-        }
-      }
-    });
+      });
+    }
+    const observer = new IntersectionObserver(handleIntersect, options);
+    elements.forEach(element => observer.observe(element));
   }
-  const observer = new IntersectionObserver(handleIntersect, options);
-  elements.forEach(element => observer.observe(element));
-}
-
-// rootMargin をスマホ／PCで切り替える関数
-function getRootMargin(pcMargin, spMargin) {
-  return window.matchMedia("(min-width: 768px)").matches ? pcMargin : spMargin;
-}
-
-// 各要素に適用
-observeElements(".js-fade-in", "is-active", {
-  rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
-});
-observeElements(".js-fade-up", "is-active", {
-  rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -10% 0px")
-});
-observeElements(".js-clip-img", "is-active", {
-  rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -15% 0px")
-});
-observeElements(".js-scaleImg", "is-active", {
-  rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -5% 0px")
-});
-observeElements(".js-text-animate", "is-active", {
-  rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -15% 0px")
-});
-observeElements(".js-top-person-list", "is-active", {
-  rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -5% 0px")
-});
-observeElements(".js-clip-item", "is-active", {
-  rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
-});
-
-// keepActive = true の場合
-observeElements(".js-line-bg01", "is-active", {
-  rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -20% 0px")
-}, true);
-observeElements(".js-line-bg02", "is-active", {
-  rootMargin: getRootMargin("0px 0px -40% 0px", "0px 0px -25% 0px")
-}, true);
-observeElements(".js-line-bg03", "is-active", {
-  rootMargin: getRootMargin("0px 0px -40% 0px", "0px 0px -25% 0px")
-}, true);
-observeElements(".js-content-img", "is-active", {
-  rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
-});
-observeElements(".js-gallery-img", "is-active", {
-  rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
-});
-
-// =======================
-// 文字を1文字ずつ <span> に分割
-// =======================
-function wrapTextInSpans(selector) {
-  document.querySelectorAll(selector).forEach(element => {
-    const text = element.textContent;
-    element.setAttribute('aria-label', text);
-    element.setAttribute('role', 'text');
-    element.textContent = '';
-    [...text].forEach((char, index) => {
-      const span = document.createElement('span');
-      span.textContent = char;
-      span.style.setProperty('--index', index);
-      span.setAttribute('aria-hidden', 'true');
-      element.appendChild(span);
-    });
+  function getRootMargin(pcMargin, spMargin) {
+    return window.matchMedia("(min-width: 768px)").matches ? pcMargin : spMargin;
+  }
+  observeElements(".js-fade-in", "is-active", {
+    rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
   });
-}
-wrapTextInSpans(".js-text-split");
+  observeElements(".js-fade-up", "is-active", {
+    rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -10% 0px")
+  });
+  observeElements(".js-clip-img", "is-active", {
+    rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -15% 0px")
+  });
+  observeElements(".js-scaleImg", "is-active", {
+    rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -5% 0px")
+  });
+  observeElements(".js-text-animate", "is-active", {
+    rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -15% 0px")
+  });
+  observeElements(".js-top-person-list", "is-active", {
+    rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -5% 0px")
+  });
+  observeElements(".js-clip-item", "is-active", {
+    rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
+  });
+  observeElements(".js-line-bg01", "is-active", {
+    rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -20% 0px")
+  }, true);
+  observeElements(".js-line-bg02", "is-active", {
+    rootMargin: getRootMargin("0px 0px -40% 0px", "0px 0px -25% 0px")
+  }, true);
+  observeElements(".js-line-bg03", "is-active", {
+    rootMargin: getRootMargin("0px 0px -40% 0px", "0px 0px -25% 0px")
+  }, true);
+  observeElements(".js-content-img", "is-active", {
+    rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
+  });
+  observeElements(".js-gallery-img", "is-active", {
+    rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
+  });
+  observeElements(".js-job-list", "is-active", {
+    rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
+  });
 
-/* ===============================================
-# テキストをクリーンにする；翻訳用
-=============================================== */
-// translate-clean が付いている要素からは <br> を除いてテキストを取得
-function getTextForTranslate(el) {
-  if (!el) return "";
-  if (el.classList.contains("translate-clean")) {
-    const clone = el.cloneNode(true);
-    clone.querySelectorAll("br").forEach(br => br.remove());
-    return clone.innerText.trim();
+  // =======================
+  // 文字を1文字ずつ <span> に分割
+  // =======================
+  function wrapTextInSpans(selector) {
+    document.querySelectorAll(selector).forEach(element => {
+      const text = element.textContent;
+      element.setAttribute('aria-label', text);
+      element.setAttribute('role', 'text');
+      element.textContent = '';
+      [...text].forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.setProperty('--index', index);
+        span.setAttribute('aria-hidden', 'true');
+        element.appendChild(span);
+      });
+    });
   }
-  return el.innerText.trim();
-}
-
-// 複数の .translate-clean をまとめて処理
-const targets = document.querySelectorAll(".translate-clean");
-const textsForTranslate = Array.from(targets).map(el => getTextForTranslate(el));
+  wrapTextInSpans(".js-text-split");
+});

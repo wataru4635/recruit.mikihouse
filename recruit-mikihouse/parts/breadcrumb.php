@@ -10,6 +10,19 @@ if (!is_home() && !is_front_page()) :
       <?php
       // 固定ページ
       if (is_page()) :
+        // 親ページがある場合の処理
+        $parent_id = wp_get_post_parent_id(get_the_ID());
+        if ($parent_id) {
+          $parent_title = get_the_title($parent_id);
+          $parent_url = get_permalink($parent_id);
+        ?>
+          <li class="breadcrumb__item">
+            <a href="<?php echo esc_url($parent_url); ?>" class="breadcrumb__link">
+              <?php echo esc_html($parent_title); ?>
+            </a>
+          </li>
+        <?php
+        }
         ?>
         <li class="breadcrumb__item">
           <?php the_title(); ?>
@@ -81,6 +94,12 @@ if (!is_home() && !is_front_page()) :
         $term = get_queried_object();
       ?>
         <li class="breadcrumb__item"><?php echo esc_html($term->name); ?></li>
+
+      <?php
+      // 404ページ
+      elseif (is_404()) :
+      ?>
+        <li class="breadcrumb__item">404 Not Found</li>
       <?php endif; ?>
     </ul>
   </nav>

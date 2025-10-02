@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 /* ===============================================
   # YouTubeモーダル（複数動画対応）
   =============================================== */
@@ -209,3 +210,4 @@
       requestAnimationFrame(step);
     }
   })();
+});

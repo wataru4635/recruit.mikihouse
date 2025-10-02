@@ -1,0 +1,90 @@
+@use "global"as *;
+
+.not-found {
+  padding-block: rem(80);
+
+  @include mq('md') {
+    padding-block: rem(120);
+  }
+}
+
+.sub-inner.not-found__inner {
+  @media (max-width: 767px) {
+    padding-inline: 20px;
+  }
+}
+
+.not-found__title {
+  text-align: center;
+  font-size: rem(20);
+  font-weight: var(--font-weight-bold);
+
+  @include mq('md') {
+    font-size: rem(26);
+  }
+}
+
+.not-found__text {
+  text-align: center;
+  font-size: rem(14);
+  font-weight: var(--font-weight-regular);
+  margin-top: rem(20);
+  line-height: 1.8;
+
+  @include mq('md') {
+    font-size: rem(16);
+    margin-top: rem(40);
+  }
+}
+
+.not-found__button-wrap {
+  text-align: center;
+  margin-top: rem(40);
+
+  @include mq('md') {
+    margin-top: rem(60);
+  }
+}
+
+.not-found__button {
+  border: 1px solid var(--main-color);
+  padding: rem(10) rem(50);
+  background-color: var(--main-color);
+  color: var(--white);
+  font-size: rem(16);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+  transition: background-color var(--duration-base) ease, color var(--duration-base) ease;
+
+  @include mq('md') {
+    font-size: rem(18);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--white);
+      color: var(--main-color);
+    }
+  }
+}
+
+.sub-fv.sub-fv--not-found {
+  & .sub-fv__img-wrap {
+    aspect-ratio: none;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    & .sub-fv__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @include mq('md') {
+    height: 300px;
+  }
+}

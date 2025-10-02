@@ -12,6 +12,7 @@
   font-size: rem(12);
   font-weight: 700;
   line-height: 2;
+  white-space: nowrap;
 @media (min-width: 1440px) {
   font-size: clamp(12px, 12px + 1 * var(--fluid-basis-2), 13px);
 }

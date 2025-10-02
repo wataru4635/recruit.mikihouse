@@ -1,13 +1,14 @@
-@use "global" as *;
+@use "global"as *;
 
 .sub-fv {
-margin-top: rem(53);
-container-type: inline-size;
-height: auto;
-@include mq('md') {
-  margin-top: rem(95);
-  position: relative;
-}
+  margin-top: rem(53);
+  container-type: inline-size;
+  height: auto;
+
+  @include mq('md') {
+    margin-top: rem(95);
+    position: relative;
+  }
 }
 
 .sub-fv__content {
@@ -16,15 +17,16 @@ height: auto;
     padding-block: calc(35 * 100 / var(--cq-ref-mobile) * 1cqw) calc(42 * 100 / var(--cq-ref-mobile) * 1cqw);
     padding-inline: calc(20 * 100 / var(--cq-ref-mobile) * 1cqw);
   }
-@include mq('md') {
-  position: absolute;
-  top: 50%;
-  left: 23%;
-  translate: -50% -50%;
-  display: flex;
-  flex-direction: column;
-  gap: calc(10 * 100 / var(--cq-ref) * 1cqw);
-}
+
+  @include mq('md') {
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    translate: -50% -50%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(10 * 100 / var(--cq-ref) * 1cqw);
+  }
 }
 
 .sub-fv__label {
@@ -33,6 +35,7 @@ height: auto;
   font-size: calc(12 * 100 / var(--cq-ref-mobile) * 1cqw);
   font-weight: var(--font-weight-light);
   text-transform: uppercase;
+
   @include mq('md') {
     font-size: calc(20 * 100 / var(--cq-ref) * 1cqw);
   }
@@ -43,6 +46,7 @@ height: auto;
   font-weight: var(--font-weight-bold);
   line-height: 1.3913;
   text-indent: -0.3em;
+
   @include mq('md') {
     font-size: calc(45 * 100 / var(--cq-ref) * 1cqw);
     line-height: 1;
@@ -58,15 +62,29 @@ height: auto;
 }
 
 .sub-fv__img-wrap {
-height: auto;
+  height: auto;
 }
 
 .sub-fv__img {
-height: auto;
-object-fit: cover;
-aspect-ratio: 375 / 180;
-@include mq('md') {
-  aspect-ratio: 1440 / 390;
-}
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 375 / 180;
+
+  @include mq('md') {
+    aspect-ratio: 1440 / 390;
+  }
 }
 
+.sub-fv.sub-fv--person-detail {
+  & .sub-fv__title {
+    @include mq('md') {
+      font-size: calc(32 * 100 / var(--cq-ref) * 1cqw);
+    }
+  }
+
+  & .sub-fv__img {
+    @include mq('md') {
+      aspect-ratio: 1440 / 200;
+    }
+  }
+}
