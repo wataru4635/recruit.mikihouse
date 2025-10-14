@@ -1,6 +1,6 @@
 <div class="float-entry-btn-sp">
     <div class="float-entry-btn-sp__inner">
-      <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="float-entry-btn-sp__link" target="_blank" rel="noopener noreferrer">
+      <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/login/baitai-entry/entrycd/2027" class="float-entry-btn-sp__link" target="_blank" rel="noopener noreferrer">
         <span class="float-entry-btn-sp__label"><span class="float-entry-btn-sp__label-ls">今</span>すぐ! エントリー</span>
         <span class="float-entry-btn-sp__text">entry</span>
       </a>
@@ -8,7 +8,7 @@
   </div>
 
 <div class="float-entry js-float-entry">
-    <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027" class="float-entry__link" target="_blank" rel="noopener noreferrer">
+    <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/login/baitai-entry/entrycd/2027" class="float-entry__link" target="_blank" rel="noopener noreferrer">
       <span class="float-entry__label">今すぐ! エントリー</span>
       <span class="float-entry__main">ENTRY</span>
       <span class="float-entry__logo"><span class="float-entry__logo-img"></span><span class="float-entry__logo-text">新卒採用2027</span></span>

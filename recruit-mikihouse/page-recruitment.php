@@ -7,7 +7,7 @@ Template Name: 採用情報
 <?php get_header(); ?>
 
 <main>
-
+ <img src="./assets/images/common/.webp" alt="" width="" height="" loading="lazy">
   <section class="sub-fv">
     <div class="sub-fv__content">
       <p class="sub-fv__label">recruitment</p>

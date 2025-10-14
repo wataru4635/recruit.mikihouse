@@ -52,9 +52,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="fv__video-wrap">
-        <video src="<?php echo VIDEOPATH; ?>/fv.mp4" class="fv__video" autoplay muted loop playsinline></video>
-      </div> -->
       <div class="fv__space"></div>
       <div class="fv__content">
         <div class="fv__vision-label">our&nbsp;vision</div>
@@ -366,7 +363,7 @@ $news_q = new WP_Query([
     <div class="recruit-links__inner inner">
       <ul class="recruit-links__list">
         <li class="recruit-links__item">
-          <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027"
+          <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/login/baitai-entry/entrycd/2027"
             class="recruit-links__btn recruit-links__btn--01" target="_blank" rel="noopener noreferrer">
             <span class="recruit-links__text">
               <span class="recruit-links__category">新卒採用</span>

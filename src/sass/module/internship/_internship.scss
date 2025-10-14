@@ -1,0 +1,260 @@
+@use "global" as *;
+
+.internship {
+  margin-block: rem(66) rem(30);
+  container-type: inline-size;
+  @include mq('md') {
+    margin-block: rem(100) rem(280);
+  }
+}
+
+.internship__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  margin-top: rem(50);
+  @include mq('md') {
+  margin-top: rem(62);
+  }
+}
+
+.internship__link {
+  display: block;
+  transition: opacity var(--duration-base) ease;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+.internship__img-wrap {
+  width: 100%;
+}
+
+.internship__img {
+  width: 100%;
+  height: auto;
+}
+
+.internship__other {
+  background: url('../images/internship/internship-bg-sp.webp') no-repeat top center / cover;
+  padding-block: rem(50);
+  margin-top: rem(50);
+  @media (max-width: 767px) {
+    margin-inline: calc(50% - 50cqi);
+  padding-inline: calc(50cqi - 50%);
+  }
+  @include mq('md') {
+    background: url('../images/internship/internship-bg.webp') no-repeat top center / cover;
+    padding-inline: rem(50);
+  }
+}
+
+.internship__other-heading {
+  text-align: center;
+  font-size: rem(20);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.55;
+  @include mq('md') {
+    font-size: rem(24);
+    line-height: 1.8;
+  }
+}
+
+.internship__other-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  margin-top: rem(20);
+  background-color: var(--white);
+  padding: rem(30) rem(20);
+  @include mq('md') {
+    padding: rem(30);
+  }
+}
+
+.internship__other-item {
+display: block;
+border-radius: 10px;
+}
+
+.internship__other-link {
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+@media (any-hover: hover) {
+  &:hover {
+    .internship__other-text {
+      color: var(--main-color);
+    }
+  }
+}
+}
+
+.internship__other-text {
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  transition: color var(--duration-base) ease;
+  @include mq('md') {
+  font-size: rem(16);
+  }
+}
+
+.internship__arrow {
+  aspect-ratio: 1/1;
+  width: rem(25);
+  border-radius: calc(infinity * 1px);
+  background-color: var(--main-color);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.internship__arrow::before {
+  content: "";
+  position: absolute;
+  top: 48%;
+  left: 49%;
+  translate: -50% -50%;
+  border-top: 1px solid var(--white);
+  border-right: 1px solid var(--white);
+  transform: rotate(45deg);
+  transform-origin: center;
+    width: rem(5);
+    height: rem(5);
+}
+@media (hover: hover) {
+  .internship__other-link:hover .internship__arrow::before,
+  .internship__year-link:hover .internship__arrow::before {
+    transform: scale(1.1);
+  }
+
+  .internship__other-link:hover .internship__arrow::before,
+  .internship__year-link:hover .internship__arrow::before {
+    animation: arrow-right 0.3s ease forwards;
+  }
+}
+
+@keyframes arrow-right {
+  0% {
+    translate: -50% -50%;
+    transform: rotate(45deg);
+  }
+
+  49% {
+    translate: calc(-50% + 200%) -50%;
+    transform: rotate(45deg);
+    visibility: hidden;
+  }
+
+  50% {
+    translate: calc(-50% - 200%) -50%;
+    transform: rotate(45deg);
+    visibility: hidden;
+  }
+
+  52% {
+    visibility: visible;
+  }
+
+  100% {
+    translate: -50% -50%;
+    transform: rotate(45deg);
+  }
+}
+
+.internship__past {
+  margin-top: rem(50);
+  @include mq('md') {
+    margin-top: rem(60);
+  }
+}
+
+.internship__past-heading {
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.57143;
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+  @include mq('md') {
+    font-size: rem(24);
+    line-height: 1.33333;
+    gap: rem(10);
+  }
+  }
+  
+  .internship__past-heading::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background-color: var(--main-color);
+    @include mq('md') {
+      width: 15px;
+    }
+  }
+  
+
+.internship__year {
+  margin-top: rem(30);
+  @include mq('md') {
+    margin-top: rem(40);
+  }
+}
+
+.internship__year-title {
+  font-kerning: none;
+  font-feature-settings: 'halt' on;
+  font-family: var(--font-family-fourth);
+  font-size: rem(15);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: calc(0.75 / 15 * 1em);
+}
+
+.internship__year-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(20);
+}
+
+.internship__year-item:first-child {
+  border-top: 1px solid var(--line-color);
+}
+
+.internship__year-link {
+  display: flex;
+  align-items: center;
+  gap: rem(13);
+  padding-block: rem(13);
+  border-bottom: 1px solid var(--line-color);
+  @include mq('md') {
+    padding: rem(20) rem(28);
+    gap: rem(22);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .internship__year-text {
+        color: var(--main-color);
+      }
+    }
+  }
+}
+
+
+.internship__year-text {
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  transition: color var(--duration-base) ease;
+  line-height: 2.07143;
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: 2;
+  }
+}

@@ -1844,6 +1844,160 @@ button {
 	object-fit: cover;
 }
 
+.internship {
+	container-type: inline-size;
+	margin-bottom: 1.875rem;
+	margin-top: 4.125rem;
+}
+
+.internship__list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	margin-top: 3.125rem;
+}
+
+.internship__link {
+	display: block;
+	transition: opacity var(--duration-base) ease;
+}
+
+.internship__img-wrap {
+	width: 100%;
+}
+
+.internship__img {
+	height: auto;
+	width: 100%;
+}
+
+.internship__other {
+	background: url("../images/internship/internship-bg-sp.webp") no-repeat top center/cover;
+	margin-top: 3.125rem;
+	padding-bottom: 3.125rem;
+	padding-top: 3.125rem;
+}
+
+.internship__other-heading {
+	font-size: 1.25rem;
+	font-weight: var(--font-weight-bold);
+	line-height: 1.55;
+	text-align: center;
+}
+
+.internship__other-list {
+	background-color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+	margin-top: 1.25rem;
+	padding: 1.875rem 1.25rem;
+}
+
+.internship__other-item {
+	border-radius: 10px;
+	display: block;
+}
+
+.internship__other-link {
+	align-items: center;
+	border-radius: 10px;
+	display: flex;
+	gap: 0.625rem;
+	justify-content: center;
+	width: 100%;
+}
+
+.internship__other-text {
+	font-size: 0.875rem;
+	font-weight: var(--font-weight-bold);
+	transition: color var(--duration-base) ease;
+}
+
+.internship__arrow {
+	aspect-ratio: 1/1;
+	background-color: var(--main-color);
+	border-radius: calc(infinity * 1px);
+	flex-shrink: 0;
+	overflow: hidden;
+	position: relative;
+	width: 1.5625rem;
+}
+
+.internship__arrow::before {
+	border-right: 1px solid var(--white);
+	border-top: 1px solid var(--white);
+	content: "";
+	height: 0.3125rem;
+	left: 49%;
+	position: absolute;
+	top: 48%;
+	transform: rotate(45deg);
+	transform-origin: center;
+	translate: -50% -50%;
+	width: 0.3125rem;
+}
+
+.internship__past {
+	margin-top: 3.125rem;
+}
+
+.internship__past-heading {
+	align-items: center;
+	display: flex;
+	font-size: 0.875rem;
+	font-weight: var(--font-weight-bold);
+	gap: 0.25rem;
+	line-height: 1.57143;
+}
+
+.internship__past-heading::before {
+	background-color: var(--main-color);
+	content: "";
+	display: inline-block;
+	height: 1px;
+	width: 10px;
+}
+
+.internship__year {
+	margin-top: 1.875rem;
+}
+
+.internship__year-title {
+	font-feature-settings: "halt" on, "kern" off;
+	font-family: var(--font-family-fourth);
+	font-kerning: none;
+	font-size: 0.9375rem;
+	font-weight: var(--font-weight-bold);
+	letter-spacing: 0.05em;
+}
+
+.internship__year-list {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.25rem;
+}
+
+.internship__year-item:first-child {
+	border-top: 1px solid var(--line-color);
+}
+
+.internship__year-link {
+	align-items: center;
+	border-bottom: 1px solid var(--line-color);
+	display: flex;
+	gap: 0.8125rem;
+	padding-bottom: 0.8125rem;
+	padding-top: 0.8125rem;
+}
+
+.internship__year-text {
+	font-size: 0.875rem;
+	font-weight: var(--font-weight-bold);
+	line-height: 2.07143;
+	transition: color var(--duration-base) ease;
+}
+
 .job-detail {
 	container-type: inline-size;
 	margin-top: 5rem;
@@ -4067,6 +4221,18 @@ a:hover {
 	filter: brightness(1.2);
 }
 
+.internship__link:hover {
+	opacity: 0.7;
+}
+
+.internship__other-link:hover .internship__other-text {
+	color: var(--main-color);
+}
+
+.internship__year-link:hover .internship__year-text {
+	color: var(--main-color);
+}
+
 .job-nav__link:hover .job-nav__link-text {
 	color: var(--main-color);
 }
@@ -4202,6 +4368,16 @@ a:hover {
 
 .about-nav__link:hover .about-nav__link-arrow::before {
 	animation: arrow 0.3s ease forwards;
+}
+
+.internship__other-link:hover .internship__arrow::before,
+.internship__year-link:hover .internship__arrow::before {
+	transform: scale(1.1);
+}
+
+.internship__other-link:hover .internship__arrow::before,
+.internship__year-link:hover .internship__arrow::before {
+	animation: arrow-right 0.3s ease forwards;
 }
 
 .job-nav__link:hover .job-nav__link-arrow::before {
@@ -5018,6 +5194,62 @@ html {
 
 .global-expansion__gallery-img {
 	aspect-ratio: 346/250;
+}
+
+.internship {
+	margin-bottom: 17.5rem;
+	margin-top: 6.25rem;
+}
+
+.internship__list {
+	margin-top: 3.875rem;
+}
+
+.internship__other {
+	background: url("../images/internship/internship-bg.webp") no-repeat top center/cover;
+	padding-left: 3.125rem;
+	padding-right: 3.125rem;
+}
+
+.internship__other-heading {
+	font-size: 1.5rem;
+	line-height: 1.8;
+}
+
+.internship__other-list {
+	padding: 1.875rem;
+}
+
+.internship__other-text {
+	font-size: 1rem;
+}
+
+.internship__past {
+	margin-top: 3.75rem;
+}
+
+.internship__past-heading {
+	font-size: 1.5rem;
+	gap: 0.625rem;
+	line-height: 1.33333;
+}
+
+.internship__past-heading::before {
+	width: 15px;
+}
+
+.internship__year {
+	margin-top: 2.5rem;
+}
+
+.internship__year-link {
+	gap: 1.375rem;
+	padding: 1.25rem 1.75rem;
+}
+
+.internship__year-text {
+	font-size: 1rem;
+	line-height: 2;
 }
 
 .job-detail {
@@ -6119,6 +6351,13 @@ html {
 	margin-top: 1.875rem;
 }
 
+.internship__other {
+	margin-left: calc(50% - 50cqi);
+	margin-right: calc(50% - 50cqi);
+	padding-left: calc(50cqi - 50%);
+	padding-right: calc(50cqi - 50%);
+}
+
 .job-detail__interview {
 	grid-template-areas: "name" "info" "img" "text" "btn";
 	margin-left: calc(50% - 50cqi);
@@ -6393,6 +6632,36 @@ html {
 
 100% {
 	transform: scale(1.05);
+}
+
+}
+
+@keyframes arrow-right {
+
+0% {
+	transform: rotate(45deg);
+	translate: -50% -50%;
+}
+
+49% {
+	transform: rotate(45deg);
+	translate: 150% -50%;
+	visibility: hidden;
+}
+
+50% {
+	transform: rotate(45deg);
+	translate: -250% -50%;
+	visibility: hidden;
+}
+
+52% {
+	visibility: visible;
+}
+
+100% {
+	transform: rotate(45deg);
+	translate: -50% -50%;
 }
 
 }

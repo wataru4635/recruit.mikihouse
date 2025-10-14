@@ -25,7 +25,7 @@ if (!is_home() && !is_front_page()) :
         }
         ?>
         <li class="breadcrumb__item">
-          <?php the_title(); ?>
+          <?php echo esc_html(get_the_title()); ?>
         </li>
 
       <?php
@@ -40,7 +40,7 @@ if (!is_home() && !is_front_page()) :
             </a>
           </li>
         <?php endif; ?>
-        <li class="breadcrumb__item"><?php the_title(); ?></li>
+        <li class="breadcrumb__item"><?php echo esc_html(get_the_title()); ?></li>
 
       <?php
       // カスタム投稿タイプ
@@ -71,7 +71,7 @@ if (!is_home() && !is_front_page()) :
           }
         }
         ?>
-        <li class="breadcrumb__item"><?php the_title(); ?></li>
+        <li class="breadcrumb__item"><?php echo esc_html(get_the_title()); ?></li>
 
       <?php
       // カスタム投稿タイプのアーカイブページ

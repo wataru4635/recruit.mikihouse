@@ -33,21 +33,21 @@ function enqueue_custom_scripts() {
     };
         // トップページ専用JS・CSS
     if (is_front_page()) {
-        // Swiper JS
+        $swiper_js_file = '/js/swiper-bundle.min.js';
         wp_enqueue_script(
             'swiper-js',
-            'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js',
+            "{$asset_uri}{$swiper_js_file}",
             [],
-            '8.0.0',
+            $get_ver("{$theme_path}/assets{$swiper_js_file}"),
             true
         );
-        
-        // Swiper CSS
+
+        $swiper_css_file = '/css/swiper-bundle.min.css';
         wp_enqueue_style(
             'swiper-css',
-            'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
+            "{$asset_uri}{$swiper_css_file}",
             [],
-            '8.0.0'
+            $get_ver("{$theme_path}/assets{$swiper_css_file}")
         );
 
         // topページ専用JS
@@ -86,11 +86,12 @@ function enqueue_custom_scripts() {
 
     if (is_page('person')) {
         // MixItUp ライブラリを追加
+        $mixitup_file = '/js/mixitup.min.js';
         wp_enqueue_script(
             'mixitup',
-            'https://cdn.jsdelivr.net/npm/mixitup@3/dist/mixitup.min.js',
+            "{$asset_uri}{$mixitup_file}",
             [],
-            '3.0.0',
+            $get_ver("{$theme_path}/assets{$mixitup_file}"),
             true
         );
         

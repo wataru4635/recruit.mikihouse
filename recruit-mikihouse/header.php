@@ -20,11 +20,11 @@
         <?php
           $logo_tag = (is_front_page() || is_home()) ? 'h1' : 'div';
         ?>
-        <<?php echo $logo_tag; ?> class="header__logo">
+        <<?php echo esc_attr($logo_tag); ?> class="header__logo">
           <img src="<?php echo IMAGEPATH; ?>/common/logo.svg" alt="ミキハウスのロゴ" class="header__logo-img" width="171.64"
             height="30">
           <p class="header__logo-text">新卒採用2027</p>
-        </<?php echo $logo_tag; ?>>
+        </<?php echo esc_attr($logo_tag); ?>>
       </a>
       <div class="header__menu">
         <nav class="header__nav">
@@ -47,14 +47,14 @@
 
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="<?php echo ABOUT_URL; ?>" class="header__nav-link<?php echo $is_about ? ' is-current' : ''; ?>">
+              <a href="<?php echo ABOUT_URL; ?>" class="header__nav-link<?php echo $is_about ? esc_attr(' is-current') : ''; ?>">
                 <span class="header__nav-label">ミキハウスを知る</span>
                 <span class="header__nav-sub">about</span>
               </a>
             </li>
 
             <li class="header__nav-item">
-              <a href="<?php echo JOB_URL; ?>" class="header__nav-link<?php echo $is_job ? ' is-current' : ''; ?>">
+              <a href="<?php echo JOB_URL; ?>" class="header__nav-link<?php echo $is_job ? esc_attr(' is-current') : ''; ?>">
                 <span class="header__nav-label">ミキハウスの仕事</span>
                 <span class="header__nav-sub">job</span>
               </a>
@@ -62,7 +62,7 @@
 
             <li class="header__nav-item">
               <a href="<?php echo PERSON_URL; ?>"
-                class="header__nav-link<?php echo $is_person ? ' is-current' : ''; ?>">
+                class="header__nav-link<?php echo $is_person ? esc_attr(' is-current') : ''; ?>">
                 <span class="header__nav-label">ミキハウスの人</span>
                 <span class="header__nav-sub">person</span>
               </a>
@@ -70,7 +70,7 @@
 
             <li class="header__nav-item">
               <a href="<?php echo RECRUITMENT_URL; ?>"
-                class="header__nav-link<?php echo $is_recruit ? ' is-current' : ''; ?>">
+                class="header__nav-link<?php echo $is_recruit ? esc_attr(' is-current') : ''; ?>">
                 <span class="header__nav-label">採用情報</span>
                 <span class="header__nav-sub">recruitment</span>
               </a>
@@ -78,7 +78,7 @@
 
             <li class="header__nav-item">
               <a href="<?php echo INTERNSHIP_URL; ?>"
-                class="header__nav-link<?php echo $is_internship ? ' is-current' : ''; ?>">
+                class="header__nav-link<?php echo $is_internship ? esc_attr(' is-current') : ''; ?>">
                 <span class="header__nav-label">インターンシップ</span>
                 <span class="header__nav-sub">internship</span>
               </a>
@@ -86,7 +86,7 @@
           </ul>
         </nav>
         <div class="header__entry">
-          <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027"
+          <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/login/baitai-entry/entrycd/2027"
             class="header__entry-link" target="_blank" rel="noopener noreferrer">
             <span class="header__entry-label">今すぐ！エントリー</span>
             <span class="header__entry-text">entry</span>
@@ -137,7 +137,7 @@
         </ul>
       </nav>
       <div class="header__drawer-entry-btn">
-        <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/entry/baitai-entry/entrycd/2027"
+        <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/login/baitai-entry/entrycd/2027"
           class="header__drawer-entry-btn-link" target="_blank" rel="noopener noreferrer">
           <span class="header__drawer-entry-btn-label"><span class="header__drawer-entry-btn-label-ls">今</span>すぐ! エントリー</span>
           <span class="header__drawer-entry-btn-text">entry</span>
