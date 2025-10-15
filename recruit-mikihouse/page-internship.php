@@ -39,7 +39,7 @@ if ( ! function_exists('mz_is_external_url') ) {
   function mz_is_external_url( string $url ): bool {
     $url = trim($url);
     if ( $url === '' ) return false;
-    if ( preg_match('#^(mailto:|tel:|#)#i', $url) ) return false;
+    if ( preg_match('/^(mailto:|tel:|#)/i', $url) ) return false;
     if ( preg_match('#^/([^/]|$)#', $url) ) return false;
 
     $home_host = wp_parse_url( home_url(), PHP_URL_HOST );
@@ -104,50 +104,47 @@ if ( ! function_exists('mz_link_target_rel') ) {
       ?>
 
       <?php if ( $current_valid > 0 ) : ?>
-        <div class="swiper internship__swiper js-swiper">
-          <ul class="internship__list swiper-wrapper">
-            <?php foreach ( $current_items as $it ) :
-              $img_id = isset($it['image']) ? (int)$it['image'] : 0;
-              $url    = isset($it['link'])  ? $it['link']       : '';
-              if ( ! $img_id && ! $url ) continue;
-              $alt = mz_get_alt_with_fallback($img_id, 'インターンシップバナー画像');
-            ?>
-              <li class="internship__item swiper-slide">
-                <?php if ( $url ) : ?>
-                  <a href="<?php echo esc_url($url); ?>"<?php echo mz_link_target_rel($url); ?> class="internship__link">
-                <?php else: ?>
-                  <div class="internship__link">
-                <?php endif; ?>
+        <ul class="internship__list">
+          <?php foreach ( $current_items as $it ) :
+            $img_id = isset($it['image']) ? (int)$it['image'] : 0;
+            $url    = isset($it['link'])  ? $it['link']       : '';
+            if ( ! $img_id && ! $url ) continue;
+            $alt = mz_get_alt_with_fallback($img_id, 'インターンシップバナー画像');
+          ?>
+            <li class="internship__item">
+              <?php if ( $url ) : ?>
+                <a href="<?php echo esc_url($url); ?>"<?php echo mz_link_target_rel($url); ?> class="internship__link">
+              <?php else: ?>
+                <div class="internship__link">
+              <?php endif; ?>
 
-                    <div class="internship__img-wrap">
-                      <?php
-                      if ( $img_id ) {
-                        echo wp_get_attachment_image(
-                          $img_id,
-                          'full',
-                          false,
-                          [
-                            'class'   => 'internship__img',
-                            'loading' => 'lazy',
-                            'width'   => 1100,
-                            'height'  => 280,
-                            'alt'     => $alt,
-                          ]
-                        );
-                      }
-                      ?>
-                    </div>
+                <div class="internship__img-wrap">
+                  <?php
+                  if ( $img_id ) {
+                    echo wp_get_attachment_image(
+                      $img_id,
+                      'full',
+                      false,
+                      [
+                        'class'   => 'internship__img',
+                        'loading' => 'lazy',
+                        'width'   => 1100,
+                        'height'  => 280,
+                        'alt'     => $alt,
+                      ]
+                    );
+                  }
+                  ?>
+                </div>
 
-                <?php if ( $url ) : ?>
-                  </a>
-                <?php else: ?>
-                  </div>
-                <?php endif; ?>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-          <div class="internship__swiper-pagination"></div>
-        </div>
+              <?php if ( $url ) : ?>
+                </a>
+              <?php else: ?>
+                </div>
+              <?php endif; ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
       <?php else: ?>
         <p class="internship__none" style="margin-top:40px;text-align:center;">現在募集中のインターンシップはありません</p>
       <?php endif; ?>
