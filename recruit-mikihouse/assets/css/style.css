@@ -1850,11 +1850,30 @@ button {
 	margin-top: 4.125rem;
 }
 
-.internship__list {
+.internship__swiper {
+	height: -moz-fit-content;
+	height: fit-content;
+}
+
+.internship__swiper-pagination {
 	display: flex;
-	flex-direction: column;
-	gap: 1.25rem;
+	justify-content: center;
+	margin-top: 1.25rem;
+}
+
+.internship__swiper-pagination .swiper-pagination-bullet-active {
+	background: var(--main-color);
+}
+
+.internship__list {
+	height: 100%;
 	margin-top: 3.125rem;
+}
+
+.internship__item {
+	display: block;
+	height: -moz-fit-content;
+	height: fit-content;
 }
 
 .internship__link {
@@ -5201,7 +5220,14 @@ html {
 	margin-top: 6.25rem;
 }
 
+.internship__swiper-pagination {
+	display: none;
+}
+
 .internship__list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
 	margin-top: 3.875rem;
 }
 

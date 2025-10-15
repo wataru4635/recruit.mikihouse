@@ -31,8 +31,8 @@ function enqueue_custom_scripts() {
     $get_ver = function($file_path) {
         return file_exists($file_path) ? filemtime($file_path) : wp_get_theme()->get('Version');
     };
-        // トップページ専用JS・CSS
-    if (is_front_page()) {
+        // Swiper JS・CSS（トップページとインターンシップページで使用）
+    if (is_front_page() || is_page('internship')) {
         $swiper_js_file = '/js/swiper-bundle.min.js';
         wp_enqueue_script(
             'swiper-js',
@@ -49,14 +49,27 @@ function enqueue_custom_scripts() {
             [],
             $get_ver("{$theme_path}/assets{$swiper_css_file}")
         );
+    }
 
-        // topページ専用JS
+    // トップページ専用JS
+    if (is_front_page()) {
         $top_file = '/js/top.js';
         wp_enqueue_script(
             'top-script',
             "{$asset_uri}{$top_file}",
             ['swiper-js'],
             $get_ver("{$theme_path}/assets{$top_file}"),
+            true
+        );
+    }
+    if (is_page('internship')) {
+        // internshipページ専用JS
+        $internship_file = '/js/internship.js';
+        wp_enqueue_script(
+            'internship-script',
+            "{$asset_uri}{$internship_file}",
+            [],
+            $get_ver("{$theme_path}/assets{$internship_file}"),
             true
         );
     }
