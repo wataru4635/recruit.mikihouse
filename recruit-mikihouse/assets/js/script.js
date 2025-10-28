@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ===============================================
 # ヘッダー；スクロールでクラスを追加
-# + PCのみ：.js-float-entry は「スクロール中のみ is-scroll」
 =============================================== */
 document.addEventListener('DOMContentLoaded', () => {
   var _PC_MEDIA$addEventLis;
@@ -150,9 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
   observeElements(".js-fade-up", "is-active", {
     rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -10% 0px")
   });
-  observeElements(".js-clip-img", "is-active", {
-    rootMargin: getRootMargin("0px 0px -30% 0px", "0px 0px -15% 0px")
-  });
   observeElements(".js-scaleImg", "is-active", {
     rootMargin: getRootMargin("0px 0px -10% 0px", "0px 0px -5% 0px")
   });
@@ -183,24 +179,4 @@ document.addEventListener('DOMContentLoaded', () => {
   observeElements(".js-job-list", "is-active", {
     rootMargin: getRootMargin("0px 0px -20% 0px", "0px 0px -10% 0px")
   });
-
-  // =======================
-  // 文字を1文字ずつ <span> に分割
-  // =======================
-  function wrapTextInSpans(selector) {
-    document.querySelectorAll(selector).forEach(element => {
-      const text = element.textContent;
-      element.setAttribute('aria-label', text);
-      element.setAttribute('role', 'text');
-      element.textContent = '';
-      [...text].forEach((char, index) => {
-        const span = document.createElement('span');
-        span.textContent = char;
-        span.style.setProperty('--index', index);
-        span.setAttribute('aria-hidden', 'true');
-        element.appendChild(span);
-      });
-    });
-  }
-  wrapTextInSpans(".js-text-split");
 });

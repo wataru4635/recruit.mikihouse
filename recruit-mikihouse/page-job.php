@@ -36,8 +36,7 @@ Template Name: ミキハウスの仕事
         <h2 class="sub-section-header__title sub-section-header__title--transform-none js-text-animate">「飾らないありのままのあなた」と向き合いたい</h2>
       </div>
       <p class="job__lead">
-        “会社の未来は人がつくる”という考えのもと、私たちMIKI
-        HOUSEは創業当時から一人ひとりの多様な個性や価値観を大切にしてきました。<br>採用活動はそのスタートであり、私たち採用チームは​「飾らないありのままのあなた」と向き合いたいと考えています。
+        “会社の未来は人がつくる”という考えのもと、私たちミキハウスは創業当時から一人ひとりの多様な個性や価値観を大切にしてきました。<br>採用活動はそのスタートであり、私たち採用チームは​「飾らないありのままのあなた」と向き合いたいと考えています。
       </p>
 
       <ul class="job__list js-job-list">
@@ -60,11 +59,10 @@ Template Name: ミキハウスの仕事
             <p class="job__subtitle">笑顔を届ける仕事</p>
           </div>
           <ul class="job__role-list">
-            <li class="job__role">商品企画</li>
-            <li class="job__role job__role--sub">営業<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
-            <li class="job__role job__role--sub">エリアマネージャー<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
+            <li class="job__role">ファッション<br class="u-mobile">アドバイザー</li>
             <li class="job__role">ストアマネージャー</li>
-            <li class="job__role">ファッションアドバイザー</li>
+            <li class="job__role job__role--sub">エリアマネージャー<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
+            <li class="job__role job__role--sub">営業<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
           </ul>
         </li>
 
@@ -74,11 +72,9 @@ Template Name: ミキハウスの仕事
             <p class="job__subtitle">事業を支える仕事</p>
           </div>
           <ul class="job__role-list">
-            <li class="job__role">経営管理</li>
-            <li class="job__role">人事採用</li>
+            <li class="job__role">物流・貿易管理<br class="u-mobile">人事採用</li>
             <li class="job__role">財務経理</li>
             <li class="job__role job__role--sub">事業開発<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
-            <li class="job__role">物流管理</li>
           </ul>
         </li>
 
@@ -99,7 +95,8 @@ Template Name: ミキハウスの仕事
     </div>
   </section>
 
-  <div class="job-nav">
+  <!-- 準備中の為非表示：2025/10/24 -->
+  <!-- <div class="job-nav">
     <div class="job-nav__inner sub-inner">
       <div class="job-nav__content">
         <div class="job-nav__header">
@@ -151,7 +148,6 @@ Template Name: ミキハウスの仕事
   <section class="job-detail">
     <div class="job-detail__inner sub-inner">
 
-      <!-- Creative -->
       <div class="job-detail__block" id="creative">
         <div class="job-detail__header">
           <p class="job-detail__category js-text-animate">Creative</p>
@@ -178,7 +174,6 @@ Template Name: ミキハウスの仕事
         </div>
       </div>
 
-      <!-- Sales -->
       <div class="job-detail__block" id="sales">
         <div class="job-detail__header">
           <p class="job-detail__category js-text-animate">Sales</p>
@@ -205,7 +200,6 @@ Template Name: ミキハウスの仕事
         </div>
       </div>
 
-      <!-- Fashion Adviser -->
       <div class="job-detail__block" id="fashion-adviser">
         <div class="job-detail__header">
           <p class="job-detail__category js-text-animate">Fashion Adviser</p>
@@ -233,7 +227,6 @@ Template Name: ミキハウスの仕事
         </div>
       </div>
 
-      <!-- Management -->
       <div class="job-detail__block" id="management">
         <div class="job-detail__header">
           <p class="job-detail__category js-text-animate">Management</p>
@@ -260,7 +253,6 @@ Template Name: ミキハウスの仕事
         </div>
       </div>
 
-      <!-- Branding -->
       <div class="job-detail__block" id="branding">
         <div class="job-detail__header">
           <p class="job-detail__category js-text-animate">Branding</p>
@@ -288,7 +280,7 @@ Template Name: ミキハウスの仕事
       </div>
 
     </div>
-  </section>
+  </section> -->
 
   <section class="training">
     <div class="training__inner sub-inner">
@@ -315,7 +307,7 @@ Template Name: ミキハウスの仕事
           <p class="training__item-title">ステージ別研修</p>
           <div class="training__body">
             <p class="training__item-text">
-              社員一人ひとりが歩むキャリアのステージに応じて、必要な知識やスキルを学べるのがステージ別研修です。<br>年次や経験、国籍を問わず、多様な仲間が集まり、意見を交わしながら学び合う場となっています。<br>MerchandisingやManagement、Leadershipなど、それぞれのステージで求められるビジネススキルを習得でき、日々の仕事に直結する実践力を磨くことができます。
+              社員一人ひとりが歩むキャリアのステージに応じて、必要な知識やスキルを学べるのがステージ別研修です。<br>年次や経験、国籍を問わず、多様な仲間が集まり、意見を交わしながら学び合う場となっています。<br>Merchandising（マーチャンダイジング）やManagement（マネジメント）、Leadership（リーダーシップ）など、それぞれのステージで求められるビジネススキルを習得でき、日々の仕事に直結する実践力を磨くことができます。
             </p>
           <div class="training__img-wrap">
             <img src="<?php echo IMAGEPATH; ?>/job/training-img02.webp" alt="グループワークに参加する社員の様子" class="training__img" width="300" height="200" loading="lazy">

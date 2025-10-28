@@ -6,7 +6,7 @@ margin-top: rem(100);
 overflow-x: clip;
 }
 @include mq('md') {
-margin-top: rem(150);
+margin-top: rem(100);
 padding-top: rem(95);
 position: relative;
 container-type: inline-size;
@@ -22,10 +22,6 @@ grid-template-areas:
 "lead"
 "btn";
 }
-}
-
-.inner {
-
 }
 
 .top-person__text-wrap {
@@ -239,3 +235,8 @@ position: relative;
   }
 }
 
+.top-person__coming-soon {
+  @include mq('md') {
+    height: 140px;
+  }
+}

@@ -23,7 +23,7 @@
         <<?php echo esc_attr($logo_tag); ?> class="header__logo">
           <img src="<?php echo IMAGEPATH; ?>/common/logo.svg" alt="ミキハウスのロゴ" class="header__logo-img" width="171.64"
             height="30">
-          <p class="header__logo-text">新卒採用2027</p>
+          <p class="header__logo-text">新卒採用サイト</p>
         </<?php echo esc_attr($logo_tag); ?>>
       </a>
       <div class="header__menu">
@@ -109,7 +109,7 @@
     <div class="header__drawer-header">
       <img src="<?php echo IMAGEPATH; ?>/common/logo-white.svg" alt="ミキハウスのロゴ" class="header__drawer-header-img"
       width="171.64" height="30">
-      <p class="header__drawer-header-text">新卒採用2027</p>
+      <p class="header__drawer-header-text">新卒採用サイト</p>
     </div>
     <div class="header__drawer-body">
       <nav class="header__drawer-nav">

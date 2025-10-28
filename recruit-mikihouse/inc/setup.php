@@ -168,3 +168,26 @@ function codeups_clean_up_head() {
 
   // テーマが読み込まれた後に実行
   add_action('after_setup_theme', 'codeups_clean_up_head');
+
+// ==========================================================================
+// persons フォルダーの個人ページ設定：非表示化
+// ==========================================================================
+function add_noindex_to_persons_pages() {
+    $template = get_page_template_slug();
+    
+    if (is_page() && strpos($template, 'persons/') === 0) {
+        echo '<meta name="robots" content="noindex, nofollow">' . "\n";
+    }
+}
+add_action('wp_head', 'add_noindex_to_persons_pages');
+
+function redirect_persons_pages() {
+    $template = get_page_template_slug();
+    
+    if (is_page() && strpos($template, 'persons/') === 0) {
+        $redirect_url = home_url('/person/');
+        wp_redirect($redirect_url, 301);
+        exit;
+    }
+}
+add_action('template_redirect', 'redirect_persons_pages');

@@ -74,9 +74,5 @@ gap: rem(70);
 
 .top-message__img {
 height: auto;
-object-fit: cover;
-aspect-ratio: 356 / 432;
-@include mq('md') {
-  aspect-ratio: 525 / 657;
-}
+object-fit: contain;
 }

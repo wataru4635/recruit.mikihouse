@@ -154,7 +154,7 @@ if ( ! function_exists('mz_link_target_rel') ) {
       $other_valid = mz_count_valid_items_by_keys($other_items, ['link','text']);
       ?>
       <div class="internship__other">
-        <p class="internship__other-heading">その他のインターンシップ</p>
+        <p class="internship__other-heading">現在募集中のその他インターンシップ</p>
 
         <?php if ( $other_valid > 0 ) : ?>
           <ul class="internship__other-list">
@@ -189,7 +189,11 @@ if ( ! function_exists('mz_link_target_rel') ) {
       $year_keys = ['year_1','year_2'];
       ?>
       <div class="internship__past">
-        <p class="internship__past-heading">過去のインターンシップ</p>
+      <div class="internship__past-header sub-section-header">
+        <h2 class="sub-section-header__title sub-section-header__title--transform-none js-text-animate">
+        過去のインターンシップ
+        </h2>
+      </div>
 
         <?php
         $rendered_any_year = false;

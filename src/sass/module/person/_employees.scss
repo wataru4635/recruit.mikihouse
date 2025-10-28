@@ -171,3 +171,27 @@
     margin-top: rem(6);
   }
 }
+
+.employees__coming-soon {
+  background-color: var(--bg-color);
+  margin-block: rem(50) rem(100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: rem(60);
+  @include mq('md') {
+    margin-block: rem(50) rem(217);
+    padding-block: rem(120);
+  }
+}
+
+.employees__coming-soon-text {
+  text-align: center;
+  font-size: rem(14);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.7;
+  @include mq('md') {
+    font-size: rem(16);
+    line-height: 2;
+  }
+}

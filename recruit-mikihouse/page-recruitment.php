@@ -7,7 +7,6 @@ Template Name: 採用情報
 <?php get_header(); ?>
 
 <main>
- <img src="./assets/images/common/.webp" alt="" width="" height="" loading="lazy">
   <section class="sub-fv">
     <div class="sub-fv__content">
       <p class="sub-fv__label">recruitment</p>
@@ -44,9 +43,15 @@ Template Name: 採用情報
           <p class="recruit-info__course">Fashion Adviser（FA）コース　約20名</p>
           <ul class="recruit-info__role-rows">
             <li class="recruit-info__role-row">
-              <p class="recruit-info__dept recruit-info__dept--black"><a href="https://recruit.mikihouse.co.jp/person/ryu.html" class="recruit-info__link">Fashion Adviser（FA）</a></p>
+              <p class="recruit-info__dept">
+                <!-- <a href="https://recruit.mikihouse.co.jp/person/ryu.html" class="recruit-info__link">Fashion Adviser（FA）</a> -->
+                Fashion Adviser（FA）
+              </p>
               <ul class="recruit-info__positions">
-                <li class="recruit-info__position"><a href="https://recruit.mikihouse.co.jp/person/yamauchi.html" class="recruit-info__link">Store Manager（店長）</a></li>
+                <li class="recruit-info__position">
+                  <!-- <a href="https://recruit.mikihouse.co.jp/person/yamauchi.html" class="recruit-info__link">Store Manager（店長）</a> -->
+                  Store Manager（店長）
+                </li>
               </ul>
             </li>
             <li class="recruit-info__role-row">
@@ -62,9 +67,9 @@ Template Name: 採用情報
             <li class="recruit-info__role-row">
               <p class="recruit-info__dept">Creative部門</p>
               <ul class="recruit-info__positions">
-                <li class="recruit-info__position"><a href="https://recruit.mikihouse.co.jp/person/shimizu.html" class="recruit-info__link">商品企画</a></li>
+                <li class="recruit-info__position">商品企画</li>
                 <li class="recruit-info__position">生産管理</li>
-                <li class="recruit-info__position"><a href="https://recruit.mikihouse.co.jp/person/maeda.html" class="recruit-info__link">商品MD</a></li>
+                <li class="recruit-info__position">商品MD</li>
               </ul>
             </li>
             <li class="recruit-info__role-row">
@@ -73,8 +78,8 @@ Template Name: 採用情報
                 <li class="recruit-info__position">国内営業</li>
                 <li class="recruit-info__position">海外営業</li>
                 <li class="recruit-info__position">広告宣伝/販売促進</li>
-                <li class="recruit-info__position">EC/デジタルマーケティング</li>
-                <li class="recruit-info__position">物流管理</li>
+                <li class="recruit-info__position">EC/デジタルマーケティング/ITエンジニア</li>
+                <li class="recruit-info__position">物流・貿易管理</li>
               </ul>
             </li>
             <li class="recruit-info__role-row">
@@ -149,7 +154,7 @@ Template Name: 採用情報
       </div>
       <p class="process__lead">
         飾らないありのままのあなたにお会いしたい。<br>
-        そんな想いから、MIKI HOUSEではOnline・Offline問わず<br class="u-desktop">
+        そんな想いから、ミキハウスではOnline・Offline問わず<br class="u-desktop">
         選考時の服装はリクルートスーツではなく、リラックスできるあなたらしいファッションで参加ください。
       </p>
 
@@ -167,11 +172,11 @@ Template Name: 採用情報
             <span class="process__step-label-sp">STEP 1</span>
             <p class="process__subtitle">ご応募</p>
             <ul class="process__details">
-              <li class="process__detail">① エントリーシート</li>
+              <li class="process__detail">① プロフィールシート</li>
               <li class="process__detail">② 自己PR動画</li>
             </ul>
             <p class="process__text">
-              上記2点を「MIKI HOUSE新卒採用マイページ」より<br>
+              上記2点を「MIKI HOUSE新卒採用マイページ」より<br class="u-desktop">
               ご登録いただくことで、一次選考の応募が完了となります。<br>
               ※登録期限はマイページにてご確認ください。
             </p>
@@ -234,7 +239,7 @@ Template Name: 採用情報
     <div class="faq__inner sub-inner">
 
       <div class="faq__header sub-section-header02">
-        <h2 class="sub-section-header02__title sub-section-header02__title--center js-text-animate">FAQ</h2>
+        <h2 class="sub-section-header02__title sub-section-header02__title--center js-text-animate">よくある質問</h2>
       </div>
 
       <div class="faq__group">
@@ -245,13 +250,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">OB・OG訪問は受け付けていますか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                本来ならばお受けしたいのですが、毎年たくさんのご応募をいただき、全ての希望を受けきれないため、こちらからOB・OGを紹介することはしていません。
               </span>
             </dd>
           </div>
@@ -260,13 +265,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">既卒でもエントリーできますか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                はい、エントリーできます。新卒採用と同じ時期にエントリーをしていただき、基本的には新卒と同じ条件での4月入社となります。
               </span>
             </dd>
           </div>
@@ -275,13 +280,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">インターンシップや選考は本当に普段着で参加して良いのですか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                Online・Offline問わず、ミキハウスのインターンシップや選考はリクルートスーツではなく、あなたらしい普段着で参加いただいています。ジーンズが好きな人はジーンズで、靴やバッグ・小物にこだわる人はお気に入りのアイテムを取り入れるなど、1番リラックスできるファッションでお越しください。
               </span>
             </dd>
           </div>
@@ -290,13 +295,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">留学生の採用が増えている中で、語学力は必須ですか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                いいえ、必須ではありません。もちろん優れた語学力をお持ちの方は大きな強みとなりますが、採用段階ではスキルよりもその人自身の個性や想いを重要視していますので必須項目ではありません。しかし将来、海外を舞台に活躍したいとお考えの方は、入社後に語学力の習得が必要となります。
               </span>
             </dd>
           </div>
@@ -305,13 +310,28 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">海外出張や駐在はありますか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                日本を拠点としながら海外出張ベースの働き方をしている社員が多いですが、状況に応じて海外駐在の業務を担当する可能性もあります。現在、社内では欧米・アジア圏で複数名の海外駐在スタッフが活躍しています。
+              </span>
+            </dd>
+          </div>
+
+          <div class="faq__item">
+            <dt class="faq__item-question">
+              <button class="faq__item-question-btn js-faq-question">
+                <span class="faq__item-question-icon">Q</span>
+                <span class="faq__item-question-text">留学生の在留資格変更サポートはありますか？</span>
+                <span class="faq__item-question-toggle-icon"></span>
+              </button>
+            </dt>
+            <dd class="faq__item-answer">
+              <span class="faq__item-answer-text">
+                あります。いわゆる「留学ビザ」から「就労ビザ」への変更申請をしっかりサポートします。ミキハウスでは既にたくさんの外国籍社員が様々なフィールドで活躍していますので、安心してください。
               </span>
             </dd>
           </div>
@@ -327,13 +347,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">配属や勤務地はどのように決まりますか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                選考の際にエントリーしていただいたコースに基づいて配属を考えます。ただし1年目から希望の部署に配属されるとは限りません。初年度の配属は、将来希望の部署で活躍するために必要な知識やスキルを習得できるよう決定されます。また、初めての配属については希望勤務地を確認し、できるだけ本人の意志にそえるように配慮しながら決定していきます。将来的には、キャリアに応じてしっかり話をした上で、転居を伴う全国転勤の可能性もあります。
               </span>
             </dd>
           </div>
@@ -342,13 +362,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">入社後、別のコースや職種への異動はありますか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                年2回の自己申告アンケートを通して自分のやりたいことをアピールする機会があります。組織として社内の状況が優先されるため、全ての人の希望通りになるというわけではありませんが、本人の意志と情熱、そして会社側の評価によって希望する仕事に就いた実例もたくさんあります。
               </span>
             </dd>
           </div>
@@ -357,13 +377,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">産休・育休について教えてください。</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                産休・育休取得率100%を継続しており、「仕事も子育ても両立して頑張りたい」というスタッフのために、「ママJOBセミナー」など、育児休暇からの復帰に向けたサポートにも取り組んでいます。もちろん会社や店舗の状況によって、個人の希望を全て実現できるわけではありませんが、子育てをしながら自分の経験をお客様に伝えていきたいと手を挙げるスタッフには、「OB・OG制度」など会社としてもできるだけ柔軟に対応していきたいと考えています。
               </span>
             </dd>
           </div>
@@ -372,13 +392,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">出産や子育てを経験した社員はどのように働いているのですか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                ミキハウスでは、妊娠・出産・子育てといったライフイベントはキャリアに繋がると考えています。若いスタッフに向けたベビー研修の開催や、新商品の提案など、あらゆるシーンで自身の出産や子育て経験を活かした活躍をしています。また、独自の研修プログラムに1年間参加し、マタニティとベビーの接客スペシャリストと認められたスタッフを、社内資格の「子育てキャリアアドバイザー(KCA)」として認定し、お客様のライフアドバイザーとしてのキャリアアップの支援も行っています。
               </span>
             </dd>
           </div>
@@ -387,13 +407,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">内定者期間・入社後の研修制度について教えてください。</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                内定者期間には、同期の絆を深めることや安心して入社を迎えることを目的として、数回の研修が行われます。また、入社後も成長を続けるためにMIKI HOUSEオリジナルの研修プログラムが様々用意されています。詳しくは教育・研修制度のページをご覧ください。<br><a href="http://recruit.mikihouse.co.jp/job/ " class="faq__item-answer-link">http://recruit.mikihouse.co.jp/job/ </a>
               </span>
             </dd>
           </div>
@@ -402,20 +422,20 @@ Template Name: 採用情報
       </div>
 
       <div class="faq__group">
-        <p class="faq__group-title">MIKI HOUSEについて</p>
+        <p class="faq__group-title">ミキハウスについて</p>
         <dl class="faq__list">
 
           <div class="faq__item">
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">ミキハウスの企業理念（Brand Promise）は何ですか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                「子どもと家族の毎日を笑顔でいっぱいに」です。創業以来、世界中の子どもたちの健やかな成長を願い、アパレルだけでなく、出版事業や教育、子育て・スポーツ支援など、子どもに関わるすべての分野を事業フィールドとしています。
               </span>
             </dd>
           </div>
@@ -424,13 +444,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">ミキハウスのグローバル展開について教えてください。</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                現在は、フランス、アメリカ、イギリス、中国の現地法人と世界16の国と地域で108店舗（2025年8月現在）を展開しています。またOfflineだけでなくOnline(EC)の展開も積極的に行い、今後はいずれの販路も強化しながら多様なチャネルでの相乗効果を図っていきます。
               </span>
             </dd>
           </div>
@@ -439,43 +459,13 @@ Template Name: 採用情報
             <dt class="faq__item-question">
               <button class="faq__item-question-btn js-faq-question">
                 <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
+                <span class="faq__item-question-text">今後ますます少子化が進んでいくと思うのですが、どう考えていますか？</span>
                 <span class="faq__item-question-toggle-icon"></span>
               </button>
             </dt>
             <dd class="faq__item-answer">
               <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
-              </span>
-            </dd>
-          </div>
-
-          <div class="faq__item">
-            <dt class="faq__item-question">
-              <button class="faq__item-question-btn js-faq-question">
-                <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
-                <span class="faq__item-question-toggle-icon"></span>
-              </button>
-            </dt>
-            <dd class="faq__item-answer">
-              <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
-              </span>
-            </dd>
-          </div>
-
-          <div class="faq__item">
-            <dt class="faq__item-question">
-              <button class="faq__item-question-btn js-faq-question">
-                <span class="faq__item-question-icon">Q</span>
-                <span class="faq__item-question-text">質問のタイトルが入ります</span>
-                <span class="faq__item-question-toggle-icon"></span>
-              </button>
-            </dt>
-            <dd class="faq__item-answer">
-              <span class="faq__item-answer-text">
-                質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。質問のこたえが入ります。
+                たしかに日本の出生数は年々低下していますが、ベビー・子ども服は着る人と買う人が異なる特殊なジャンルです。購買層の数は減っておらず、逆に少子化が進む中で、子どもに安心・安全なものを与えたいという考えが深く根付いてきています。だからこそ、クオリティにこだわり信頼されるものづくりを続けてきた私たちは、少子化はむしろチャンスであると考えています。
               </span>
             </dd>
           </div>

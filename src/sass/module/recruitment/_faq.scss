@@ -172,3 +172,14 @@
     padding: rem(30) rem(50);
   }
 }
+
+.faq__item-answer-link {
+  color: var(--main-color2);
+  text-decoration: underline;
+  transition: opacity var(--duration-base) ease;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -109,7 +109,7 @@
   justify-content: center;
 
   @media (max-width: 767px) {
-    width: calc(50% - rem(10));
+    width: calc(50% - rem(5));
   }
 
   @include mq('md') {
@@ -124,6 +124,12 @@
   border-bottom: 1px solid var(--main-color);
 }
 
+@media (max-width: 767px) {
+  .job__role:nth-last-child(2):nth-child(odd) {
+    border-bottom: none;
+  }
+}
+
 .job__role-list .job__role:nth-child(odd):last-child {
   @media (max-width: 767px) {
     width: 100%;
@@ -131,7 +137,9 @@
 }
 
 .job__role.job__role--sub {
-  padding-block: rem(7);
+  @include mq('md') {
+    padding-block: rem(7);
+  }
 }
 
 .job__role-sub {

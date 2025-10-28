@@ -282,7 +282,6 @@
 .fv__swiper .swiper-img img {
   height: auto;
   width: 100%;
-  object-fit: cover;
   aspect-ratio: 375 / 440;
   @include mq('md') {
     aspect-ratio: 1211 / 690;

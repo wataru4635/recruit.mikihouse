@@ -67,7 +67,6 @@
 
 .sub-fv__img {
   height: auto;
-  object-fit: cover;
   aspect-ratio: 375 / 180;
 
   @include mq('md') {

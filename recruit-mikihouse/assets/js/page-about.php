@@ -510,7 +510,7 @@ Template Name: ミキハウスを知る
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/about/brand-img02-sp.webp" media="(max-width: 767px)"
                   type="image/webp" width="319" height="180">
-                <img src="<?php echo IMAGEPATH; ?>/about/brand-img02.webp" class="brand__img" alt="ベビー用アウターを着た赤ちゃん二人"
+                <img class="" src="<?php echo IMAGEPATH; ?>/about/brand-img02.webp" alt="ベビー用アウターを着た赤ちゃん二人"
                   width="329.33" height="270" loading="lazy">
               </picture>
             </div>

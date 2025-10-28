@@ -34,8 +34,12 @@
         <h2 class="sub-section-header__title sub-section-header__title--transform-none js-text-animate">社員紹介</h2>
       </div>
 
-      <!-- フィルターメニュー -->
-      <ul class="employees__filters">
+      <div class="employees__coming-soon">
+        <p class="employees__coming-soon-text">Comming soon…</p>
+      </div>
+
+      <!-- 準備中の為非表示：2025/10/24 -->
+      <!-- <ul class="employees__filters">
         <li data-filter="all" class="employees__filter mixitup-control-active">すべて表示</li>
         <li data-filter=".sales" class="employees__filter">営業・グローバル推進</li>
         <li data-filter=".plan" class="employees__filter">企画・生産管理</li>
@@ -43,8 +47,6 @@
         <li data-filter=".marketing" class="employees__filter">マーケティング</li>
         <li data-filter=".manager" class="employees__filter">ストアマネージャー</li>
       </ul>
-
-      <!-- 社員リスト -->
       <ul class="employees__list" id="employees-list">
         <li class="employees__item mix sales">
           <a href="<?php echo PERSON_SN_2009_SALES01; ?>" class="employees__link">
@@ -195,11 +197,12 @@
             </div>
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </section>
 
-  <section class="talk">
+  <!-- 準備中の為非表示：2025/10/24 -->
+  <!-- <section class="talk">
     <div class="talk__inner sub-inner">
       <div class="talk__header sub-section-header02">
         <h2 class="sub-section-header02__title js-text-animate">トーク・対談</h2>
@@ -211,7 +214,7 @@
         <p class="talk__frame-text">トーク・対談が入ります</p>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 </main>

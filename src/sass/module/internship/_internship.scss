@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .internship {
-  margin-block: rem(66) rem(30);
+  margin-block: rem(66) rem(100);
   container-type: inline-size;
   @include mq('md') {
     margin-block: rem(100) rem(280);
@@ -12,9 +12,9 @@
   display: flex;
   flex-direction: column;
   gap: rem(20);
-  margin-top: rem(50);
+  margin-top: rem(40);
   @include mq('md') {
-  margin-top: rem(62);
+  margin-top: rem(60);
   }
 }
 
@@ -39,40 +39,42 @@
 }
 
 .internship__other {
-  background: url('../images/internship/internship-bg-sp.webp') no-repeat top center / cover;
-  padding-block: rem(50);
-  margin-top: rem(50);
-  @media (max-width: 767px) {
-    margin-inline: calc(50% - 50cqi);
-  padding-inline: calc(50cqi - 50%);
-  }
+  margin-top: rem(40);
   @include mq('md') {
-    background: url('../images/internship/internship-bg.webp') no-repeat top center / cover;
-    padding-inline: rem(50);
+  margin-top: rem(60);
   }
 }
 
 .internship__other-heading {
-  text-align: center;
-  font-size: rem(20);
+  font-size: rem(14);
   font-weight: var(--font-weight-bold);
-  line-height: 1.55;
+  line-height: 1.57143;
+  display: flex;
+  align-items: center;
+  gap: rem(4);
   @include mq('md') {
     font-size: rem(24);
-    line-height: 1.8;
+    line-height: 1.33333;
+    gap: rem(10);
   }
-}
+  }
+  
+  .internship__other-heading::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 1px;
+    background-color: var(--main-color);
+    @include mq('md') {
+      width: 15px;
+    }
+  }
 
 .internship__other-list {
   display: flex;
   flex-direction: column;
-  gap: rem(30);
+  gap: rem(10);
   margin-top: rem(20);
-  background-color: var(--white);
-  padding: rem(30) rem(20);
-  @include mq('md') {
-    padding: rem(30);
-  }
 }
 
 .internship__other-item {
@@ -85,15 +87,12 @@ border-radius: 10px;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: rem(10);
-@media (any-hover: hover) {
-  &:hover {
-    .internship__other-text {
-      color: var(--main-color);
-    }
+  background: var(--bg-color);
+  padding: rem(15) rem(10);
+  @include mq('md') {
+    padding: rem(20) rem(30);
   }
-}
 }
 
 .internship__other-text {
@@ -107,26 +106,34 @@ border-radius: 10px;
 
 .internship__arrow {
   aspect-ratio: 1/1;
-  width: rem(25);
+  width: rem(20);
   border-radius: calc(infinity * 1px);
   background-color: var(--main-color);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  @include mq('md') {
+    width: rem(25);
+  }
 }
 
 .internship__arrow::before {
   content: "";
   position: absolute;
-  top: 48%;
+  top: 50%;
   left: 49%;
   translate: -50% -50%;
   border-top: 1px solid var(--white);
   border-right: 1px solid var(--white);
   transform: rotate(45deg);
   transform-origin: center;
-    width: rem(5);
-    height: rem(5);
+    width: rem(4.5);
+    height: rem(4.5);
+    @include mq('md') {
+      width: rem(5);
+      height: rem(5);
+      left: 49%;
+    }
 }
 @media (hover: hover) {
   .internship__other-link:hover .internship__arrow::before,
@@ -169,9 +176,9 @@ border-radius: 10px;
 }
 
 .internship__past {
-  margin-top: rem(50);
+  margin-top: rem(80);
   @include mq('md') {
-    margin-top: rem(60);
+    margin-top: rem(100);
   }
 }
 
@@ -204,7 +211,13 @@ border-radius: 10px;
 .internship__year {
   margin-top: rem(30);
   @include mq('md') {
-    margin-top: rem(40);
+    margin-top: rem(60);
+  }
+}
+
+.internship__year + .internship__year {
+  @include mq('md') {
+  margin-top: rem(40);
   }
 }
 
@@ -231,7 +244,7 @@ border-radius: 10px;
   display: flex;
   align-items: center;
   gap: rem(13);
-  padding-block: rem(13);
+  padding-block: rem(20);
   border-bottom: 1px solid var(--line-color);
   @include mq('md') {
     padding: rem(20) rem(28);
