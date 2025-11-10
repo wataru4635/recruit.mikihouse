@@ -22,8 +22,8 @@
 
 .fv__content {
   position: absolute;
-  top: 97%;
-  left: 51.5%;
+  top: 95%;
+  left: 52.5%;
   translate: -50% -50%;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
   z-index: 1;
 
   @include mq('md') {
-    top: 69.5%;
+    top: 57.5%;
     left: 69%;
   }
 }
@@ -49,7 +49,8 @@
 }
 
 .fv__vision-label {
-  color: var(--main-color2);
+  color: var(--white);
+  margin-right: rem(10);
   text-align: right;
   font-family: var(--font-family-second);
   font-size: calc(15 * 100 / var(--cq-ref-mobile) * 1cqw);
@@ -59,6 +60,8 @@
 
   @include mq('md') {
     font-size: calc(20 * 100 / var(--cq-ref) * 1cqw);
+    color: var(--main-color2);
+    margin-right: 0;
   }
 }
 
@@ -110,18 +113,14 @@
     padding-inline: 10px;
   }
 }
-
-/* デフォルトは全部非表示 */
 .fv__title {
   display: none;
 }
 
-/* 日本語のとき */
 :root:lang(ja) .fv__title.fv__title--jp {
   display: flex;
 }
 
-/* 英語のとき */
 :root:lang(en) .fv__title.fv__title--other[lang="en"] {
   display: inline;
 
@@ -130,7 +129,6 @@
   }
 }
 
-/* その他の言語（翻訳時） */
 :root:not(:lang(ja)):not(:lang(en)) .fv__title.fv__title--other:not([lang="en"]) {
   display: inline;
 }
@@ -138,14 +136,17 @@
 
 
 .fv__vision-dot {
-  background-color: var(--main-color);
+  background-color: var(--white);
   aspect-ratio: 1 / 1;
   width: calc(4 * 100 / var(--cq-ref-mobile) * 1cqw);
-  margin-top: calc(14 * 100 / var(--cq-ref-mobile) * 1cqw);
+  margin-top: calc(7 * 100 / var(--cq-ref-mobile) * 1cqw);
+  margin-right: rem(10);
 
   @include mq('md') {
     width: calc(7 * 100 / var(--cq-ref) * 1cqw);
     margin-top: calc(25 * 100 / var(--cq-ref) * 1cqw);
+    background-color: var(--main-color);
+
   }
 }
 
@@ -155,7 +156,7 @@
   font-size: calc(23.806 * 100 / var(--cq-ref-mobile) * 1cqw);
   font-weight: var(--font-weight-bold);
   line-height: 1.35259;
-  margin-top: calc(24 * 100 / var(--cq-ref-mobile) * 1cqw);
+  margin-top: calc(12 * 100 / var(--cq-ref-mobile) * 1cqw);
   flex-direction: column;
   gap: calc(5 * 100 / var(--cq-ref-mobile) * 1cqw);
 

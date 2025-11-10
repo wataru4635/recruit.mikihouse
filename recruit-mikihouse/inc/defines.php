@@ -21,10 +21,9 @@ define('PERSON_URL',           esc_url(home_url('/person/')));                  
 define('PERSON_SN_2009_SALES01', esc_url(home_url('/person/sn-2009-sales01/')));
 define('PERSON_SN_2009_SALES02', esc_url(home_url('/person/sn-2009-sales02/')));
 define('PERSON_SN_2009_SALES03', esc_url(home_url('/person/sn-2009-sales03/')));
-define('PERSON_SN_2009_SALES04', esc_url(home_url('/person/sn-2009-sales04/')));
-define('PERSON_SN_2009_SALES05', esc_url(home_url('/person/sn-2009-sales05/')));
-define('PERSON_SN_2009_SALES06', esc_url(home_url('/person/sn-2009-sales06/')));
-
+define('PERSON_WJ_2022_FA', esc_url(home_url('/person/wj-2022-fa/')));
+define('PERSON_YK_2024_FA', esc_url(home_url('/person/yk-2024-fa/')));
+define('PERSON_WJ_2017_MD', esc_url(home_url('/person/wj-2017-md/')));
 define('PERSON_YB_2003_CHILDCARE_ADVISOR', esc_url(home_url('/person/yb-2003-childcare_advisor/')));
 define('PERSON_YJ_2017_NEW_BUSINESS',      esc_url(home_url('/person/yj-2017-new_business/')));
 define('PERSON_AP_2018_SALES',             esc_url(home_url('/person/ap-2018-sales/')));

@@ -59,16 +59,6 @@
   }
 }
 
-.job__category {
-  color: var(--white);
-  text-align: center;
-  font-family: var(--font-family-second);
-  font-size: rem(12);
-  font-weight: var(--font-weight-light);
-  line-height: 1;
-  letter-spacing: calc(1.2 / 12 * 1em);
-}
-
 .job__subtitle {
   color: var(--white);
   text-align: center;
@@ -116,7 +106,7 @@
     font-size: rem(14);
     line-height: 1.1;
     padding-block: rem(15);
-    padding-inline: clamp(5px, calc(5px + 20 * var(--fluid-basis)), 25px);
+    padding-inline: clamp(5px, calc(5px + 4 * var(--fluid-basis)), 9px);
   }
 }
 

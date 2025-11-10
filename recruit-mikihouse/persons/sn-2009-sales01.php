@@ -43,7 +43,7 @@ Template Name: 営業 S.N・2009年 入社 (01)
           </div>
           <div class="person-detail__sec01-img-wrap js-scaleImg">
             <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales01_sec01.webp" class="person-detail__img"
-              alt="S.Nのプロフィール写真" width="745" height="560">
+              alt="S.Nさんのプロフィール写真" width="745" height="560">
           </div>
         </div>
 
@@ -65,7 +65,7 @@ Template Name: 営業 S.N・2009年 入社 (01)
         <div class="person-detail__sec02-body">
           <div class="person-detail__sec02-img-wrap js-scaleImg">
             <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales01_sec02.webp" class="person-detail__img"
-              alt="お客様と話すS.N" width="700" height="526" loading="lazy">
+              alt="お客様と話すS.Nさん" width="700" height="526" loading="lazy">
           </div>
           <p class="person-detail__text">
             <span
@@ -89,7 +89,7 @@ Template Name: 営業 S.N・2009年 入社 (01)
           </p>
           <div class="person-detail__sec03-img-wrap js-scaleImg">
             <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales01_sec03.webp" class="person-detail__img"
-              alt="電話をしているS.N" width="465" height="350" loading="lazy">
+              alt="電話をしているS.Nさん" width="465" height="350" loading="lazy">
           </div>
         </div>
         <p class="person-detail__note">※ 所属部署は取材時の情報です。</p>

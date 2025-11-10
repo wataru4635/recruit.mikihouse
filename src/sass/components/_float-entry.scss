@@ -100,9 +100,9 @@
     display: inline-block;
     width: rem(85.82);
     height: rem(15  );
-    background-color: var(--white); /* 背景色（マスク内で表示される色） */
-    -webkit-mask-image: url('../images/common/logo-white.svg'); /* マスクとして使用するSVG */
-    mask-image: url('../images/common/logo-white.svg'); /* フォールバックで他のブラウザ向け */
+    background-color: var(--white);
+    -webkit-mask-image: url('../images/common/logo-white.svg');
+    mask-image: url('../images/common/logo-white.svg');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
     -webkit-mask-size: contain;

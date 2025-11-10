@@ -56,81 +56,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* ===============================================
-# ヘッダー；スクロールでクラスを追加
+# ヘッダー、フローティングボタンのスクロール制御
 =============================================== */
 document.addEventListener('DOMContentLoaded', () => {
+  var _PC_MEDIA$addEventLis;
   const header = document.querySelector('.header');
   const floatEntries = document.querySelectorAll('.js-float-entry');
-
+  const floatEntryBtnSp = document.querySelector('.float-entry-btn-sp');
   const THRESHOLD = 50;
-  const SCROLL_STOP_DELAY = 500;
+  const SCROLL_STOP_DELAY = 2000;
   const PC_MEDIA = window.matchMedia('(min-width: 768px)');
+  let lastScrollY = 0;
+  let ticking = false;
+  let spTimer = null;
 
   /* -------------------------------
-  # ヘッダーの is-scroll 制御（既存仕様）
+  # スクロール方向の検出とヘッダー・フローティングボタンの制御
   ------------------------------- */
-  let ticking = false;
-  const applyHeader = () => {
-    if (!header) return;
-    const y = window.pageYOffset || document.documentElement.scrollTop || 0;
-    header.classList.toggle('is-scroll', y > THRESHOLD);
-    ticking = false;
-  };
-
-  applyHeader();
-
-  window.addEventListener('scroll', () => {
+  const handleScroll = () => {
     if (!ticking) {
       ticking = true;
-      requestAnimationFrame(applyHeader);
+      requestAnimationFrame(() => {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        const isScrollingDown = currentScrollY > lastScrollY;
+        const isScrolled = currentScrollY > THRESHOLD;
+        if (header && PC_MEDIA.matches && isScrolled) {
+          if (isScrollingDown) {
+            header.classList.add('is-hidden');
+          } else {
+            header.classList.remove('is-hidden');
+          }
+        } else if (header && !PC_MEDIA.matches) {
+          header.classList.toggle('is-scroll', isScrolled);
+        }
+        if (PC_MEDIA.matches && floatEntries.length > 0 && isScrolled) {
+          if (isScrollingDown) {
+            floatEntries.forEach(el => el.classList.add('is-scroll'));
+          } else {
+            floatEntries.forEach(el => el.classList.remove('is-scroll'));
+          }
+        } else if (!PC_MEDIA.matches) {
+          floatEntries.forEach(el => el.classList.remove('is-scroll'));
+        }
+        if (!PC_MEDIA.matches && floatEntryBtnSp && isScrolled && isScrollingDown) {
+          floatEntryBtnSp.classList.add('is-scroll');
+          if (spTimer) clearTimeout(spTimer);
+          spTimer = setTimeout(() => {
+            floatEntryBtnSp.classList.remove('is-scroll');
+          }, SCROLL_STOP_DELAY);
+        } else if (PC_MEDIA.matches && floatEntryBtnSp) {
+          floatEntryBtnSp.classList.remove('is-scroll');
+        }
+        lastScrollY = currentScrollY;
+        ticking = false;
+      });
     }
-  }, {
+  };
+  const initializeElements = () => {
+    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    if (PC_MEDIA.matches) {
+      if (header) header.classList.remove('is-scroll', 'is-hidden');
+      if (floatEntryBtnSp) floatEntryBtnSp.classList.remove('is-scroll');
+      floatEntries.forEach(el => el.classList.remove('is-scroll'));
+    } else {
+      if (header) {
+        header.classList.remove('is-hidden');
+        header.classList.toggle('is-scroll', currentScrollY > THRESHOLD);
+      }
+      if (floatEntryBtnSp) floatEntryBtnSp.classList.remove('is-scroll');
+      floatEntries.forEach(el => el.classList.remove('is-scroll'));
+    }
+  };
+  window.addEventListener('scroll', handleScroll, {
     passive: true
   });
-
-  /* -------------------------------
-  # PC限定：.js-float-entry は「スクロール中のみ is-scroll」
-  ------------------------------- */
-  let stopTimer = null;
-
-  const addFloatScrollClass = () => {
-    if (!PC_MEDIA.matches) return;
-    floatEntries.forEach(el => el.classList.add('is-scroll'));
-  };
-
-  const removeFloatScrollClass = () => {
-    floatEntries.forEach(el => el.classList.remove('is-scroll'));
-  };
-
-  const onScrollForFloat = () => {
-    if (!PC_MEDIA.matches) {
-      removeFloatScrollClass();
-      return;
-    }
-
-    addFloatScrollClass();
-
-    if (stopTimer) clearTimeout(stopTimer);
-    stopTimer = setTimeout(() => {
-      removeFloatScrollClass();
-    }, SCROLL_STOP_DELAY);
-  };
-
-  window.addEventListener('scroll', onScrollForFloat, {
-    passive: true
-  });
-
   const handleMediaChange = () => {
-    if (!PC_MEDIA.matches) {
-      removeFloatScrollClass();
+    initializeElements();
+    if (spTimer) {
+      clearTimeout(spTimer);
+      spTimer = null;
     }
   };
-  PC_MEDIA.addEventListener ?.('change', handleMediaChange);
+  (_PC_MEDIA$addEventLis = PC_MEDIA.addEventListener) === null || _PC_MEDIA$addEventLis === void 0 ? void 0 : _PC_MEDIA$addEventLis.call(PC_MEDIA, 'change', handleMediaChange);
   if (!PC_MEDIA.addEventListener) {
     PC_MEDIA.addListener(handleMediaChange);
   }
+  initializeElements();
 });
-
 
 /* ===============================================
 # アニメーション

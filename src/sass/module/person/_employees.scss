@@ -2,10 +2,12 @@
 
 .employees {
   margin-top: rem(66);
+  margin-bottom: rem(80);
   container-type: inline-size;
 
   @include mq('md') {
     margin-top: rem(100);
+    padding-bottom: rem(150);
   }
 }
 

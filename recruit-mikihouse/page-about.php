@@ -419,8 +419,7 @@ Template Name: ミキハウスを知る
       <ul class="business__list">
 
         <li class="business__item business__item--01">
-          <a href="https://50th.mikihouse.co.jp/craftsmanship/print.html" class="business__link" target="_blank"
-            rel="noopener noreferrer">
+          <div class="business__item-content">
             <div class="business__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/about/business-img01-sp.webp" media="(max-width: 767px)"
@@ -430,14 +429,14 @@ Template Name: ミキハウスを知る
               </picture>
             </div>
             <p class="business__subtitle">ベビー＆<br>子供服アパレル事業</p>
-          </a>
+          </div>
           <p class="business__text">
             「子どものことを第一に考えた」ものづくりに取り組み、そのクオリティとデザインは世界中から定評をいただいています。国内直営店約90店舗をはじめ、パリ、ニューヨーク、ロンドン、シンガポール、上海、台北、バンコク、ホーチミン、ソウル、メルボルンなど世界各都市に108店舗（2025年8月現在）を展開。また国内外でオンラインショップを運営しています
           </p>
         </li>
 
         <li class="business__item">
-          <a href="https://www.mhkidspal.com/" class="business__link" target="_blank" rel="noopener noreferrer">
+          <div class="business__item-content">
             <div class="business__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/about/business-img02-sp.webp" media="(max-width: 767px)"
@@ -447,7 +446,7 @@ Template Name: ミキハウスを知る
               </picture>
             </div>
             <p class="business__subtitle">教育事業</p>
-          </a>
+          </div>
           <p class="business__text">
             楽習（楽しい学び）を通して親子の今を未来につなげる幼児教室「ミキハウスキッズパル」、１歳からの本格的で楽しい幼児専門の英会話教室「ミキハウス
             英会話くらぶ」、志望校合格という親子の夢を全力で応援する「ミキハウスキッズパル 小学校受験コース」を全国の百貨店内で展開しています。
@@ -455,7 +454,7 @@ Template Name: ミキハウスを知る
         </li>
 
         <li class="business__item">
-          <a href="https://www.happy-note.com/" class="business__link" target="_blank" rel="noopener noreferrer">
+          <div class="business__item-content">
             <div class="business__img-wrap">
               <picture>
                 <source srcset="<?php echo IMAGEPATH; ?>/about/business-img03-sp.webp" media="(max-width: 767px)"
@@ -464,10 +463,10 @@ Template Name: ミキハウスを知る
                   class="business__img" width="529" height="220" loading="lazy">
               </picture>
             </div>
-            <p class="business__subtitle">子育て支援事業</p>
-          </a>
+            <p class="business__subtitle">出版事業</p>
+          </div>
           <p class="business__text">
-            子育て応援ポータルサイトとして日本最大級の「ハッピーノート.com」を運営。子育ての不安や悩みに専門家や先輩ママがアドバイスをしています。また、年4回全国の直営店や提携医療機関で配布されているフリーマガジン「Happy-Note」では、子どもを取り巻く健康的で楽しい安心・安全なくらしの提案や、家族の思い出づくりのサポートをしています。
+            あたたかな親子の絆と、子どもたちに豊かな感受性をはぐくんでほしいと、1987年より出版事業を展開しています。親子のコミュニケーションを深める楽しい絵本はもちろん、芸術性の高い名作絵本や宮沢賢治シリーズもつくっています。ミキハウスの絵本を通じ、子どもたちに想像力の翼を広げてほしいと考えています。
           </p>
         </li>
 

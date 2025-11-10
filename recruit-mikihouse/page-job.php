@@ -43,7 +43,6 @@ Template Name: ミキハウスの仕事
 
         <li class="job__item js-fade-in">
           <div class="job__item-header">
-            <p class="job__category">Creative</p>
             <p class="job__subtitle">ものづくりに携わる仕事</p>
           </div>
           <ul class="job__role-list">
@@ -55,24 +54,24 @@ Template Name: ミキハウスの仕事
 
         <li class="job__item js-fade-in --delay-2">
           <div class="job__item-header">
-            <p class="job__category">Sales</p>
             <p class="job__subtitle">笑顔を届ける仕事</p>
           </div>
           <ul class="job__role-list">
-            <li class="job__role">ファッション<br class="u-mobile">アドバイザー</li>
-            <li class="job__role">ストアマネージャー</li>
-            <li class="job__role job__role--sub">エリアマネージャー<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
+            <li class="job__role job__role--sub">Fashion Adviser<span class="job__role-sub">（FA）</span></li>
+            <li class="job__role job__role--sub">Store Manager<span class="job__role-sub">（店長）</span></li>
+            <li class="job__role">Area Manager</li>
+            <li class="job__role">Global Manager</li>
             <li class="job__role job__role--sub">営業<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
           </ul>
         </li>
 
         <li class="job__item js-fade-in --delay-4">
           <div class="job__item-header">
-            <p class="job__category">Fashion Adviser</p>
             <p class="job__subtitle">事業を支える仕事</p>
           </div>
           <ul class="job__role-list">
-            <li class="job__role">物流・貿易管理<br class="u-mobile">人事採用</li>
+            <li class="job__role">物流・貿易管理</li>
+            <li class="job__role">経営/人事</li>
             <li class="job__role">財務経理</li>
             <li class="job__role job__role--sub">事業開発<br class="translate-none"><span class="job__role-sub">（国内／海外）</span></li>
           </ul>
@@ -80,13 +79,12 @@ Template Name: ミキハウスの仕事
 
         <li class="job__item js-fade-in --delay-6">
           <div class="job__item-header">
-            <p class="job__category">Branding</p>
             <p class="job__subtitle">ミキハウスを伝える仕事</p>
           </div>
           <ul class="job__role-list">
             <li class="job__role">広報</li>
             <li class="job__role">広告宣伝／販売促進</li>
-            <li class="job__role">デジタルマーケティング</li>
+            <li class="job__role">EC/デジタルマーケティング<br class="u-desktop">/ITエンジニア</li>
           </ul>
         </li>
 

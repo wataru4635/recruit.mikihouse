@@ -231,9 +231,17 @@ button {
 .float-entry-btn-sp {
 	bottom: 20px;
 	left: 50%;
+	opacity: 0;
 	position: fixed;
+	transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 	translate: -50% 0;
+	visibility: hidden;
 	z-index: var(--z-index-float-entry);
+}
+
+.float-entry-btn-sp.is-scroll {
+	opacity: 1;
+	visibility: visible;
 }
 
 .float-entry-btn-sp__inner {
@@ -314,9 +322,9 @@ button {
 	align-items: flex-end;
 	display: flex;
 	flex-direction: column;
-	left: 51.5%;
+	left: 52.5%;
 	position: absolute;
-	top: 97%;
+	top: 95%;
 	translate: -50% -50%;
 	z-index: 1;
 }
@@ -326,11 +334,12 @@ button {
 }
 
 .fv__vision-label {
-	color: var(--main-color2);
+	color: var(--white);
 	font-family: var(--font-family-second);
 	font-size: calc(1500 / var(--cq-ref-mobile) * 1cqw);
 	font-weight: var(--font-weight-light);
 	letter-spacing: -0.023em;
+	margin-right: 0.625rem;
 	text-align: right;
 	text-transform: uppercase;
 }
@@ -362,25 +371,17 @@ button {
 	padding-right: 5px;
 }
 
-/* デフォルトは全部非表示 */
-
 .fv__title {
 	display: none;
 }
-
-/* 日本語のとき */
 
 :root:lang(ja) .fv__title.fv__title--jp {
 	display: flex;
 }
 
-/* 英語のとき */
-
 :root:lang(en) .fv__title.fv__title--other[lang=en] {
 	display: inline;
 }
-
-/* その他の言語（翻訳時） */
 
 :root:not(:lang(ja)):not(:lang(en)) .fv__title.fv__title--other:not([lang=en]) {
 	display: inline;
@@ -388,8 +389,9 @@ button {
 
 .fv__vision-dot {
 	aspect-ratio: 1/1;
-	background-color: var(--main-color);
-	margin-top: calc(1400 / var(--cq-ref-mobile) * 1cqw);
+	background-color: var(--white);
+	margin-right: 0.625rem;
+	margin-top: calc(700 / var(--cq-ref-mobile) * 1cqw);
 	width: calc(400 / var(--cq-ref-mobile) * 1cqw);
 }
 
@@ -400,7 +402,7 @@ button {
 	font-weight: var(--font-weight-bold);
 	gap: calc(500 / var(--cq-ref-mobile) * 1cqw);
 	line-height: 1.35259;
-	margin-top: calc(2400 / var(--cq-ref-mobile) * 1cqw);
+	margin-top: calc(1200 / var(--cq-ref-mobile) * 1cqw);
 	text-align: right;
 }
 
@@ -1153,14 +1155,9 @@ button {
 	margin-top: 3.125rem;
 }
 
-.business__link {
+.business__item-content {
 	display: block;
 	position: relative;
-}
-
-.business__link:hover .business__img {
-	filter: brightness(1.1);
-	transform: scale(1.05);
 }
 
 .business__img-wrap {
@@ -1187,7 +1184,6 @@ button {
 	border-radius: 0 0 50px 0;
 	height: auto;
 	object-fit: cover;
-	transition: transform var(--duration-base) ease, filter var(--duration-base) ease;
 }
 
 .business__subtitle {
@@ -1208,7 +1204,6 @@ button {
 	position: absolute;
 	right: -2.5rem;
 	top: 50%;
-	transition: right var(--duration-base) ease;
 	translate: 0 -50%;
 	width: 1.75rem;
 }
@@ -2225,16 +2220,6 @@ button {
 	padding-top: 0.796875rem;
 }
 
-.job__category {
-	color: var(--white);
-	font-family: var(--font-family-second);
-	font-size: 0.75rem;
-	font-weight: var(--font-weight-light);
-	letter-spacing: 0.1em;
-	line-height: 1;
-	text-align: center;
-}
-
 .job__subtitle {
 	color: var(--white);
 	font-size: 0.875rem;
@@ -2324,6 +2309,7 @@ button {
 
 .employees {
 	container-type: inline-size;
+	margin-bottom: 5rem;
 	margin-top: 4.125rem;
 }
 
@@ -2682,7 +2668,6 @@ button {
 .talk {
 	background-color: var(--bg-color);
 	margin-bottom: 5rem;
-	margin-top: 5rem;
 	padding-bottom: 5rem;
 	padding-top: 5rem;
 }
@@ -3082,6 +3067,10 @@ button {
 	color: var(--text-color);
 }
 
+.recruit-info__dept.recruit-info__dept--weight-regular {
+	font-weight: var(--font-weight-regular);
+}
+
 .recruit-info__positions {
 	-moz-column-gap: 0.625rem;
 	align-items: center;
@@ -3405,13 +3394,13 @@ button {
 }
 
 .float-entry__logo-img {
-	-webkit-mask-image: url("../images/common/logo-white.svg"); /* マスクとして使用するSVG */
+	-webkit-mask-image: url("../images/common/logo-white.svg");
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-size: contain;
-	background-color: var(--white); /* 背景色（マスク内で表示される色） */
+	background-color: var(--white);
 	display: inline-block;
 	height: 0.9375rem;
-	mask-image: url("../images/common/logo-white.svg"); /* フォールバックで他のブラウザ向け */
+	mask-image: url("../images/common/logo-white.svg");
 	mask-repeat: no-repeat;
 	mask-size: contain;
 	transition: background-color var(--duration-base) ease;
@@ -4152,10 +4141,6 @@ a:hover {
 	transform: scale(1.05);
 }
 
-.business__link:hover .business__subtitle::after {
-	right: -2.8125rem;
-}
-
 .youtube-thumbnail:hover {
 	filter: brightness(1.2);
 }
@@ -4357,7 +4342,7 @@ html {
 
 .fv__content {
 	left: 69%;
-	top: 69.5%;
+	top: 57.5%;
 }
 
 :root:not(:lang(ja)) .fv__content {
@@ -4365,7 +4350,9 @@ html {
 }
 
 .fv__vision-label {
+	color: var(--main-color2);
 	font-size: calc(2000 / var(--cq-ref) * 1cqw);
+	margin-right: 0;
 }
 
 .fv__title.fv__title--other {
@@ -4383,6 +4370,7 @@ html {
 }
 
 .fv__vision-dot {
+	background-color: var(--main-color);
 	margin-top: calc(2500 / var(--cq-ref) * 1cqw);
 	width: calc(700 / var(--cq-ref) * 1cqw);
 }
@@ -5351,8 +5339,8 @@ html {
 	font-size: 0.875rem;
 	line-height: 1.1;
 	padding-bottom: 0.9375rem;
-	padding-left: clamp(5px, 5px + 20 * var(--fluid-basis), 25px);
-	padding-right: clamp(5px, 5px + 20 * var(--fluid-basis), 25px);
+	padding-left: clamp(5px, 5px + 4 * var(--fluid-basis), 9px);
+	padding-right: clamp(5px, 5px + 4 * var(--fluid-basis), 9px);
 	padding-top: 0.9375rem;
 }
 
@@ -5392,6 +5380,7 @@ html {
 
 .employees {
 	margin-top: 6.25rem;
+	padding-bottom: 9.375rem;
 }
 
 .employees__filters {
@@ -5519,7 +5508,11 @@ html {
 .person-detail__title {
 	font-size: 2.1875rem;
 	line-height: 1.8;
+	margin-right: calc(50% - 50cqw);
 	margin-top: clamp(30px, 9900 / var(--cq-ref) * 1cqw, 120px);
+	max-width: clamp(428px, 428px + 300 * var(--fluid-basis), 728px);
+	position: relative;
+	z-index: 1;
 }
 
 .person-detail__meta {
@@ -5564,6 +5557,19 @@ html {
 	margin-top: 3.125rem;
 }
 
+.person-detail__sec02-body.person-detail__sec02-body--reverse {
+	grid-template-areas: "text img";
+	grid-template-columns: 350fr 700fr;
+}
+
+.person-detail__sec02-body.person-detail__sec02-body--reverse .person-detail__text {
+	grid-area: text;
+}
+
+.person-detail__sec02-body.person-detail__sec02-body--reverse .person-detail__img {
+	grid-area: img;
+}
+
 .person-detail__sec02 .person-detail__text.person-detail__text--second {
 	margin-top: 3.125rem;
 }
@@ -5575,6 +5581,19 @@ html {
 .person-detail__sec03-body {
 	gap: 3.125rem;
 	grid-template-columns: 584.6fr 465.399fr;
+}
+
+.person-detail__sec03-body.person-detail__sec03-body--reverse {
+	grid-template-areas: "img text";
+	grid-template-columns: 465.399fr 584.6fr;
+}
+
+.person-detail__sec03-body.person-detail__sec03-body--reverse .person-detail__text {
+	grid-area: text;
+}
+
+.person-detail__sec03-body.person-detail__sec03-body--reverse .person-detail__img {
+	grid-area: img;
 }
 
 .person-detail__sec03 .person-detail__img {
@@ -5590,7 +5609,6 @@ html {
 
 .talk {
 	margin-bottom: 11.25rem;
-	margin-top: 9.375rem;
 	padding-bottom: 7.5rem;
 	padding-top: 7.5rem;
 }
@@ -5823,6 +5841,11 @@ html {
 
 .header {
 	height: 5.9375rem;
+	transition: transform 0.5s ease, box-shadow var(--duration-base) ease;
+}
+
+.header.is-hidden {
+	transform: translateY(-100%);
 }
 
 .header__inner {

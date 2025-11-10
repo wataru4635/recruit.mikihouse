@@ -43,21 +43,19 @@ Template Name: 採用情報
           <p class="recruit-info__course">Fashion Adviser（FA）コース　約20名</p>
           <ul class="recruit-info__role-rows">
             <li class="recruit-info__role-row">
-              <p class="recruit-info__dept">
-                <!-- <a href="https://recruit.mikihouse.co.jp/person/ryu.html" class="recruit-info__link">Fashion Adviser（FA）</a> -->
-                Fashion Adviser（FA）
-              </p>
               <ul class="recruit-info__positions">
                 <li class="recruit-info__position">
-                  <!-- <a href="https://recruit.mikihouse.co.jp/person/yamauchi.html" class="recruit-info__link">Store Manager（店長）</a> -->
+                  Fashion Adviser（FA）
+                </li>
+                <li class="recruit-info__position">
                   Store Manager（店長）
                 </li>
-              </ul>
-            </li>
-            <li class="recruit-info__role-row">
-              <p class="recruit-info__dept">Expert Career</p>
-              <ul class="recruit-info__positions">
-                <li class="recruit-info__position">Area Manager（国内/海外）</li>
+                <li class="recruit-info__position">
+                  Area Manager
+                </li>
+                <li class="recruit-info__position">
+                  Global Manager
+                </li>
               </ul>
             </li>
           </ul>
@@ -75,8 +73,7 @@ Template Name: 採用情報
             <li class="recruit-info__role-row">
               <p class="recruit-info__dept">Sales部門</p>
               <ul class="recruit-info__positions">
-                <li class="recruit-info__position">国内営業</li>
-                <li class="recruit-info__position">海外営業</li>
+                <li class="recruit-info__position">営業 （国内/海外）</li>
                 <li class="recruit-info__position">広告宣伝/販売促進</li>
                 <li class="recruit-info__position">EC/デジタルマーケティング/ITエンジニア</li>
                 <li class="recruit-info__position">物流・貿易管理</li>
@@ -170,7 +167,7 @@ Template Name: 採用情報
           </div>
           <div class="process__body">
             <span class="process__step-label-sp">STEP 1</span>
-            <p class="process__subtitle">ご応募</p>
+            <p class="process__subtitle">エントリー</p>
             <ul class="process__details">
               <li class="process__detail">① プロフィールシート</li>
               <li class="process__detail">② 自己PR動画</li>
@@ -183,6 +180,7 @@ Template Name: 採用情報
           </div>
         </li>
 
+
         <li class="process__item">
           <div class="process__step">
             <span class="process__step-label">STEP 2</span>
@@ -193,20 +191,6 @@ Template Name: 採用情報
           </div>
           <div class="process__body">
             <span class="process__step-label-sp">STEP 2</span>
-            <p class="process__subtitle">書類・動画選考</p>
-          </div>
-        </li>
-
-        <li class="process__item">
-          <div class="process__step">
-            <span class="process__step-label">STEP 3</span>
-          </div>
-          <div class="process__dot">
-            <img src="<?php echo IMAGEPATH; ?>/recruitment/process-dot.svg" alt="ドット" class="process__dot-img"
-              width="10" height="10">
-          </div>
-          <div class="process__body">
-            <span class="process__step-label-sp">STEP 3</span>
             <p class="process__subtitle">面接・選考</p>
             <p class="process__text">
               個人面接・グループ面接、WEBテスト、グループワークなど、<br class="u-desktop">
@@ -218,14 +202,14 @@ Template Name: 採用情報
 
         <li class="process__item">
           <div class="process__step">
-            <span class="process__step-label">STEP 4</span>
+            <span class="process__step-label">STEP 3</span>
           </div>
           <div class="process__dot process__dot--bottom">
             <img src="<?php echo IMAGEPATH; ?>/recruitment/process-dot.svg" alt="ドット" class="process__dot-img"
               width="10" height="10">
           </div>
           <div class="process__body">
-            <span class="process__step-label-sp">STEP 4</span>
+            <span class="process__step-label-sp">STEP 3</span>
             <p class="process__subtitle">内々定</p>
           </div>
         </li>

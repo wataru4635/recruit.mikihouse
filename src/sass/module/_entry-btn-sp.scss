@@ -6,9 +6,18 @@
   left: 50%;
   translate: -50% 0;
   z-index: var(--z-index-float-entry);
-@include mq('md') {
-display: none;
-}
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+  
+  @include mq('md') {
+    display: none;
+  }
+  
+  &.is-scroll {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .float-entry-btn-sp__inner {

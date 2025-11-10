@@ -126,6 +126,10 @@ gap: rem(22);
   color: var(--text-color);
 }
 
+.recruit-info__dept.recruit-info__dept--weight-regular {
+  font-weight: var(--font-weight-regular);
+}
+
 .recruit-info__positions {
 display: flex;
 align-items: center;

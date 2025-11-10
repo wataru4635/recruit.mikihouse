@@ -248,7 +248,7 @@
           <a href="<?php echo PERSON_URL; ?>" class="btn-link">詳しくはこちら</a>
         </div>
       </div>
-      <!-- 準備中の為非表示：2025/10/24 ※top-person__coming-soonは公開時に削除 -->
+      <!-- 準備中の為非表示：2025/10/24 -->
       <!-- <ul class="top-person__list js-top-person-list">
         <li class="top-person__item top-person__item--01">
           <a href="<?php echo PERSON_SN_2009_SALES02; ?> " class="top-person__link">
@@ -270,32 +270,32 @@
         </li>
 
         <li class="top-person__item top-person__item--02">
-          <a href="<?php echo PERSON_SN_2009_SALES04; ?> " class="top-person__link">
+          <a href="<?php echo PERSON_WJ_2017_MD; ?> " class="top-person__link">
             <div class="top-person__img-wrap">
               <picture>
-                <source srcset="<?php echo IMAGEPATH; ?>/person/person_sn-2009b-sp.webp" media="(max-width: 767px)"
+                <source srcset="<?php echo IMAGEPATH; ?>/person/wj-2017-md.webp" media="(max-width: 767px)"
                   type="image/webp" width="280" height="400">
-                <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales04.webp" class="top-person__img"
-                  alt="黄色と水色のシャツを着た女性社員のポートレート" width="357" height="500" loading="lazy">
+                <img src="<?php echo IMAGEPATH; ?>/person/wj-2017-md.webp" class="top-person__img"
+                  alt="黒髪ショートヘアで笑顔のW.Jさんが黒いジャケットと白いTシャツを着用したポートレート" width="280" height="400" loading="lazy">
               </picture>
             </div>
             <div class="top-person__info">
               <div class="top-person__info-inner">
-                <p class="top-person__name">A.A</p>
-                <p class="top-person__position">2013年入社・商品企画 デザイナー</p>
+                <p class="top-person__name">W.J.</p>
+                <p class="top-person__position">2017年入社・商品企画部</p>
               </div>
             </div>
           </a>
         </li>
 
         <li class="top-person__item top-person__item--03">
-          <a href="<?php echo PERSON_SN_2009_SALES05; ?> " class="top-person__link">
+          <a href="<?php echo PERSON_YK_2024_FA; ?> " class="top-person__link">
             <div class="top-person__img-wrap">
               <picture>
-                <source srcset="<?php echo IMAGEPATH; ?>/person/person_sn-2009c-sp.webp" media="(max-width: 767px)"
+                <source srcset="<?php echo IMAGEPATH; ?>/person/yk-2024-fa.webp" media="(max-width: 767px)"
                   type="image/webp" width="280" height="400">
-                <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales05.webp" class="top-person__img"
-                  alt="ネイビーのジャケットを着た男性社員のポートレート" width="357" height="500" loading="lazy">
+                <img src="<?php echo IMAGEPATH; ?>/person/yk-2024-fa.webp" class="top-person__img"
+                  alt="カーキ色のシャツを着て笑顔で立つ女性ファッションアドバイザーY.Kさんのポートレート" width="280" height="400" loading="lazy">
               </picture>
             </div>
             <div class="top-person__info">
