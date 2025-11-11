@@ -39,7 +39,7 @@ Template Name: 営業 S.N・2009年 入社 (01)
             <p class="person-detail__category">営業</p>
             <h1 class="person-detail__title js-text-animate">まだ世の中にない、<br class="translate-none">新しい価値を生み出す面白さ
             </h1>
-            <p class="person-detail__meta">S.N・2009年 入社</p>
+            <p class="person-detail__meta">S.N.・2009年 入社</p>
           </div>
           <div class="person-detail__sec01-img-wrap js-scaleImg">
             <img src="<?php echo IMAGEPATH; ?>/person/sn-2009-sales01_sec01.webp" class="person-detail__img"

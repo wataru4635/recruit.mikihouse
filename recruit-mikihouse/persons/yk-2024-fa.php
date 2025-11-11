@@ -39,7 +39,7 @@ Template Name: Fashion Adviser Y.K.・2024年 入社
             <p class="person-detail__category">Fashion Adviser</p>
             <h1 class="person-detail__title js-text-animate">「ありがとう」の言葉を原動力に、<br class="translate-none">より多くの人たちに寄り添える存在に
             </h1>
-            <p class="person-detail__meta">Y.K・2024年 入社</p>
+            <p class="person-detail__meta">Y.K.・2024年 入社</p>
           </div>
           <div class="person-detail__sec01-img-wrap js-scaleImg">
             <img src="<?php echo IMAGEPATH; ?>/person/yk-2024-fa_sec01.webp" class="person-detail__img"

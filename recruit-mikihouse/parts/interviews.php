@@ -80,22 +80,22 @@
           </a>
         </li>
 
-        <!-- <li class="interviews__item">
+        <li class="interviews__item">
           <a href="<?php echo PERSON_YJ_2017_NEW_BUSINESS; ?>" class="interviews__link">
             <div class="interviews__img-wrap">
-              <img src="<?php echo IMAGEPATH; ?>/person/yj-2017-plan.webp" class="interviews__img"
-                alt="ピンク色のシャツを着た女性社員のポートレート" width="264" height="400" loading="lazy">
+              <img src="<?php echo IMAGEPATH; ?>/person/yj-2017-new-business.webp" class="interviews__img"
+                alt="ピンク色のシャツを着て笑顔で立つ女性社員Y.Jさんのポートレート" width="264" height="400" loading="lazy">
             </div>
             <div class="interviews__info">
               <div class="interviews__info-inner">
-                <p class="interviews__name">Y.J</p>
-                <p class="interviews__position">2017年入社・新規事業</p>
+                <p class="interviews__name">Y.J.</p>
+                <p class="interviews__position">2017年入社・新規事業部</p>
               </div>
             </div>
           </a>
         </li>
 
-        <li class="interviews__item">
+        <!-- <li class="interviews__item">
           <a href="<?php echo PERSON_MH_2016_STORE_MANAGER; ?>" class="interviews__link">
             <div class="interviews__img-wrap">
               <img src="<?php echo IMAGEPATH; ?>/person/mh-2016-manager.webp" class="interviews__img"

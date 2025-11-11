@@ -39,7 +39,7 @@ Template Name: 営業 A.P・2018年 入社
             <p class="person-detail__category">営業</p>
             <h1 class="person-detail__title js-text-animate">MIKI HOUSE<br class="translate-none">ブランドを世界へ
             </h1>
-            <p class="person-detail__meta">A.P・2018年 入社</p>
+            <p class="person-detail__meta">A.P.・2018年 入社</p>
           </div>
           <div class="person-detail__sec01-img-wrap js-scaleImg">
             <img src="<?php echo IMAGEPATH; ?>/person/ap-2018-sales_sec01.webp" class="person-detail__img"

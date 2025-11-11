@@ -123,22 +123,22 @@
           </a>
         </li>
 
-        <!-- <li class="employees__item mix plan">
+        <li class="employees__item mix sales">
           <a href="<?php echo PERSON_YJ_2017_NEW_BUSINESS; ?>" class="employees__link">
             <div class="employees__img-wrap">
-              <img src="<?php echo IMAGEPATH; ?>/person/yj-2017-plan.webp" class="employees__img"
-                alt="ピンク色のシャツを着た女性社員のポートレート" width="264" height="400" loading="lazy">
+              <img src="<?php echo IMAGEPATH; ?>/person/yj-2017-new-business.webp" class="employees__img"
+                alt="ピンク色のシャツを着て笑顔で立つ女性社員Y.Jさんのポートレート" width="264" height="400" loading="lazy">
             </div>
             <div class="employees__info">
               <div class="employees__info-inner">
-                <p class="employees__name">Y.J</p>
-                <p class="employees__position">2017年入社・新規事業</p>
+                <p class="employees__name">Y.J.</p>
+                <p class="employees__position">2017年入社・新規事業部</p>
               </div>
             </div>
           </a>
         </li>
 
-        <li class="employees__item mix manager">
+        <!-- <li class="employees__item mix manager">
           <a href="<?php echo PERSON_MH_2016_STORE_MANAGER; ?>" class="employees__link">
             <div class="employees__img-wrap">
               <img src="<?php echo IMAGEPATH; ?>/person/mh-2016-manager.webp" class="employees__img"
