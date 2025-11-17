@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Fashion Adviser W.J.・2022年 入社
+Template Name: Fashion Adviser L.W.・2022年 入社
 */
 ?>
 
@@ -39,11 +39,11 @@ Template Name: Fashion Adviser W.J.・2022年 入社
             <p class="person-detail__category">Fashion Adviser</p>
             <h1 class="person-detail__title js-text-animate">お客様の立場から始まった、<br class="translate-none">ミキハウスとの出会い
             </h1>
-            <p class="person-detail__meta">W.J.・留学生・2022年 入社</p>
+            <p class="person-detail__meta">L.W.・留学生・2022年 入社</p>
           </div>
           <div class="person-detail__sec01-img-wrap js-scaleImg">
-            <img src="<?php echo IMAGEPATH; ?>/person/wj-2022-fa_sec01.webp" class="person-detail__img"
-              alt="W.Jさんのプロフィール写真" width="745" height="560">
+            <img src="<?php echo IMAGEPATH; ?>/person/lw-2022-fa_sec01.webp" class="person-detail__img"
+              alt="L.Wさんのプロフィール写真" width="745" height="560">
           </div>
         </div>
 
@@ -63,8 +63,8 @@ Template Name: Fashion Adviser W.J.・2022年 入社
         <h2 class="person-detail__heading">お客様に喜んでいただくために、SHOPを飛び出し台湾へ</h2>
         <div class="person-detail__sec02-body">
           <div class="person-detail__sec02-img-wrap js-scaleImg">
-            <img src="<?php echo IMAGEPATH; ?>/person/wj-2022-fa_sec02.webp" class="person-detail__img"
-              alt="ミキハウスの店舗で子ども服を丁寧にディスプレイするW.J.さん" width="700" height="526" loading="lazy">
+            <img src="<?php echo IMAGEPATH; ?>/person/lw-2022-fa_sec02.webp" class="person-detail__img"
+              alt="ミキハウスの店舗で子ども服を丁寧にディスプレイするL.W.さん" width="700" height="526" loading="lazy">
           </div>
           <p class="person-detail__text">
             <span
@@ -88,8 +88,8 @@ Template Name: Fashion Adviser W.J.・2022年 入社
               class="person-detail__text-mt">将来の目標は、日中の架け橋となるGlobal Manager。母国である中国の店舗運営や新規店舗などに携わり、最前線からブランドの未来を切り拓いていきたいと考えています。品質の高い商品を、上質なサービスで——お客様に喜んでいただけるSHOPを、中国、そして世界中に広げていきます！</span>
           </p>
           <div class="person-detail__sec03-img-wrap js-scaleImg">
-            <img src="<?php echo IMAGEPATH; ?>/person/wj-2022-fa_sec03.webp" class="person-detail__img"
-              alt="ミキハウスの店舗でデニムジャケットを手に、お客様に商品を紹介するW.J.さん" width="465" height="350" loading="lazy">
+            <img src="<?php echo IMAGEPATH; ?>/person/lw-2022-fa_sec03.webp" class="person-detail__img"
+              alt="ミキハウスの店舗でデニムジャケットを手に、お客様に商品を紹介するL.W.さん" width="465" height="350" loading="lazy">
           </div>
         </div>
         <p class="person-detail__note">※ 所属部署は取材時の情報です。</p>

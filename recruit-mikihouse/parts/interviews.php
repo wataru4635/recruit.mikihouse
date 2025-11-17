@@ -66,14 +66,14 @@
         </li>
 
         <li class="interviews__item">
-          <a href="<?php echo PERSON_WJ_2022_FA; ?>" class="interviews__link">
+          <a href="<?php echo PERSON_LW_2022_FA; ?>" class="interviews__link">
             <div class="interviews__img-wrap">
-              <img src="<?php echo IMAGEPATH; ?>/person/wj-2022-fa.webp" class="interviews__img"
-                alt="薄紫色のシャツにリボンタイを着用し、笑顔で立つ女性ファッションアドバイザーW.Jさんのポートレート" width="264" height="400" loading="lazy">
+              <img src="<?php echo IMAGEPATH; ?>/person/lw-2022-fa.webp" class="interviews__img"
+                alt="薄紫色のシャツにリボンタイを着用し、笑顔で立つ女性ファッションアドバイザーL.W.さんのポートレート" width="264" height="400" loading="lazy">
             </div>
             <div class="interviews__info">
               <div class="interviews__info-inner">
-                <p class="interviews__name">W.J.</p>
+                <p class="interviews__name">L.W.</p>
                 <p class="interviews__position">2022年入社・Fashion Adviser</p>
               </div>
             </div>

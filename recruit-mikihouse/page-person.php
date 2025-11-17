@@ -41,11 +41,10 @@
       <!-- 一部非表示：2025/11/10 -->
       <ul class="employees__filters">
         <li data-filter="all" class="employees__filter mixitup-control-active">すべて表示</li>
-        <li data-filter=".sales" class="employees__filter">営業・グローバル推進</li>
-        <li data-filter=".plan" class="employees__filter">企画・生産管理</li>
-        <li data-filter=".md" class="employees__filter">商品MD</li>
-        <li data-filter=".marketing" class="employees__filter">マーケティング</li>
-        <li data-filter=".manager" class="employees__filter">ストアマネージャー</li>
+        <li data-filter=".manager" class="employees__filter">Fashion Adviser（FA）</li>
+        <li data-filter=".creative" class="employees__filter">Creative部門</li>
+        <li data-filter=".sales" class="employees__filter">Sales部門</li>
+        <!-- <li data-filter=".management" class="employees__filter">Management部門</li> -->
       </ul>
       <ul class="employees__list" id="employees-list">
         <li class="employees__item mix sales">
@@ -78,7 +77,7 @@
           </a>
         </li>
 
-        <li class="employees__item mix md">
+        <li class="employees__item mix creative">
           <a href="<?php echo PERSON_WJ_2017_MD; ?>" class="employees__link">
             <div class="employees__img-wrap">
               <img src="<?php echo IMAGEPATH; ?>/person/wj-2017-md.webp" class="employees__img"
@@ -109,14 +108,14 @@
         </li>
 
         <li class="employees__item mix manager">
-          <a href="<?php echo PERSON_WJ_2022_FA; ?>" class="employees__link">
+          <a href="<?php echo PERSON_LW_2022_FA; ?>" class="employees__link">
             <div class="employees__img-wrap">
-              <img src="<?php echo IMAGEPATH; ?>/person/wj-2022-fa.webp" class="employees__img"
-                alt="薄紫色のシャツにリボンタイを着用し、笑顔で立つ女性ファッションアドバイザーW.Jさんのポートレート" width="264" height="400" loading="lazy">
+              <img src="<?php echo IMAGEPATH; ?>/person/lw-2022-fa.webp" class="employees__img"
+                alt="薄紫色のシャツにリボンタイを着用し、笑顔で立つ女性ファッションアドバイザーL.W.さんのポートレート" width="264" height="400" loading="lazy">
             </div>
             <div class="employees__info">
               <div class="employees__info-inner">
-                <p class="employees__name">W.J.</p>
+                <p class="employees__name">L.W.</p>
                 <p class="employees__position">2022年入社・Fashion Adviser</p>
               </div>
             </div>
