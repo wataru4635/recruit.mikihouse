@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 商品企画部 W.J・2017年 入社
+Template Name: 商品企画 W.J・2017年 入社
 */
 ?>
 
@@ -36,8 +36,8 @@ Template Name: 商品企画部 W.J・2017年 入社
       <div class="person-detail__sec01">
         <div class="person-detail__intro">
           <div class="person-detail__header">
-            <p class="person-detail__category">商品企画部</p>
-            <h1 class="person-detail__title js-text-animate">デザインや品質には一切妥協せず、<br class="translate-none">“ミキハウスらしさ”と“新しさ”の<br class="translate-none">両立しながら挑戦する。
+            <p class="person-detail__category">商品企画</p>
+            <h1 class="person-detail__title js-text-animate">デザインや品質には一切妥協せず、<br class="translate-none">“ミキハウスらしさ”と“新しさ”を<br class="translate-none">両立しながら挑戦する。
             </h1>
             <p class="person-detail__meta">W.J.・中国出身・2017年 入社</p>
           </div>
@@ -84,7 +84,7 @@ Template Name: 商品企画部 W.J・2017年 入社
         <div class="person-detail__sec03-body">
           <p class="person-detail__text">
             <span
-              class="person-detail__text-line">ー</span>&emsp;私企画部に配属されて半年が経ったころ、「CHIEKO SAKU（チエコサク）」という新ブランドの立ち上げプロジェクトに携わる機会が訪れました。このブランドはメインブランドの「MIKI HOUSE」とは役割やターゲットが異なるため、明確な差別化を強く意識する必要がありました。<br>
+              class="person-detail__text-line">ー</span>&emsp;企画部に配属されて半年が経ったころ、「CHIEKO SAKU（チエコサク）」という新ブランドの立ち上げプロジェクトに携わる機会が訪れました。このブランドはメインブランドの「MIKI HOUSE」とは役割やターゲットが異なるため、明確な差別化を強く意識する必要がありました。<br>
               “ミキハウスらしさ”を大切にしながらも、既存の枠にとらわれない新しさを追求し、色使いや着心地、素材選定に至るまで、これまでにない表現やアプローチを積極的に取り入れました。当時、知識も経験も浅かった私にとって、求められるスピードや責任からくるプレッシャーもありましたが、「CHIEKO SAKU」でしかつくり出せない個性と世界観が形になったとき、大きな達成感を味わうことができました。<br><span
               class="person-detail__text-mt">経歴に関係なくチャレンジを後押ししてくれる風土があるからこそ、伝統を守りつつも、遊び心あふれる発想で挑戦し、お客様からの支持をさらに広げていきたいです。</span>
           </p>

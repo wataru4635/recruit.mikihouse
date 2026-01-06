@@ -44,7 +44,7 @@
             <div class="interviews__info">
               <div class="interviews__info-inner">
                 <p class="interviews__name">W.J.</p>
-                <p class="interviews__position">2017年入社・商品企画部</p>
+                <p class="interviews__position">2017年入社・商品企画</p>
               </div>
             </div>
           </a>
@@ -89,7 +89,7 @@
             <div class="interviews__info">
               <div class="interviews__info-inner">
                 <p class="interviews__name">Y.J.</p>
-                <p class="interviews__position">2017年入社・新規事業部</p>
+                <p class="interviews__position">2017年入社・事業開発</p>
               </div>
             </div>
           </a>

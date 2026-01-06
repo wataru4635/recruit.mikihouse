@@ -3431,6 +3431,8 @@ button {
 	display: flex;
 	gap: 0.83125rem;
 	transition: opacity var(--duration-base) ease;
+	width: -moz-fit-content;
+	width: fit-content;
 }
 
 .footer__logo-img {
@@ -6546,6 +6548,8 @@ html {
 .footer__logo {
 	flex-direction: column;
 	gap: 1.125rem;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .header__nav {

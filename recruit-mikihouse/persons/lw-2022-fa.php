@@ -39,7 +39,7 @@ Template Name: Fashion Adviser L.W.・2022年 入社
             <p class="person-detail__category">Fashion Adviser</p>
             <h1 class="person-detail__title js-text-animate">お客様の立場から始まった、<br class="translate-none">ミキハウスとの出会い
             </h1>
-            <p class="person-detail__meta">L.W.・留学生・2022年 入社</p>
+            <p class="person-detail__meta">L.W.・中国出身・留学生・2022年 入社</p>
           </div>
           <div class="person-detail__sec01-img-wrap js-scaleImg">
             <img src="<?php echo IMAGEPATH; ?>/person/lw-2022-fa_sec01.webp" class="person-detail__img"
@@ -68,7 +68,7 @@ Template Name: Fashion Adviser L.W.・2022年 入社
           </div>
           <p class="person-detail__text">
             <span
-              class="person-detail__text-line">ー</span>&emsp;法接客では、常に相手の立場に立った提案を心がけています。現在勤務している新宿伊勢丹店では、来店されるお客様の約70%が海外から来られるインバウンドのお客様。自分の強みである語学力を活かして、お客様との信頼関係を育む中で、たくさんの顧客様とのご縁が繋がっています。<br>その中の一人に、台湾在住で、日本に来るたびに私に会いに来てくださる顧客様がいらっしゃいます。普段は、お客様が私のいる日本のSHOPに来てくださるのですが、このお客様のために何ができるかを考えた私は、台湾で新作商品を紹介したいと考えました。これまで、日本にいるFashion Adviserが、お客様に会うために海外に行くケースはありませんでした。
+              class="person-detail__text-line">ー</span>&emsp;接客では、常に相手の立場に立った提案を心がけています。現在勤務している都内の店舗では、来店されるお客様の約70%が海外から来られるインバウンドのお客様。自分の強みである語学力を活かして、お客様との信頼関係を育む中で、たくさんの顧客様とのご縁が繋がっています。<br>その中の一人に、台湾在住で、日本に来るたびに私に会いに来てくださる顧客様がいらっしゃいます。普段は、お客様が私のいる日本のSHOPに来てくださるのですが、このお客様のために何ができるかを考えた私は、台湾で新作商品を紹介したいと考えました。これまで、日本にいるFashion Adviserが、お客様に会うために海外に行くケースはありませんでした。
           </p>
         </div>
         <p class="person-detail__text person-detail__text--second">
@@ -83,7 +83,7 @@ Template Name: Fashion Adviser L.W.・2022年 入社
         <div class="person-detail__sec03-body">
           <p class="person-detail__text">
             <span
-              class="person-detail__text-line">ー</span>&emsp;入社3年目となった現在は、サブ（副店長）として、接客だけでなく、予算設計、スタッフマネジメント、店舗運営、ブランド担当、百貨店との連携など、幅広い役割を担っています。<br><span
+              class="person-detail__text-line">ー</span>&emsp;入社3年目となった現在は、Assistant Manager（副店長）として、接客だけでなく、予算設計、スタッフマネジメント、店舗運営、ブランド担当、百貨店との連携など、幅広い役割を担っています。<br><span
               class="person-detail__text-mt">今後は、日本で培ったおもてなしと運営力、そして MIKI HOUSE QUALITYを軸に、まずは日本国内のStore Manager（店長）を目指したいと考えています。そして、人を巻き込む力をさらに磨き、お客様に喜んでいただくことはもちろん、一緒に働くスタッフの皆さんも、楽しく働けるような環境作りを実現したいと思います。</span><br><span
               class="person-detail__text-mt">将来の目標は、日中の架け橋となるGlobal Manager。母国である中国の店舗運営や新規店舗などに携わり、最前線からブランドの未来を切り拓いていきたいと考えています。品質の高い商品を、上質なサービスで——お客様に喜んでいただけるSHOPを、中国、そして世界中に広げていきます！</span>
           </p>

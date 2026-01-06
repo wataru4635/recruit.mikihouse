@@ -86,7 +86,7 @@
             <div class="employees__info">
               <div class="employees__info-inner">
                 <p class="employees__name">W.J.</p>
-                <p class="employees__position">2017年入社・商品企画部</p>
+                <p class="employees__position">2017年入社・商品企画</p>
               </div>
             </div>
           </a>
@@ -131,7 +131,7 @@
             <div class="employees__info">
               <div class="employees__info-inner">
                 <p class="employees__name">Y.J.</p>
-                <p class="employees__position">2017年入社・新規事業部</p>
+                <p class="employees__position">2017年入社・事業開発</p>
               </div>
             </div>
           </a>

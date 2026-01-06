@@ -16,11 +16,14 @@ background-color: var(--bg-color);
 .footer__logo {
 display: flex;
 align-items: center;
+width: fit-content;
 gap: rem(13.3);
 transition: opacity var(--duration-base) ease;
 @media (max-width: 767px) {
 flex-direction: column;
 gap: rem(18);
+margin-inline: auto;
+
 }
 @media (any-hover: hover) {
 &:hover {
