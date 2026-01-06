@@ -1,0 +1,98 @@
+@use "global" as *;
+
+.entry-btn {
+  margin-top: rem(50);
+  padding-top: rem(20);
+}
+
+.entry-btn__inner.sub-inner {
+  @include mq('md') {
+    max-width: rem(900);
+  }
+}
+
+.entry-btn__link {
+  height: rem(55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(10);
+  background-color: var(--main-color);
+  width: 100%;
+  padding-inline: rem(13);
+  border: 2px solid var(--main-color);
+  transition: background-color var(--duration-base) ease;
+  position: relative;
+  text-decoration: none;
+  gap: rem(3.34);
+
+  @include mq('md') {
+    padding-inline: rem(13);
+    height: rem(60);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--white);
+    }
+    &:hover .entry-btn__label {
+      color: var(--main-color);
+    }
+    &:hover .entry-btn__text {
+      color: var(--main-color);
+    }
+    &:hover::after {
+      border-top: 2px solid var(--main-color);
+      border-right: 2px solid var(--main-color);
+    }
+  }
+}
+
+.entry-btn__link::after {
+  content: '';
+  position: absolute;
+  top: 56%;
+  translate: 0 -50%;
+  right: rem(13);
+  width: rem(7);
+  height: rem(7);
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: translateY(-50%) rotate(45deg);
+  transition: border-top var(--duration-base) ease, border-right var(--duration-base) ease;
+  @include mq('md') {
+    right: rem(30);
+    translate: 0 -50%;
+    width: rem(9);
+    height: rem(9);
+  }
+}
+
+.entry-btn__label {
+  color: #FFFFFF;
+  font-family: var(--font-family-second);
+  font-size: rem(8.37);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.21;
+  transition: color var(--duration-base) ease;
+  text-align: center;
+  @media (min-width: 1441px) {
+  font-size: clamp(8.37px, calc(8.37px + 1 * var(--fluid-basis)), 9.37px);
+  }
+}
+
+.entry-btn__text {
+  color: #FFFFFF;
+  font-family: var(--font-family-second);
+  font-size: rem(22.76);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color var(--duration-base) ease;
+  text-align: center;
+  @media (min-width: 1441px) {
+  font-size: clamp(22.76px, calc(22.76px + 1 * var(--fluid-basis)), 23.76px);
+  }
+}

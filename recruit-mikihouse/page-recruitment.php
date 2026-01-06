@@ -456,10 +456,14 @@ Template Name: 採用情報
 
         </dl>
       </div>
-
+      <div class="entry-btn">
+        <a href="https://mypage.3010.i-webs.jp/mikihouse2027/applicant/login/baitai-entry/entrycd/2027" class="entry-btn__link" target="_blank" rel="noopener noreferrer">
+          <span class="entry-btn__label">今すぐ! エントリー</span>
+          <span class="entry-btn__text">ENTRY</span>
+        </a>
+      </div>
     </div>
   </section>
-
 
 </main>
 
